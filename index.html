@@ -4863,6 +4863,17 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
        • CONTACT FORM  – form submission handler
        ══════════════════════════════════════════════════════════════════ -->
   <script>
+    /* Intercept mailto: links to open Gmail compose draft in another tab */
+    document.addEventListener('click', function (e) {
+      const mailLink = e.target.closest('a[href^="mailto:"]');
+      if (mailLink) {
+        e.preventDefault();
+        const email = mailLink.getAttribute('href').replace('mailto:', '');
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+        window.open(gmailUrl, '_blank');
+      }
+    });
+
     /* ── THREE.JS 3D PARTICLE GLOBE */
     (function () {
       const container = document.getElementById("three-canvas");
