@@ -1778,6 +1778,73 @@
       color: var(--gl)
     }
 
+    /* Hyperlinked names styling */
+    .dc h4 a, 
+    .ac-name a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--tr);
+    }
+    .dc h4 a:hover, 
+    .ac-name a:hover {
+      color: var(--gl);
+      text-shadow: 0 0 8px rgba(134, 188, 42, 0.4);
+    }
+
+    /* ═══ TEAM BANNERS — Big group photos under "Meet the Team" ═══ */
+    .team-banners {
+      max-width: 1000px;
+      margin: 40px auto 56px;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .banner-top, 
+    .banner-bottom {
+      width: 100%;
+    }
+
+    .banner-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .banner-wrapper {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--bdr);
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .banner-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+    }
+
+    .banner-wrapper:hover img {
+      transform: scale(1.025);
+      filter: brightness(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .banner-bottom {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .team-banners {
+        margin: 28px auto 40px;
+        gap: 16px;
+      }
+    }
+
     /* ═══ ALUMNI CARDS — "Where Our Alumni Work" grid (Team page + Home page) ═══
    .ac-grid  → the grid container — change gap/grid-template-columns for layout
    .ac       → each person card   — change padding for card inner spacing
@@ -4190,6 +4257,22 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         <p class="ssub" style="margin:0 auto;text-align:center;max-width:none;">Handpicked through a rigorous process with a &lt;12%
           acceptance rate from IIT Kharagpur.</p>
       </div>
+      
+      <!-- BANNERS GRID -->
+      <div class="team-banners reveal">
+        <div class="banner-top banner-wrapper">
+          <img src="assets/Banner pic 1.jpg" alt="180DC Team Group Photo Big" />
+        </div>
+        <div class="banner-bottom">
+          <div class="banner-wrapper">
+            <img src="assets/Banner pic 2.jpg" alt="180DC Team Group Photo Bottom Left" />
+          </div>
+          <div class="banner-wrapper">
+            <img src="assets/Banner pic 3.jpg" alt="180DC Team Group Photo Bottom Right" />
+          </div>
+        </div>
+      </div>
+
       <!-- Org chart -->
       <div class="org reveal">
         <div class="org-row">
@@ -4236,7 +4319,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/rachit.jpg" alt="Rachit Arora" onerror="this.remove()" />
             R
           </div>
-          <h4>Rachit Arora</h4>
+          <h4><a href="https://www.linkedin.com/in/rachit-arora-544084323/" target="_blank" rel="noopener noreferrer">Rachit Arora</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Client Acquisition and Strategy</div><a href="mailto:rachitarora@180dc.org"
             class="dc-email">rachitarora@180dc.org</a>
@@ -4246,7 +4329,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/nidhi.jpg" alt="Nidhi Swamy" onerror="this.remove()" />
             N
           </div>
-          <h4>Nidhi Swamy</h4>
+          <h4><a href="https://www.linkedin.com/in/nidhi-swamy-a368a3323/" target="_blank" rel="noopener noreferrer">Nidhi Swamy</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Client Acquisition and Strategy</div><a href="mailto:nidhi.swamy@180dc.org"
             class="dc-email">nidhi.swamy@180dc.org</a>
@@ -4256,7 +4339,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/dhruv.jpg" alt="Dhruv Gupta" onerror="this.remove()" />
             D
           </div>
-          <h4>Dhruv Gupta</h4>
+          <h4><a href="https://www.linkedin.com/in/dhruv-gupta-466213319/" target="_blank" rel="noopener noreferrer">Dhruv Gupta</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Events and Global Coordinator</div><a href="mailto:dhruvgupta@180dc.org"
             class="dc-email">dhruvgupta@180dc.org</a>
@@ -4266,7 +4349,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/kabir.jpg" alt="Kabir Ladha" onerror="this.remove()" />
             K
           </div>
-          <h4>Kabir Ladha</h4>
+          <h4><a href="https://www.linkedin.com/in/kabir-ladha-56b91329a/" target="_blank" rel="noopener noreferrer">Kabir Ladha</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Finance and Legal Coordinator</div><a href="mailto:kabir.ladha@180dc.org"
             class="dc-email">kabir.ladha@180dc.org</a>
@@ -4276,7 +4359,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/baqir.jpg" alt="Baqir Amir Merchant" onerror="this.remove()" />
             B
           </div>
-          <h4>Baqir Amir Merchant</h4>
+          <h4><a href="https://www.linkedin.com/in/baqir-merchant-a31977312/" target="_blank" rel="noopener noreferrer">Baqir Amir Merchant</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Finance and Legal Coordinator</div><a href="mailto:baqir.merchant@180dc.org"
             class="dc-email">baqir.merchant@180dc.org</a>
@@ -4286,7 +4369,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/kavya.jpg" alt="Kavya Jain" onerror="this.remove()" />
             K
           </div>
-          <h4>Kavya Jain</h4>
+          <h4><a href="https://www.linkedin.com/in/kavya-jain-78926b323/" target="_blank" rel="noopener noreferrer">Kavya Jain</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Growth and Research- Marketing</div><a href="mailto:kavyajain@180dc.org"
             class="dc-email">kavyajain@180dc.org</a>
@@ -4296,7 +4379,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/parth.jpg" alt="Parth Sethi" onerror="this.remove()" />
             P
           </div>
-          <h4>Parth Sethi</h4>
+          <h4><a href="https://www.linkedin.com/in/parth-sethi-178204191/" target="_blank" rel="noopener noreferrer">Parth Sethi</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Technology and Insights</div><a href="mailto:parthsethi@180dc.org"
             class="dc-email">parthsethi@180dc.org</a>
@@ -4306,7 +4389,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <img src="assets/dev.jpg" alt="Dev Kotecha" onerror="this.remove()" />
             D
           </div>
-          <h4>Dev Kotecha</h4>
+          <h4><a href="https://www.linkedin.com/in/dev-kotecha-066236324/" target="_blank" rel="noopener noreferrer">Dev Kotecha</a></h4>
           <div class="dc-role">Executive Director</div>
           <div class="dc-dept">Technology and Insights</div><a href="mailto:dev.kotecha@180dc.org"
             class="dc-email">dev.kotecha@180dc.org</a>
