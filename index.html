@@ -103,17 +103,25 @@
       border-radius: 50%;
       pointer-events: none !important;
       transform: translate3d(-50%, -50%, 0);
-      transition: width .18s, height .18s;
+      transition: width .18s, height .18s, opacity .18s;
       mix-blend-mode: screen;
       left: -20px;
       top: -20px;
-      will-change: transform
+      will-change: transform;
+      opacity: 0;
     }
 
     #cur.big {
       width: 36px;
       height: 36px;
       background: rgba(134, 188, 42, .22);
+      pointer-events: none !important
+    }
+
+    #cur.click {
+      width: 6px;
+      height: 6px;
+      background: var(--gm);
       pointer-events: none !important
     }
 
@@ -5010,9 +5018,21 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     let cMouseX = -100, cMouseY = -100;
     let curX = -100, curY = -100;
     let cursorAnimating = false;
+
+    // Detect touch device to disable custom cursor and restore native cursor
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouchDevice) {
+      cur.style.display = 'none';
+      const style = document.createElement('style');
+      style.innerHTML = '* { cursor: auto !important; }';
+      document.head.appendChild(style);
+    }
+
     document.addEventListener("mousemove", e => {
+      if (isTouchDevice) return;
       cMouseX = e.clientX;
       cMouseY = e.clientY;
+      cur.style.opacity = "1"; // Ensure cursor is visible when moving
       if (!cursorAnimating) {
         cursorAnimating = true;
         updateCursor();
@@ -5035,9 +5055,44 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       requestAnimationFrame(updateCursor);
     };
 
-    document.querySelectorAll("a,button,.tcard,.test-card").forEach(el => {
-      el.addEventListener("mouseenter", () => cur.classList.add("big"));
-      el.addEventListener("mouseleave", () => cur.classList.remove("big"))
+    // Hide/Show custom cursor when mouse leaves/enters the document window
+    document.addEventListener("mouseleave", () => {
+      if (!isTouchDevice) cur.style.opacity = "0";
+    });
+    document.addEventListener("mouseenter", () => {
+      if (!isTouchDevice) cur.style.opacity = "1";
+    });
+
+    // Reset cursor when window loses/gains focus to prevent "stuck" cursor state
+    window.addEventListener("blur", () => {
+      if (!isTouchDevice) {
+        cur.style.opacity = "0";
+        cur.classList.remove("big", "click");
+      }
+    });
+    window.addEventListener("focus", () => {
+      if (!isTouchDevice) {
+        cur.classList.remove("big", "click");
+      }
+    });
+
+    // Click effect (shrink dot on mousedown)
+    document.addEventListener("mousedown", () => {
+      if (!isTouchDevice) cur.classList.add("click");
+    });
+    document.addEventListener("mouseup", () => {
+      if (!isTouchDevice) cur.classList.remove("click");
+    });
+
+    // Dynamic hover scaling (delegated mouseover for perfect clickability on all clickable elements)
+    document.addEventListener("mouseover", e => {
+      if (isTouchDevice) return;
+      const interactive = e.target.closest("a, button, input, select, textarea, [onclick], .tcard, .test-card, .map-card, .submap-card, .map-dot, .map-states path, .map-submap-island, .on, .co-chip");
+      if (interactive) {
+        cur.classList.add("big");
+      } else {
+        cur.classList.remove("big");
+      }
     });
 
     /* ── NAV */
@@ -5275,12 +5330,8 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       }
     }
 
-    // Register custom cursor hover big states for new map cards
+    // Initialize map
     setTimeout(() => {
-      document.querySelectorAll(".map-card, .submap-card, .map-dot, .map-states path, .map-submap-island").forEach(el => {
-        el.addEventListener("mouseenter", () => cur.classList.add("big"));
-        el.addEventListener("mouseleave", () => cur.classList.remove("big"));
-      });
       initInteractiveMap();
     }, 150);
 
