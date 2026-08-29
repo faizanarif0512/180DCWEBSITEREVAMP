@@ -1639,56 +1639,39 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 52px;
-      width: 100%;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 52px
     }
 
     .org-row {
       display: flex;
-      gap: 16px;
+      gap: 10px;
       justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
+      flex-wrap: wrap
     }
 
     .org-line {
       width: 1px;
       height: 22px;
-      background: rgba(134, 188, 42, .25);
+      background: rgba(58, 125, 68, .25);
       margin: 0 auto
     }
 
     .on {
-      padding: 14px 20px;
-      border-radius: 8px;
+      padding: 10px 18px;
+      border-radius: 5px;
       text-align: center;
-      border: 1px solid rgba(255, 255, 255, .08);
-      background: rgba(255, 255, 255, 0.02);
-      transition: all var(--tr);
-      flex: 1;
-      min-width: 180px;
-      max-width: 280px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(255, 255, 255, .07);
+      transition: border-color var(--tr)
     }
 
     .on:hover {
-      border-color: rgba(134, 188, 42, .45);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(134, 188, 42, 0.1);
+      border-color: rgba(90, 173, 106, .4)
     }
 
     .on.top {
       background: var(--k2);
-      border-color: rgba(134, 188, 42, .4);
-      min-width: 220px;
-    }
-
-    .on.top:hover {
-      border-color: var(--gl);
-      box-shadow: 0 6px 20px rgba(134, 188, 42, 0.2);
+      border-color: rgba(58, 125, 68, .4);
+      min-width: 180px
     }
 
     .on.top h4 {
@@ -1704,15 +1687,15 @@
     }
 
     .on h4 {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500
     }
 
     .on span {
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--mut);
       display: block;
-      margin-top: 2px
+      margin-top: 1px
     }
 
     /* Directors — 3 per row */
