@@ -2110,10 +2110,10 @@
 
     .map-card:hover,
     .map-card.active {
-      background: rgba(58, 125, 68, .08);
+      background: rgba(134, 188, 42, 0.08);
       border-color: var(--gl);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3)
+      box-shadow: 0 0 15px rgba(134, 188, 42, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .mc-icon {
@@ -2158,15 +2158,16 @@
       stroke: rgba(134, 188, 42, 0.45);
       stroke-width: 1;
       vector-effect: non-scaling-stroke;
-      transition: fill var(--tr), stroke var(--tr)
+      transition: fill var(--tr), stroke var(--tr), filter var(--tr)
     }
 
     /* Highlight specific states on hover */
     .map-states path:hover,
     .map-states path.active {
-      fill: rgba(0, 132, 61, 0.2);
-      stroke: rgba(134, 188, 42, 0.9);
-      stroke-width: 1.5
+      fill: rgba(0, 132, 61, 0.25);
+      stroke: rgba(134, 188, 42, 1);
+      stroke-width: 1.8;
+      filter: drop-shadow(0 0 8px rgba(134, 188, 42, 0.65))
     }
 
     /* Glowing dots */
@@ -2174,16 +2175,16 @@
       fill: #ffffff;
       stroke: none;
       cursor: none;
-      transition: transform var(--tr), r var(--tr), fill var(--tr), stroke var(--tr);
+      transition: transform var(--tr), r var(--tr), fill var(--tr), stroke var(--tr), filter var(--tr);
       transform-origin: center;
       filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))
     }
 
     .map-dot:hover,
     .map-dot.active {
-      fill: #ffffff;
+      fill: var(--gl);
       stroke: none;
-      filter: drop-shadow(0 0 12px #ffffff)
+      filter: drop-shadow(0 0 15px var(--gl))
     }
 
     .map-pins .map-dot:hover,
@@ -2202,14 +2203,15 @@
       stroke: rgba(134, 188, 42, 0.45) !important;
       stroke-width: 1 !important;
       vector-effect: non-scaling-stroke;
-      transition: fill var(--tr), stroke var(--tr)
+      transition: fill var(--tr), stroke var(--tr), filter var(--tr)
     }
 
     .map-submap-island:hover path,
     .map-submap-island.active path {
-      fill: rgba(0, 132, 61, 0.2) !important;
-      stroke: rgba(134, 188, 42, 0.9) !important;
-      stroke-width: 1.5 !important
+      fill: rgba(0, 132, 61, 0.25) !important;
+      stroke: rgba(134, 188, 42, 1) !important;
+      stroke-width: 1.8 !important;
+      filter: drop-shadow(0 0 8px rgba(134, 188, 42, 0.65))
     }
 
     .map-submap-label {
@@ -2260,8 +2262,10 @@
 
     .submap-card:hover,
     .submap-card.active {
-      background: rgba(58, 125, 68, .08);
-      border-color: var(--gl)
+      background: rgba(134, 188, 42, 0.08);
+      border-color: var(--gl);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(134, 188, 42, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .submap-svg {
@@ -2936,10 +2940,9 @@
          To add a company: copy any <div class="co-chip"> block and update the
          name and dot colour (use the company's brand hex colour).               -->
     <section id="companies">
-      <span class="slbl reveal">Our Alumni Network</span>
-      <h2 class="sttl reveal d1" style="font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-.01em">Where
-        Our<br><em style='font-style:italic;color:var(--gl)'>Alumni Work</em></h2>
-      <p class="ssub reveal d2" style="font-size:17px;color:rgba(255,255,255,.7)">Our graduates go on to leading roles
+      <span class="slbl reveal" style="display:flex;justify-content:center">Our Alumni Network</span>
+      <h2 class="sttl reveal d1" style="font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-.01em;text-align:center">Where Our<br><em style='font-style:italic;color:var(--gl)'>Alumni Work</em></h2>
+      <p class="ssub reveal d2" style="font-size:17px;color:rgba(255,255,255,.7);text-align:center;max-width:none;margin:0 auto 24px;">Our graduates go on to leading roles
         at the world&rsquo;s most respected firms across consulting, finance, tech, and social impact.</p>
       <div class="co-grid reveal d2">
         <div class="co-chip"><span class="co-dot" style="background:#00843D"></span><span>BCG</span></div>
@@ -3142,9 +3145,9 @@
        ══════════════════════════════════════════════════════════════════ -->
   <div class="page" id="page-projects">
     <div class="pp">
-      <span class="slbl reveal">Portfolio</span>
-      <h2 class="sttl reveal d1">Past Projects</h2>
-      <p class="ssub reveal d2">28+ real-world consulting engagements across India and globally. Hover over any pin to
+      <span class="slbl reveal" style="display:flex;justify-content:center">Portfolio</span>
+      <h2 class="sttl reveal d1" style="text-align:center">Past Projects</h2>
+      <p class="ssub reveal d2" style="text-align:center;max-width:none;">28+ real-world consulting engagements across India and globally. Hover over any pin to
         see the client.</p>
 
 
@@ -4184,7 +4187,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       <div class="tp-head reveal">
         <span class="slbl" style="display:flex;justify-content:center">Our People</span>
         <h2 class="sttl" style="text-align:center">Meet the Team</h2>
-        <p class="ssub" style="margin:0 auto;text-align:center">Handpicked through a rigorous process with a &lt;12%
+        <p class="ssub" style="margin:0 auto;text-align:center;max-width:none;">Handpicked through a rigorous process with a &lt;12%
           acceptance rate from IIT Kharagpur.</p>
       </div>
       <!-- Org chart -->
@@ -4310,9 +4313,8 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
       </div>
       <!-- Alumni -->
-      <h3 class="sttl reveal" style="font-size:clamp(18px,2.4vw,28px);margin-top:52px;margin-bottom:8px">Where Our
-        Alumni Work</h3>
-      <p class="ssub reveal d1" style="margin-bottom:24px">180DC IIT KGP graduates go on to careers at the world&rsquo;s
+      <h3 class="sttl reveal" style="font-size:clamp(18px,2.4vw,28px);margin-top:52px;margin-bottom:8px;text-align:center">Where Our Alumni Work</h3>
+      <p class="ssub reveal d1" style="margin-bottom:24px;text-align:center;max-width:none;">180DC IIT KGP graduates go on to careers at the world&rsquo;s
         most prestigious organisations.</p>
       <div class="ac-grid">
         <div class="ac reveal">
@@ -5054,8 +5056,8 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           if (dot) dot.classList.add('active');
           const statePath = document.getElementById(city);
           if (statePath) statePath.classList.add('active');
-          const line = svgGroup.querySelector(`.map-line[data-project="${card.dataset.project}"]`);
-          if (line) line.classList.add('active');
+          const island = document.querySelector(`.map-submap-island[data-city="${city}"]`);
+          if (island) island.classList.add('active');
         });
 
         card.addEventListener('mouseleave', () => {
@@ -5065,8 +5067,8 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           if (dot) dot.classList.remove('active');
           const statePath = document.getElementById(city);
           if (statePath) statePath.classList.remove('active');
-          const line = svgGroup.querySelector(`.map-line[data-project="${card.dataset.project}"]`);
-          if (line) line.classList.remove('active');
+          const island = document.querySelector(`.map-submap-island[data-city="${city}"]`);
+          if (island) island.classList.remove('active');
         });
       });
 
@@ -5076,11 +5078,11 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           dot.classList.add('active');
           const statePath = document.getElementById(city);
           if (statePath) statePath.classList.add('active');
+          const island = document.querySelector(`.map-submap-island[data-city="${city}"]`);
+          if (island) island.classList.add('active');
 
           document.querySelectorAll(`.map-card[data-city="${city}"], .submap-card[data-city="${city}"]`).forEach(c => {
             c.classList.add('active');
-            const line = svgGroup.querySelector(`.map-line[data-project="${c.dataset.project}"]`);
-            if (line) line.classList.add('active');
           });
         });
 
@@ -5089,11 +5091,61 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           dot.classList.remove('active');
           const statePath = document.getElementById(city);
           if (statePath) statePath.classList.remove('active');
+          const island = document.querySelector(`.map-submap-island[data-city="${city}"]`);
+          if (island) island.classList.remove('active');
 
           document.querySelectorAll(`.map-card[data-city="${city}"], .submap-card[data-city="${city}"]`).forEach(c => {
             c.classList.remove('active');
-            const line = svgGroup.querySelector(`.map-line[data-project="${c.dataset.project}"]`);
-            if (line) line.classList.remove('active');
+          });
+        });
+      });
+
+      // State Paths Hover
+      const statePaths = document.querySelectorAll('.map-states path');
+      statePaths.forEach(path => {
+        const city = path.id;
+        if (!city) return;
+
+        path.addEventListener('mouseenter', () => {
+          path.classList.add('active');
+          const dot = document.querySelector(`.map-dot[data-city="${city}"]`);
+          if (dot) dot.classList.add('active');
+          document.querySelectorAll(`.map-card[data-city="${city}"], .submap-card[data-city="${city}"]`).forEach(c => {
+            c.classList.add('active');
+          });
+        });
+
+        path.addEventListener('mouseleave', () => {
+          path.classList.remove('active');
+          const dot = document.querySelector(`.map-dot[data-city="${city}"]`);
+          if (dot) dot.classList.remove('active');
+          document.querySelectorAll(`.map-card[data-city="${city}"], .submap-card[data-city="${city}"]`).forEach(c => {
+            c.classList.remove('active');
+          });
+        });
+      });
+
+      // Submap Islands Hover
+      const islands = document.querySelectorAll('.map-submap-island');
+      islands.forEach(island => {
+        const city = island.dataset.city;
+        if (!city) return;
+
+        island.addEventListener('mouseenter', () => {
+          island.classList.add('active');
+          const dot = document.querySelector(`.map-dot[data-city="${city}"]`);
+          if (dot) dot.classList.add('active');
+          document.querySelectorAll(`.map-card[data-city="${city}"], .submap-card[data-city="${city}"]`).forEach(c => {
+            c.classList.add('active');
+          });
+        });
+
+        island.addEventListener('mouseleave', () => {
+          island.classList.remove('active');
+          const dot = document.querySelector(`.map-dot[data-city="${city}"]`);
+          if (dot) dot.classList.remove('active');
+          document.querySelectorAll(`.map-card[data-city="${city}"], .submap-card[data-city="${city}"]`).forEach(c => {
+            c.classList.remove('active');
           });
         });
       });
@@ -5123,7 +5175,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
 
     // Register custom cursor hover big states for new map cards
     setTimeout(() => {
-      document.querySelectorAll(".map-card, .submap-card, .map-dot").forEach(el => {
+      document.querySelectorAll(".map-card, .submap-card, .map-dot, .map-states path, .map-submap-island").forEach(el => {
         el.addEventListener("mouseenter", () => cur.classList.add("big"));
         el.addEventListener("mouseleave", () => cur.classList.remove("big"));
       });
