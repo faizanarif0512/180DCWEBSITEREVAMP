@@ -892,6 +892,136 @@
       color: var(--w)
     }
 
+    /* ═══ AWARD FEATURE CARD ═══ */
+    .award-card {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(134, 188, 42, 0.04) 100%);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(134, 188, 42, 0.25);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      transition: all var(--tr);
+    }
+
+    .award-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c0c0c0, var(--gl), #e5e7eb);
+    }
+
+    .award-card:hover {
+      border-color: rgba(134, 188, 42, 0.45);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(134, 188, 42, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .award-card-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 13px;
+      background: rgba(134, 188, 42, 0.12);
+      border: 1px solid rgba(134, 188, 42, 0.3);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gl);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .award-card-content h3 {
+      font-size: clamp(22px, 2.4vw, 30px);
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      color: var(--w);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .award-card-content p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--mut);
+      margin-bottom: 20px;
+    }
+
+    .award-card-content p strong {
+      color: var(--w);
+      font-weight: 600;
+    }
+
+    .award-stats {
+      display: flex;
+      gap: 28px;
+    }
+
+    .award-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .award-stat-num {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gl);
+    }
+
+    .award-stat-lbl {
+      font-size: 12px;
+      color: var(--mut);
+    }
+
+    .award-card-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .award-card-img img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .award-card:hover .award-card-img img {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 868px) {
+      .award-card-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .award-card {
+        padding: 24px 20px;
+      }
+    }
+
     /* MARQUEE (companies) */
     .mq {
       background: rgba(255, 255, 255, .05);
@@ -2896,6 +3026,30 @@
           <h3>Team Structure</h3>
           <p>Meet our Executive Directors, handpicked through a rigorous process with a &lt;12% acceptance rate.</p>
           <button class="tbtn">Meet the Team &rarr;</button>
+        </div>
+      </div>
+
+      <!-- GLOBAL AWARD CARD -->
+      <div class="award-card reveal d3">
+        <div class="award-card-inner">
+          <div class="award-card-content">
+            <span class="award-badge">🏆 Global Recognition</span>
+            <h3>Global Silver Best Consulting Award</h3>
+            <p>180DC IIT Kharagpur was awarded the prestigious <strong>Global Silver Best Consulting Award</strong> in APAC out of <strong>70+ branches</strong> worldwide for excellence in strategic consulting and social impact delivery.</p>
+            <div class="award-stats">
+              <div class="award-stat">
+                <span class="award-stat-num">🥈 Silver</span>
+                <span class="award-stat-lbl">Global Best Consulting</span>
+              </div>
+              <div class="award-stat">
+                <span class="award-stat-num">70+</span>
+                <span class="award-stat-lbl">APAC Branches Competed</span>
+              </div>
+            </div>
+          </div>
+          <div class="award-card-img">
+            <img src="assets/global-silver-award.png" alt="Awarded Global Silver Best Consulting Award - 180DC IIT Kharagpur" />
+          </div>
         </div>
       </div>
     </div>
