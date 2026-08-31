@@ -892,9 +892,17 @@
       color: var(--w)
     }
 
-    /* ═══ AWARD FEATURE CARD ═══ */
+    /* ═══ AWARD FEATURE SECTION ═══ */
+    #award-section {
+      padding: 48px;
+      background: var(--k);
+      position: relative;
+      z-index: 5;
+      border-top: 1px solid rgba(255, 255, 255, .06);
+    }
+
     .award-card {
-      margin-top: 32px;
+      margin-top: 0;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(134, 188, 42, 0.04) 100%);
       backdrop-filter: blur(16px);
       border: 1px solid rgba(134, 188, 42, 0.25);
@@ -2825,6 +2833,7 @@
       #companies,
       #impact,
       #blogs,
+      #award-section,
       .mq,
       .cta {
         padding-left: 18px;
@@ -2948,6 +2957,32 @@
       </div>
     </section>
 
+    <!-- GLOBAL AWARD SECTION (above alumni marquee) -->
+    <section id="award-section">
+      <div class="award-card reveal">
+        <div class="award-card-inner">
+          <div class="award-card-content">
+            <span class="award-badge">🏆 Global Recognition</span>
+            <h3>Global Silver Best Consulting Award</h3>
+            <p>180DC IIT Kharagpur was awarded the prestigious <strong>Global Silver Best Consulting Award</strong> in APAC out of <strong>70+ branches</strong> worldwide for excellence in strategic consulting and social impact delivery.</p>
+            <div class="award-stats">
+              <div class="award-stat">
+                <span class="award-stat-num">🥈 Silver</span>
+                <span class="award-stat-lbl">Global Best Consulting</span>
+              </div>
+              <div class="award-stat">
+                <span class="award-stat-num">70+</span>
+                <span class="award-stat-lbl">APAC Branches Competed</span>
+              </div>
+            </div>
+          </div>
+          <div class="award-card-img">
+            <img src="assets/global-silver-award.png" alt="Awarded Global Silver Best Consulting Award - 180DC IIT Kharagpur" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MARQUEE  -  company names -->
     <div class="mq">
       <p class="mq-lbl">Our alumni work at</p>
@@ -3026,30 +3061,6 @@
           <h3>Team Structure</h3>
           <p>Meet our Executive Directors, handpicked through a rigorous process with a &lt;12% acceptance rate.</p>
           <button class="tbtn">Meet the Team &rarr;</button>
-        </div>
-      </div>
-
-      <!-- GLOBAL AWARD CARD -->
-      <div class="award-card reveal d3">
-        <div class="award-card-inner">
-          <div class="award-card-content">
-            <span class="award-badge">🏆 Global Recognition</span>
-            <h3>Global Silver Best Consulting Award</h3>
-            <p>180DC IIT Kharagpur was awarded the prestigious <strong>Global Silver Best Consulting Award</strong> in APAC out of <strong>70+ branches</strong> worldwide for excellence in strategic consulting and social impact delivery.</p>
-            <div class="award-stats">
-              <div class="award-stat">
-                <span class="award-stat-num">🥈 Silver</span>
-                <span class="award-stat-lbl">Global Best Consulting</span>
-              </div>
-              <div class="award-stat">
-                <span class="award-stat-num">70+</span>
-                <span class="award-stat-lbl">APAC Branches Competed</span>
-              </div>
-            </div>
-          </div>
-          <div class="award-card-img">
-            <img src="assets/global-silver-award.png" alt="Awarded Global Silver Best Consulting Award - 180DC IIT Kharagpur" />
-          </div>
         </div>
       </div>
     </div>
