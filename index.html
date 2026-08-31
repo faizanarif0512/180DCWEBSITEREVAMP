@@ -2325,9 +2325,19 @@
       cursor: default;
     }
 
+    .map-col.left-col {
+      direction: rtl;
+      padding-right: 0;
+      padding-left: 8px;
+    }
+
+    .map-col.left-col > * {
+      direction: ltr;
+    }
+
     /* Custom scrollbar for columns with easy hit area and clickability */
     .map-col::-webkit-scrollbar {
-      width: 6px;
+      width: 7px;
       cursor: pointer;
     }
 
