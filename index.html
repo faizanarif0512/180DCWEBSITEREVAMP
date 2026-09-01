@@ -2109,21 +2109,35 @@
    CONTACT PAGE
 ────────────────────────────────────────────── */
     .cp {
-      padding: 96px 48px 72px
+      padding: 96px 48px 72px;
+      text-align: left;
+    }
+
+    .cp .slbl,
+    .cp .sttl,
+    .cp .ssub {
+      text-align: left;
+      margin-left: 0;
     }
 
     .cp-grid {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       gap: 56px;
-      margin-top: 48px
+      margin-top: 48px;
+      text-align: left;
     }
 
     .ci-item {
       display: flex;
       gap: 14px;
       margin-bottom: 24px;
-      align-items: flex-start
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .ci-item div {
+      text-align: left;
     }
 
     .ci-icon {
@@ -2144,14 +2158,16 @@
       color: var(--mut);
       text-transform: uppercase;
       letter-spacing: .07em;
-      margin-bottom: 4px
+      margin-bottom: 4px;
+      text-align: left;
     }
 
     .ci-item p,
     .ci-item a {
       font-size: 14.5px;
       color: var(--w);
-      line-height: 1.6
+      line-height: 1.6;
+      text-align: left;
     }
 
     .ci-item a:hover {
@@ -2160,6 +2176,7 @@
 
     .soc-row {
       display: flex;
+      justify-content: flex-start;
       gap: 10px;
       margin-top: 24px
     }
