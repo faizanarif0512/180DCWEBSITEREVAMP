@@ -380,6 +380,19 @@
       max-width: 540px
     }
 
+    .ssub-single {
+      max-width: none !important;
+      white-space: nowrap;
+      text-align: center !important;
+      margin: 0 auto 16px auto !important;
+    }
+
+    @media (max-width: 768px) {
+      .ssub-single {
+        white-space: normal;
+      }
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(26px);
@@ -3281,8 +3294,7 @@
       <div class="sp-head reveal">
         <span class="slbl" style="justify-content:center;display:flex">What We Do</span>
         <h2 class="sttl" style="text-align:center">Our Service Offerings</h2>
-        <p class="ssub" style="margin:0 auto;text-align:center">Six consulting verticals tailored for nonprofits, social
-          enterprises, and impact-driven organisations.</p>
+        <p class="ssub ssub-single">Six consulting verticals tailored for nonprofits, social enterprises, and impact-driven organisations.</p>
       </div>
       <div class="sc-grid">
         <div class="sc  reveal">
@@ -5148,10 +5160,11 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
        ══════════════════════════════════════════════════════════════════ -->
   <div class="page" id="page-resources">
     <div class="rp">
-      <span class="slbl reveal">Resources</span>
-      <h2 class="sttl reveal d1">Learning & Resources</h2>
-      <p class="ssub reveal d2">Tools, frameworks, and materials developed by our team to advance consulting practice
-        and social impact.</p>
+      <div style="text-align:center;margin-bottom:32px">
+        <span class="slbl reveal" style="justify-content:center;display:flex">Resources</span>
+        <h2 class="sttl reveal d1" style="text-align:center">Learning & Resources</h2>
+        <p class="ssub ssub-single reveal d2">Tools, frameworks, and materials developed by our team to advance consulting practice and social impact.</p>
+      </div>
       <div class="res-grid">
         <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal">
           <div class="rc-icon">&#128196;</div>
