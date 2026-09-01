@@ -468,6 +468,7 @@
     .h-eye {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 12px;
       font-family: "DM Mono", monospace;
       font-size: 11px;
@@ -482,17 +483,19 @@
     .h-eye::before {
       content: "";
       display: inline-block;
-      width: 28px;
+      width: 12px;
       height: 1px;
       background: var(--gl)
     }
 
     .h-h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(38px, 5vw, 68px);
-      font-weight: 600;
-      line-height: 1.05;
-      margin-bottom: 22px;
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 16px;
+      text-align: left;
       opacity: 0;
       animation: fu .9s .35s forwards
     }
@@ -503,7 +506,7 @@
     }
 
     .h-h1 span {
-      display: block
+      display: inline
     }
 
     .h-tagline {
@@ -512,6 +515,7 @@
       color: rgba(255, 255, 255, .55);
       font-style: italic;
       margin-bottom: 12px;
+      text-align: left;
       opacity: 0;
       animation: fu .9s .42s forwards
     }
@@ -522,7 +526,10 @@
       color: rgba(255, 255, 255, .72);
       line-height: 1.8;
       max-width: 500px;
+      margin-left: 0;
+      margin-right: auto;
       margin-bottom: 16px;
+      text-align: left;
       opacity: 0;
       animation: fu .9s .5s forwards
     }
@@ -1082,22 +1089,37 @@
     .m-pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 13px 24px;
+      gap: 12px;
+      padding: 10px 22px;
       background: rgba(255, 255, 255, .06);
       border: 1px solid rgba(255, 255, 255, .15);
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: rgba(255, 255, 255, .9);
       white-space: nowrap;
-      transition: color var(--tr), border-color var(--tr)
+      transition: color var(--tr), border-color var(--tr), background var(--tr);
     }
 
     .m-pill:hover {
       color: var(--w);
       border-color: var(--gl);
       background: rgba(58, 125, 68, .15)
+    }
+
+    .m-logo {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: #ffffff;
+      padding: 2px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .m-dot {
@@ -2979,11 +3001,7 @@
 
       <div class="h-left">
         <p class="h-eye">IIT Kharagpur &middot; 180DC Global Network</p>
-        <h1 class="h-h1">
-          <span>Turning Challenges</span>
-          <span>into <em>Opportunities,</em></span>
-          <span>One Project at a Time</span>
-        </h1>
+        <h1 class="h-h1">Turning Challenges into <em>Opportunities,</em> One Project at a Time</h1>
         <p class="h-desc">180 Degrees Consulting offers high-quality consulting services without the premium price tag.
           Our team comprises carefully selected top-tier university students who volunteer their time because they share
           our vision and values. We partner with non-profits and social enterprises to provide innovative, practical,
@@ -3026,59 +3044,61 @@
       </div>
     </section>
 
-    <!-- MARQUEE  -  company names -->
+    <!-- MARQUEE  -  company logos -->
     <div class="mq">
       <p class="mq-lbl">Our alumni work at</p>
       <div class="mq-wrap">
-        <div class="mq-track" aria-hidden="true"><span class="m-pill"><span class="m-dot"
-              style="background:#00843D"></span>BCG</span><span class="m-pill"><span class="m-dot"
-              style="background:#CC0000"></span>Bain & Co</span><span class="m-pill"><span class="m-dot"
-              style="background:#003580"></span>McKinsey</span><span class="m-pill"><span class="m-dot"
-              style="background:#1B1F5F"></span>Morgan Stanley</span><span class="m-pill"><span class="m-dot"
-              style="background:#B9192F"></span>Nomura</span><span class="m-pill"><span class="m-dot"
-              style="background:#016FD0"></span>American Express</span><span class="m-pill"><span class="m-dot"
-              style="background:#000000"></span>Blackrock</span><span class="m-pill"><span class="m-dot"
-              style="background:#003087"></span>JPMorgan</span><span class="m-pill"><span class="m-dot"
-              style="background:#7399C6"></span>Goldman Sachs</span><span class="m-pill"><span class="m-dot"
-              style="background:#0018A8"></span>Deutsche Bank</span><span class="m-pill"><span class="m-dot"
-              style="background:#A100FF"></span>Accenture</span><span class="m-pill"><span class="m-dot"
-              style="background:#1B3A6B"></span>LEK Consulting</span><span class="m-pill"><span class="m-dot"
-              style="background:#F26522"></span>Optiver</span><span class="m-pill"><span class="m-dot"
-              style="background:#0866FF"></span>Meta</span><span class="m-pill"><span class="m-dot"
-              style="background:#FF9900"></span>Amazon</span><span class="m-pill"><span class="m-dot"
-              style="background:#365EBF"></span>Intuit</span><span class="m-pill"><span class="m-dot"
-              style="background:#0A5C36"></span>Elevation Capital</span><span class="m-pill"><span class="m-dot"
-              style="background:#1E3A8A"></span>Hindustan Unilever</span><span class="m-pill"><span class="m-dot"
-              style="background:#003DA5"></span>Procter & Gamble</span><span class="m-pill"><span class="m-dot"
-              style="background:#1A1A2E"></span>3one4 Capital</span><span class="m-pill"><span class="m-dot"
-              style="background:#2D5F8A"></span>Alphagrep</span><span class="m-pill"><span class="m-dot"
-              style="background:#1A3C5E"></span>Quadeye</span><span class="m-pill"><span class="m-dot"
-              style="background:#00843D"></span>Boston Scientific</span><span class="m-pill"><span class="m-dot"
-              style="background:#8B0000"></span>ITC Limited</span><span class="m-pill"><span class="m-dot"
-              style="background:#00843D"></span>BCG</span><span class="m-pill"><span class="m-dot"
-              style="background:#CC0000"></span>Bain & Co</span><span class="m-pill"><span class="m-dot"
-              style="background:#003580"></span>McKinsey</span><span class="m-pill"><span class="m-dot"
-              style="background:#1B1F5F"></span>Morgan Stanley</span><span class="m-pill"><span class="m-dot"
-              style="background:#B9192F"></span>Nomura</span><span class="m-pill"><span class="m-dot"
-              style="background:#016FD0"></span>American Express</span><span class="m-pill"><span class="m-dot"
-              style="background:#000000"></span>Blackrock</span><span class="m-pill"><span class="m-dot"
-              style="background:#003087"></span>JPMorgan</span><span class="m-pill"><span class="m-dot"
-              style="background:#7399C6"></span>Goldman Sachs</span><span class="m-pill"><span class="m-dot"
-              style="background:#0018A8"></span>Deutsche Bank</span><span class="m-pill"><span class="m-dot"
-              style="background:#A100FF"></span>Accenture</span><span class="m-pill"><span class="m-dot"
-              style="background:#1B3A6B"></span>LEK Consulting</span><span class="m-pill"><span class="m-dot"
-              style="background:#F26522"></span>Optiver</span><span class="m-pill"><span class="m-dot"
-              style="background:#0866FF"></span>Meta</span><span class="m-pill"><span class="m-dot"
-              style="background:#FF9900"></span>Amazon</span><span class="m-pill"><span class="m-dot"
-              style="background:#365EBF"></span>Intuit</span><span class="m-pill"><span class="m-dot"
-              style="background:#0A5C36"></span>Elevation Capital</span><span class="m-pill"><span class="m-dot"
-              style="background:#1E3A8A"></span>Hindustan Unilever</span><span class="m-pill"><span class="m-dot"
-              style="background:#003DA5"></span>Procter & Gamble</span><span class="m-pill"><span class="m-dot"
-              style="background:#1A1A2E"></span>3one4 Capital</span><span class="m-pill"><span class="m-dot"
-              style="background:#2D5F8A"></span>Alphagrep</span><span class="m-pill"><span class="m-dot"
-              style="background:#1A3C5E"></span>Quadeye</span><span class="m-pill"><span class="m-dot"
-              style="background:#00843D"></span>Boston Scientific</span><span class="m-pill"><span class="m-dot"
-              style="background:#8B0000"></span>ITC Limited</span></div>
+        <div class="mq-track" aria-hidden="true">
+          <span class="m-pill"><img src="assets/logos/bcg.png" alt="BCG" class="m-logo" onerror="this.style.display='none'"> BCG</span>
+          <span class="m-pill"><img src="assets/logos/bain.png" alt="Bain & Co" class="m-logo" onerror="this.style.display='none'"> Bain & Co</span>
+          <span class="m-pill"><img src="assets/logos/mckinsey.png" alt="McKinsey" class="m-logo" onerror="this.style.display='none'"> McKinsey</span>
+          <span class="m-pill"><img src="assets/logos/morgan-stanley.svg" alt="Morgan Stanley" class="m-logo" onerror="this.style.display='none'"> Morgan Stanley</span>
+          <span class="m-pill"><img src="assets/logos/nomura.png" alt="Nomura" class="m-logo" onerror="this.style.display='none'"> Nomura</span>
+          <span class="m-pill"><img src="assets/logos/american-express.svg" alt="American Express" class="m-logo" onerror="this.style.display='none'"> American Express</span>
+          <span class="m-pill"><img src="assets/logos/blackrock.png" alt="Blackrock" class="m-logo" onerror="this.style.display='none'"> Blackrock</span>
+          <span class="m-pill"><img src="assets/logos/jpmorgan.png" alt="JPMorgan" class="m-logo" onerror="this.style.display='none'"> JPMorgan</span>
+          <span class="m-pill"><img src="assets/logos/goldman-sachs.svg" alt="Goldman Sachs" class="m-logo" onerror="this.style.display='none'"> Goldman Sachs</span>
+          <span class="m-pill"><img src="assets/logos/deutsche-bank.svg" alt="Deutsche Bank" class="m-logo" onerror="this.style.display='none'"> Deutsche Bank</span>
+          <span class="m-pill"><img src="assets/logos/accenture.svg" alt="Accenture" class="m-logo" onerror="this.style.display='none'"> Accenture</span>
+          <span class="m-pill"><img src="assets/logos/lek.svg" alt="LEK Consulting" class="m-logo" onerror="this.style.display='none'"> LEK Consulting</span>
+          <span class="m-pill"><img src="assets/logos/optiver.png" alt="Optiver" class="m-logo" onerror="this.style.display='none'"> Optiver</span>
+          <span class="m-pill"><img src="assets/logos/meta.svg" alt="Meta" class="m-logo" onerror="this.style.display='none'"> Meta</span>
+          <span class="m-pill"><img src="assets/logos/amazon.svg" alt="Amazon" class="m-logo" onerror="this.style.display='none'"> Amazon</span>
+          <span class="m-pill"><img src="assets/logos/intuit.svg" alt="Intuit" class="m-logo" onerror="this.style.display='none'"> Intuit</span>
+          <span class="m-pill"><img src="assets/logos/elevation-capital.png" alt="Elevation Capital" class="m-logo" onerror="this.style.display='none'"> Elevation Capital</span>
+          <span class="m-pill"><img src="assets/logos/hindustan-unilever.svg" alt="Hindustan Unilever" class="m-logo" onerror="this.style.display='none'"> Hindustan Unilever</span>
+          <span class="m-pill"><img src="assets/logos/pg.svg" alt="Procter & Gamble" class="m-logo" onerror="this.style.display='none'"> Procter & Gamble</span>
+          <span class="m-pill"><img src="assets/logos/3one4-capital.png" alt="3one4 Capital" class="m-logo" onerror="this.style.display='none'"> 3one4 Capital</span>
+          <span class="m-pill"><img src="assets/logos/alphagrep.png" alt="Alphagrep" class="m-logo" onerror="this.style.display='none'"> Alphagrep</span>
+          <span class="m-pill"><img src="assets/logos/quadeye.png" alt="Quadeye" class="m-logo" onerror="this.style.display='none'"> Quadeye</span>
+          <span class="m-pill"><img src="assets/logos/boston-scientific.png" alt="Boston Scientific" class="m-logo" onerror="this.style.display='none'"> Boston Scientific</span>
+          <span class="m-pill"><img src="assets/logos/itc.svg" alt="ITC Limited" class="m-logo" onerror="this.style.display='none'"> ITC Limited</span>
+          <!-- Duplicate set for seamless continuous marquee loop -->
+          <span class="m-pill"><img src="assets/logos/bcg.png" alt="BCG" class="m-logo" onerror="this.style.display='none'"> BCG</span>
+          <span class="m-pill"><img src="assets/logos/bain.png" alt="Bain & Co" class="m-logo" onerror="this.style.display='none'"> Bain & Co</span>
+          <span class="m-pill"><img src="assets/logos/mckinsey.png" alt="McKinsey" class="m-logo" onerror="this.style.display='none'"> McKinsey</span>
+          <span class="m-pill"><img src="assets/logos/morgan-stanley.svg" alt="Morgan Stanley" class="m-logo" onerror="this.style.display='none'"> Morgan Stanley</span>
+          <span class="m-pill"><img src="assets/logos/nomura.png" alt="Nomura" class="m-logo" onerror="this.style.display='none'"> Nomura</span>
+          <span class="m-pill"><img src="assets/logos/american-express.svg" alt="American Express" class="m-logo" onerror="this.style.display='none'"> American Express</span>
+          <span class="m-pill"><img src="assets/logos/blackrock.png" alt="Blackrock" class="m-logo" onerror="this.style.display='none'"> Blackrock</span>
+          <span class="m-pill"><img src="assets/logos/jpmorgan.png" alt="JPMorgan" class="m-logo" onerror="this.style.display='none'"> JPMorgan</span>
+          <span class="m-pill"><img src="assets/logos/goldman-sachs.svg" alt="Goldman Sachs" class="m-logo" onerror="this.style.display='none'"> Goldman Sachs</span>
+          <span class="m-pill"><img src="assets/logos/deutsche-bank.svg" alt="Deutsche Bank" class="m-logo" onerror="this.style.display='none'"> Deutsche Bank</span>
+          <span class="m-pill"><img src="assets/logos/accenture.svg" alt="Accenture" class="m-logo" onerror="this.style.display='none'"> Accenture</span>
+          <span class="m-pill"><img src="assets/logos/lek.svg" alt="LEK Consulting" class="m-logo" onerror="this.style.display='none'"> LEK Consulting</span>
+          <span class="m-pill"><img src="assets/logos/optiver.png" alt="Optiver" class="m-logo" onerror="this.style.display='none'"> Optiver</span>
+          <span class="m-pill"><img src="assets/logos/meta.svg" alt="Meta" class="m-logo" onerror="this.style.display='none'"> Meta</span>
+          <span class="m-pill"><img src="assets/logos/amazon.svg" alt="Amazon" class="m-logo" onerror="this.style.display='none'"> Amazon</span>
+          <span class="m-pill"><img src="assets/logos/intuit.svg" alt="Intuit" class="m-logo" onerror="this.style.display='none'"> Intuit</span>
+          <span class="m-pill"><img src="assets/logos/elevation-capital.png" alt="Elevation Capital" class="m-logo" onerror="this.style.display='none'"> Elevation Capital</span>
+          <span class="m-pill"><img src="assets/logos/hindustan-unilever.svg" alt="Hindustan Unilever" class="m-logo" onerror="this.style.display='none'"> Hindustan Unilever</span>
+          <span class="m-pill"><img src="assets/logos/pg.svg" alt="Procter & Gamble" class="m-logo" onerror="this.style.display='none'"> Procter & Gamble</span>
+          <span class="m-pill"><img src="assets/logos/3one4-capital.png" alt="3one4 Capital" class="m-logo" onerror="this.style.display='none'"> 3one4 Capital</span>
+          <span class="m-pill"><img src="assets/logos/alphagrep.png" alt="Alphagrep" class="m-logo" onerror="this.style.display='none'"> Alphagrep</span>
+          <span class="m-pill"><img src="assets/logos/quadeye.png" alt="Quadeye" class="m-logo" onerror="this.style.display='none'"> Quadeye</span>
+          <span class="m-pill"><img src="assets/logos/boston-scientific.png" alt="Boston Scientific" class="m-logo" onerror="this.style.display='none'"> Boston Scientific</span>
+          <span class="m-pill"><img src="assets/logos/itc.svg" alt="ITC Limited" class="m-logo" onerror="this.style.display='none'"> ITC Limited</span>
+        </div>
       </div>
     </div>
 
@@ -3148,10 +3168,9 @@
 
     <!-- BLOGS CAROUSEL -->
     <section id="blogs">
-      <span class="slbl reveal">Insights</span>
-      <h2 class="sttl reveal d1">From Our Blog</h2>
-      <p class="ssub reveal d2">Perspectives on consulting, social impact, and the development sector  -  written by
-        our team.</p>
+      <span class="slbl reveal" style="display:flex;justify-content:center">Insights</span>
+      <h2 class="sttl reveal d1" style="text-align:center">From Our Blog</h2>
+      <p class="ssub reveal d2" style="text-align:center;max-width:none;margin:0 auto">Perspectives on consulting, social impact, and the development sector written by our team.</p>
       <div class="bc-outer reveal d3">
         <div class="bc-track" id="bcTrack">
           <article class="bc reveal">
@@ -3391,7 +3410,7 @@
     <div class="pp">
       <span class="slbl reveal" style="display:flex;justify-content:center">Portfolio</span>
       <h2 class="sttl reveal d1" style="text-align:center">Past Projects</h2>
-      <p class="ssub reveal d2" style="text-align:center;max-width:none;">28+ real-world consulting engagements across India and globally. Hover over any pin to
+      <p class="ssub reveal d2" style="text-align:center;max-width:none;">38+ real-world consulting engagements across India and globally. Hover over any pin to
         see the client.</p>
 
 
@@ -3407,6 +3426,62 @@
         <div class="india-map-layout">
           <!-- Left Column (Cards) -->
           <div class="map-col left-col">
+            <!-- Tech Mahindra Foundation -->
+            <div class="map-card" data-city="wb" data-project="techmahindra">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Tech Mahindra Foundation</h4>
+                <p class="mc-tag">CSR & Education &middot; Kolkata, West Bengal</p>
+              </div>
+            </div>
+            <!-- Neofusion Creative Foundation -->
+            <div class="map-card" data-city="hr" data-project="neofusion">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Neofusion Creative Foundation</h4>
+                <p class="mc-tag">Youth & Empowerment &middot; Gurgaon, Haryana</p>
+              </div>
+            </div>
+            <!-- Crashfree India -->
+            <div class="map-card" data-city="dl" data-project="crashfree">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Crashfree India</h4>
+                <p class="mc-tag">Road Safety & Advocacy &middot; New Delhi, India</p>
+              </div>
+            </div>
+            <!-- Gubbachi -->
+            <div class="map-card" data-city="ka" data-project="gubbachi">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Gubbachi</h4>
+                <p class="mc-tag">Child Education &middot; Bengaluru, India</p>
+              </div>
+            </div>
+            <!-- Indeanta Card -->
+            <div class="map-card" data-city="ka" data-project="indeanta">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Indeanta</h4>
+                <p class="mc-tag">Campus Mobility &middot; Bengaluru, India</p>
+              </div>
+            </div>
+            <!-- Trumio Card -->
+            <div class="map-card" data-city="usa" data-project="trumio">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Trumio</h4>
+                <p class="mc-tag">AI Workplace &middot; San Francisco, USA</p>
+              </div>
+            </div>
+            <!-- CHK Sneakers Card -->
+            <div class="map-card" data-city="ka" data-project="chk">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>CHK Sneakers</h4>
+                <p class="mc-tag">Footwear & D2C &middot; Bengaluru, India</p>
+              </div>
+            </div>
             <!-- Mancrafters Card -->
             <div class="map-card" data-city="dl" data-project="mancrafters">
               <div class="mc-icon">&#128269;</div>
@@ -3453,14 +3528,6 @@
               <div class="mc-content">
                 <h4>Mahila Saksham Foundation</h4>
                 <p class="mc-tag">Women Empowerment &middot; Thane, India</p>
-              </div>
-            </div>
-            <!-- Indeanta Card -->
-            <div class="map-card" data-city="ka" data-project="indeanta">
-              <div class="mc-icon">&#128269;</div>
-              <div class="mc-content">
-                <h4>Indeanta</h4>
-                <p class="mc-tag">Campus Mobility &middot; Bengaluru, India</p>
               </div>
             </div>
             <!-- Flomobility Card -->
@@ -3591,17 +3658,21 @@
               <g class="map-submaps">
                 <!-- USA -->
                 <text x="85" y="555" class="map-submap-label">USA</text>
-                <g class="map-submap-island" data-city="usa" transform="translate(30, 560) scale(1.1)">
+                <g class="map-submap-island" data-city="usa" transform="translate(30, 560) scale(0.05)">
                   <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
-
+                    <path d="M9767 8370 l-55 -50 -25 20 c-25 20 -26 20 -36 2 -26 -48 -43 -197 -36 -309 5 -92 4 -117 -10 -142 -10 -21 -14 -43 -9 -65 9 -49 -3 -76 -40 -91 -37 -16 -52 -31 -57 -59 -5 -24 -97 -65 -358 -160 -101 -37 -195 -74 -208 -83 -32 -21 -71 -89 -93 -164 -11 -34 -33 -79 -50 -100 -16 -21 -30 -40 -30 -43 0 -3 18 -9 40 -12 43 -7 51 -26 28 -64 -10 -16 -9 -23 11 -43 l22 -25 -33 -31 c-18 -18 -75 -53 -125 -77 -73 -36 -105 -46 -151 -48 -43 -2 -74 -11 -120 -36 -37 -19 -59 -37 -55 -44 3 -6 19 -28 35 -48 21 -27 27 -44 23 -59 -11 -33 -204 -228 -265 -267 -30 -20 -86 -65 -125 -102 -70 -67 -186 -143 -238 -156 -18 -4 -34 -1 -45 8 -9 9 -35 18 -56 21 -22 4 -46 13 -54 21 -13 13 -13 18 2 41 11 17 21 60 26 113 10 107 15 120 49 129 55 13 54 50 -4 168 -77 156 -96 -41 -42 -47 -74 -28 -1122 -43 -1470 -21 -998 62 -1967 243 -2867 534 -76 25 -138 43 -138 40 0 -2 11 -21 25 -41 29 -43 30 -50 9 -73 -15 -17 -15 -22 0 -65 22 -64 20 -83 -9 -110 -17 -16 -25 -34 -25 -57 0 -18 -6 -40 -12 -49 -15 -18 -66 -52 -90 -61 -23 -8 -58 28 -58 59 0 20 6 23 41 26 56 4 74 31 40 59 l-24 20 23 24 c23 24 23 25 4 46 -10 11 -60 40 -110 64 -50 24 -104 55 -121 69 l-31 26 -11 -28 c-9 -21 -9 -50 -2 -113 6 -46 11 -109 11 -140 0 -37 5 -59 13 -62 8 -3 6 -9 -8 -20 -20 -15 -20 -16 -1 -47 18 -32 18 -32 -3 -61 -27 -36 -26 -43 4 -63 35 -23 31 -34 -11 -38 -37 -3 -37 -4 -59 -78 -12 -41 -35 -102 -52 -135 -17 -33 -45 -97 -62 -142 -18 -44 -54 -118 -82 -164 -107 -178 -116 -206 -139 -418 -4 -41 -5 -91 -3 -112 9 -61 -25 -164 -70 -215 -54 -62 -58 -97 -17 -186 l33 -72 -18 -111 c-21 -128 -17 -160 27 -242 28 -52 30 -62 20 -97 -13 -49 -1 -82 33 -98 20 -9 28 -8 44 6 17 16 19 16 25 -6 3 -13 6 -38 6 -57 0 -25 -4 -32 -14 -28 -11 5 -17 -5 -22 -38 -10 -72 1 -107 51 -154 25 -23 45 -45 45 -49 0 -4 -11 -25 -25 -46 l-24 -39 28 -56 c16 -31 32 -75 36 -98 3 -23 19 -60 35 -81 16 -22 40 -69 55 -106 23 -58 25 -74 19 -135 l-6 -70 33 -20 c19 -12 60 -28 92 -37 50 -15 65 -25 119 -86 36 -41 81 -79 109 -93 32 -17 49 -32 51 -47 2 -12 19 -32 38 -45 70 -44 86 -62 119 -128 21 -44 33 -85 34 -116 1 -28 7 -51 15 -53 6 -3 12 -16 12 -30 0 -29 -17 -24 265 -71 149 -25 212 -39 218 -50 11 -20 78 -63 311 -197 105 -61 220 -132 256 -158 36 -26 83 -57 105 -68 52 -25 195 -58 315 -71 177 -19 370 -34 376 -29 3 3 6 30 7 58 l2 53 150 -7 c83 -3 166 -10 186 -15 44 -10 149 -110 164 -155 7 -20 29 -43 67 -68 31 -21 68 -53 83 -72 32 -43 75 -147 75 -184 0 -33 40 -92 93 -139 50 -44 166 -111 205 -119 30 -6 37 -2 100 64 41 44 86 79 114 92 43 19 54 20 115 9 64 -10 71 -15 124 -69 30 -32 100 -127 154 -211 58 -90 120 -175 151 -204 58 -55 75 -90 123 -242 36 -117 44 -125 141 -146 36 -8 79 -22 95 -31 17 -9 46 -16 66 -16 21 0 47 -8 62 -20 26 -21 63 -26 85 -11 11 7 11 9 -2 14 -9 4 -16 18 -16 33 0 15 -12 62 -27 105 -24 73 -25 82 -13 120 13 39 13 42 -10 59 l-24 18 32 30 c36 34 38 39 17 69 -14 20 -14 23 5 36 11 7 27 30 35 51 9 20 20 34 26 30 14 -9 48 24 65 64 10 26 18 32 32 28 33 -11 52 3 46 32 l-5 27 73 1 c46 0 84 6 104 17 74 39 164 169 143 208 -12 24 -6 35 31 54 28 15 29 14 40 -20 6 -19 16 -37 21 -40 5 -4 42 10 81 30 40 19 105 42 143 50 66 13 75 13 135 -5 36 -11 83 -20 105 -20 34 0 44 5 68 35 32 40 48 42 112 15 26 -11 49 -20 51 -20 3 0 -7 22 -23 49 -31 56 -28 66 11 51 34 -13 56 -63 56 -130 0 -37 5 -55 20 -70 25 -25 37 -25 75 0 22 14 39 18 71 13 35 -5 44 -2 58 18 23 33 20 46 -15 78 -23 22 -29 34 -24 50 10 31 33 26 74 -18 20 -21 59 -51 88 -65 29 -14 56 -34 62 -43 9 -17 11 -17 30 1 41 37 23 69 -51 91 -35 10 -44 17 -46 39 -4 34 13 56 44 56 32 0 31 17 -2 32 -20 9 -30 9 -45 0 -33 -21 -59 -15 -59 13 0 28 -12 32 -30 10 -21 -26 -78 -19 -111 14 -16 16 -29 33 -29 38 0 4 19 16 43 26 43 17 44 17 109 -7 l65 -25 58 40 c49 33 65 39 112 39 61 0 109 17 137 49 24 27 30 27 44 -4 10 -23 17 -25 72 -25 l60 0 0 30 c0 28 2 30 40 30 22 0 60 5 85 12 38 10 59 10 130 -5 80 -16 89 -21 142 -72 l56 -54 69 35 c53 27 72 42 80 64 10 29 12 30 77 30 72 0 83 -7 124 -72 10 -16 41 -40 70 -54 63 -32 113 -69 126 -93 6 -10 15 -58 20 -107 21 -172 22 -180 32 -161 13 23 46 21 54 -3 3 -11 1 -35 -6 -53 -10 -29 -9 -38 10 -75 34 -67 56 -84 96 -76 28 5 35 3 35 -9 0 -9 15 -28 34 -42 21 -16 33 -32 29 -41 -3 -8 6 -26 20 -39 13 -14 27 -38 30 -54 4 -19 14 -32 29 -36 12 -4 45 -29 72 -55 28 -26 61 -53 74 -59 17 -9 21 -18 17 -32 -6 -19 -5 -20 17 -7 22 12 28 14 55 17 41 4 62 150 52 366 -3 61 -9 87 -25 110 -12 17 -24 44 -28 60 -4 17 -45 92 -92 168 -46 76 -84 140 -84 143 0 2 9 4 20 4 17 0 9 14 -44 84 -77 101 -133 198 -156 274 -15 47 -20 54 -27 37 -4 -11 -8 -44 -8 -72 0 -29 -2 -53 -5 -53 -9 0 -30 86 -30 119 0 16 7 34 15 41 18 15 19 69 4 124 -13 49 6 194 33 248 10 21 18 51 18 67 0 16 5 33 10 36 6 4 9 19 8 33 -2 16 2 26 8 25 7 -1 20 7 29 17 10 11 22 20 27 20 19 0 106 83 112 106 4 13 11 24 16 24 14 0 60 72 60 94 0 11 9 29 20 41 12 12 37 55 58 96 30 61 46 80 87 106 76 47 105 78 105 109 0 32 41 106 83 151 17 18 52 40 79 49 50 16 85 51 69 67 -6 6 -22 -1 -42 -17 -37 -31 -74 -32 -74 -1 0 14 8 21 28 23 22 3 27 8 27 32 0 23 -6 30 -32 40 -31 11 -32 12 -11 20 12 5 27 18 33 29 12 24 31 26 61 9 18 -11 23 -10 44 15 33 37 49 100 34 129 -11 21 -12 21 -24 -9 -13 -30 -13 -30 -63 -20 -42 9 -54 8 -76 -6 -14 -9 -27 -17 -30 -17 -8 0 -28 101 -22 108 4 3 20 -2 36 -11 29 -17 29 -17 74 16 l44 34 -19 29 c-12 19 -17 38 -14 55 8 36 -26 57 -90 56 -28 0 -61 5 -74 12 -22 12 -23 14 -7 23 10 6 29 8 42 5 24 -4 23 -3 -8 24 l-33 29 23 17 23 16 -52 35 c-42 28 -49 36 -36 43 9 5 26 5 41 -1 41 -15 42 8 2 49 -39 40 -44 51 -22 51 26 0 28 20 3 31 -18 8 -33 33 -56 91 -17 43 -31 89 -31 101 0 27 43 93 70 107 26 14 38 -11 22 -43 -18 -38 -10 -103 17 -130 12 -14 21 -30 17 -35 -3 -5 12 -26 34 -47 21 -21 41 -48 44 -61 5 -19 13 -24 36 -24 35 0 38 -13 14 -64 -16 -33 -12 -79 5 -60 5 5 18 67 30 137 27 162 22 190 -48 240 -38 28 -50 43 -55 72 -4 20 -6 38 -4 40 2 2 26 -2 54 -8 56 -13 83 -31 85 -56 2 -35 89 302 89 345 0 9 -12 14 -35 14 l-35 0 0 49 c0 42 7 60 49 123 67 99 100 128 211 188 112 61 146 91 162 142 13 43 15 44 39 22 16 -14 20 -12 50 26 22 27 36 37 43 30 17 -17 24 -12 65 40 40 50 44 73 14 84 -22 9 -28 -1 -14 -18 18 -22 5 -52 -29 -66 -41 -17 -72 -7 -94 31 -10 17 -34 37 -52 45 -31 13 -34 18 -34 59 0 24 5 47 11 51 8 4 2 12 -15 21 -32 17 -33 38 -6 151 23 95 42 137 71 155 11 6 37 35 58 62 31 41 39 61 43 108 5 67 31 106 49 75 18 -33 14 -37 160 120 37 39 59 71 59 86 0 34 -34 71 -80 90 -25 10 -48 28 -58 47 -10 18 -28 32 -45 36 -33 7 -50 37 -93 162 -32 95 -76 151 -117 151 -17 0 -44 -17 -80 -50z" />
+                    <path d="M9619 6582 c-47 -20 -94 -44 -105 -52 -25 -19 -54 -60 -54 -77 0 -24 27 -13 92 35 60 43 166 133 157 132 -2 -1 -43 -18 -90 -38z" />
                   </g>
                 </g>
 
                 <!-- Singapore -->
                 <text x="300" y="590" class="map-submap-label">Singapore</text>
-                <g class="map-submap-island" data-city="singapore" transform="translate(260, 595) scale(0.8)">
+                <g class="map-submap-island" data-city="singapore" transform="translate(265, 600) scale(0.035)">
                   <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
-
+                    <path d="M5305 8075 c-171 -13 -530 -62 -659 -91 -87 -19 -108 -30 -208 -110 -86 -70 -97 -73 -190 -49 -22 6 -34 0 -70 -33 -23 -21 -56 -46 -73 -55 -16 -8 -88 -78 -160 -155 l-130 -139 -130 -6 c-71 -4 -148 -10 -171 -13 -40 -6 -41 -5 -90 55 -53 66 -87 79 -98 38 -6 -27 -44 -47 -89 -47 -18 0 -39 -5 -47 -10 -11 -7 3 -10 45 -10 l60 0 58 -90 c31 -49 57 -100 57 -114 0 -33 9 -33 55 4 40 32 75 39 75 16 0 -10 -13 -16 -37 -18 -26 -2 -38 -8 -38 -18 0 -8 -20 -25 -45 -38 -54 -28 -150 -120 -150 -143 0 -13 -12 -19 -50 -24 -34 -5 -54 -13 -60 -26 -10 -17 -7 -19 37 -16 45 2 48 0 65 -33 9 -19 17 -38 18 -42 0 -16 -43 -7 -67 12 -14 11 -32 20 -40 20 -24 0 -87 -37 -118 -70 -34 -37 -98 -80 -118 -80 -25 0 -47 -36 -47 -74 0 -48 13 -72 50 -91 25 -13 60 -60 60 -80 0 -4 -17 7 -37 24 -39 32 -83 40 -100 19 -6 -7 -13 -55 -15 -106 -6 -107 -9 -111 -97 -162 -53 -31 -62 -40 -70 -75 l-9 -40 -1 33 c-1 38 26 83 76 126 27 23 33 35 31 59 -2 23 -9 33 -28 38 -15 4 -18 7 -8 8 24 1 41 36 49 104 4 32 14 66 23 76 17 18 21 58 8 77 -20 30 -88 44 -109 23 -23 -23 -57 -4 -96 54 -22 32 -47 57 -57 57 -9 0 -42 -27 -72 -60 -62 -68 -83 -77 -66 -30 8 26 7 34 -7 50 -18 20 -18 20 14 9 30 -11 35 -9 66 21 30 29 38 32 71 26 24 -5 51 -21 77 -48 37 -37 43 -40 76 -33 20 4 59 8 87 9 48 1 52 3 106 64 31 35 58 73 60 85 2 17 15 25 59 37 43 12 67 26 105 65 79 78 104 117 104 158 0 32 -4 38 -27 43 -16 4 -36 16 -47 26 -18 19 -29 19 -70 3 -14 -6 -18 -4 -14 6 7 20 73 23 100 5 36 -26 48 -20 48 23 0 22 -4 43 -10 46 -5 3 -10 14 -10 24 0 14 -6 17 -24 14 -38 -8 -45 32 -12 66 50 52 36 84 -102 237 -83 92 -95 101 -142 112 -70 16 -109 15 -225 -7 -132 -25 -187 -47 -325 -129 -156 -91 -290 -193 -319 -241 l-25 -39 -105 -6 c-73 -5 -122 -13 -156 -27 -27 -12 -79 -27 -115 -34 -94 -18 -149 -51 -176 -106 -12 -24 -43 -116 -68 -204 -35 -118 -54 -167 -74 -188 -27 -29 -77 -47 -128 -47 -17 0 -36 -6 -41 -12 -23 -31 -43 -142 -43 -240 0 -88 -4 -116 -31 -195 -25 -76 -36 -95 -64 -114 -44 -30 -48 -51 -20 -92 12 -19 26 -46 32 -62 l9 -28 28 27 c16 14 39 26 52 26 17 0 29 10 42 36 14 28 21 34 28 23 4 -8 8 -23 9 -34 0 -15 8 -21 32 -23 20 -2 37 -11 43 -23 14 -26 23 -24 59 11 23 24 32 27 38 16 4 -7 25 -32 45 -55 33 -35 41 -39 62 -31 31 11 46 56 48 143 2 41 6 66 13 64 5 -2 9 -15 8 -28 -4 -45 8 -88 32 -118 15 -17 23 -36 19 -45 -8 -20 -24 -11 -24 15 0 22 -9 24 -34 6 -19 -14 -23 -44 -12 -92 6 -27 5 -28 -5 -7 -14 26 -29 29 -30 5 0 -16 -2 -15 -10 2 -7 13 -29 25 -62 34 -105 27 -111 27 -145 -15 -29 -35 -30 -38 -15 -60 9 -14 25 -24 39 -24 16 0 22 -4 18 -15 -3 -8 3 -30 15 -48 15 -24 21 -51 21 -88 0 -87 -15 -86 -28 2 -16 101 -18 105 -52 119 -32 13 -50 7 -50 -18 0 -9 -14 -23 -31 -31 -36 -16 -50 -8 -20 11 12 7 21 23 21 35 0 12 5 25 10 28 14 9 13 35 -2 35 -7 0 -24 11 -38 25 l-26 25 -37 -26 c-20 -13 -37 -31 -37 -39 0 -9 -10 -15 -24 -15 -13 0 -26 -7 -30 -15 -4 -11 -20 -15 -55 -15 -98 0 -102 18 -35 151 25 51 44 101 42 115 -2 18 -21 -10 -77 -112 -56 -100 -81 -136 -98 -140 -38 -10 -52 -38 -39 -79 11 -36 20 -43 31 -25 5 8 52 4 63 -6 2 -1 -6 -12 -17 -23 -22 -22 -27 -56 -12 -80 6 -9 11 -10 15 -2 4 6 12 11 17 11 6 0 -2 -11 -17 -23 l-28 -24 23 -31 c13 -18 31 -32 43 -32 15 0 18 -4 12 -17 -8 -19 -8 -43 -2 -78 2 -13 -3 -20 -12 -20 -11 0 -16 13 -18 47 -2 35 -8 48 -21 53 -11 3 -21 15 -24 25 -4 16 -14 20 -51 20 -27 0 -46 5 -46 11 0 6 -9 9 -20 6 -11 -3 -22 -2 -24 2 -5 8 17 79 36 115 22 44 -12 -2 -77 -103 -36 -57 -64 -109 -61 -117 3 -9 -7 -15 -32 -19 -20 -4 -42 -8 -47 -10 -6 -1 -19 -56 -29 -121 l-18 -119 -83 -135 c-124 -203 -185 -362 -301 -784 l-66 -240 22 -16 c12 -9 85 -55 163 -102 181 -109 318 -155 329 -110 11 42 -15 83 -126 199 l-114 119 45 63 45 62 -62 57 c-35 31 -69 61 -76 65 -11 6 -9 18 12 59 l26 50 31 -29 c18 -16 81 -74 141 -127 l109 -97 72 71 72 72 22 -31 22 -31 -71 -80 -70 -81 37 -44 c20 -25 40 -45 42 -45 3 0 40 34 82 76 71 70 78 75 98 63 11 -8 21 -21 21 -29 0 -8 -46 -61 -102 -117 l-101 -102 26 -40 c28 -41 41 -49 52 -31 3 6 13 10 22 10 13 0 12 -5 -7 -25 -31 -34 -19 -43 20 -15 26 19 34 20 41 9 12 -20 11 -32 -7 -57 -15 -22 -13 -25 72 -118 l87 -95 48 47 47 46 17 -25 c16 -25 16 -28 -6 -67 -15 -27 -19 -44 -13 -50 12 -12 260 196 258 215 -1 7 -27 46 -58 87 -55 73 -56 76 -56 141 l0 67 50 0 50 0 0 -57 c0 -56 3 -61 60 -133 33 -41 63 -76 67 -77 5 -1 31 10 58 25 l50 27 1 118 c1 111 11 156 29 127 4 -6 10 -58 12 -114 l6 -103 78 -6 c57 -5 90 -2 123 9 l46 16 0 67 c0 78 10 93 76 110 47 12 74 6 74 -16 0 -8 20 -38 45 -66 25 -29 45 -62 45 -74 0 -22 4 -23 70 -23 l70 0 20 40 c11 21 20 50 20 63 0 18 13 31 64 59 l63 35 64 -45 c35 -24 85 -64 111 -88 44 -41 157 -119 162 -112 26 34 36 58 36 85 l0 33 -60 0 c-73 0 -76 10 -20 65 42 41 52 79 28 104 -11 10 -10 11 3 6 11 -4 24 4 39 24 20 29 50 42 50 22 0 -5 -12 -23 -26 -40 l-26 -31 17 -55 c15 -53 17 -55 50 -55 28 0 35 -4 35 -20 0 -13 -10 -24 -25 -30 -22 -8 -23 -12 -14 -39 6 -16 19 -37 29 -46 22 -20 112 -45 165 -45 29 0 44 -5 53 -20 23 -37 95 -21 106 24 6 23 9 24 35 15 27 -9 29 -13 19 -34 -30 -65 29 -113 149 -121 67 -5 83 -3 109 14 17 11 37 34 45 50 13 30 14 30 90 29 76 -2 76 -2 62 -24 -9 -14 -12 -31 -8 -45 10 -31 96 -148 109 -148 6 0 38 -26 71 -59 40 -39 79 -66 117 -80 49 -20 59 -28 73 -64 23 -60 75 -108 155 -147 53 -26 70 -39 70 -54 0 -66 130 -123 256 -113 80 7 84 4 84 -57 0 -36 34 -76 65 -76 10 0 54 -37 98 -82 73 -76 81 -81 85 -59 2 13 -13 71 -33 128 -20 58 -35 106 -33 109 3 2 36 -34 74 -81 60 -74 73 -85 101 -85 22 0 44 10 66 30 31 27 42 30 100 30 70 0 76 -4 86 -54 7 -33 15 -38 119 -80 75 -31 88 -27 164 41 29 27 68 59 86 71 17 13 32 30 32 39 0 11 5 13 18 7 9 -5 54 -10 100 -12 63 -3 82 -7 82 -18 0 -11 -19 -14 -91 -14 -68 0 -90 -3 -87 -12 5 -13 31 -20 134 -36 58 -9 104 -35 104 -58 0 -17 44 -64 60 -64 7 0 9 13 4 36 -11 57 15 39 63 -46 30 -53 44 -70 48 -58 4 9 2 26 -4 37 -10 18 -7 22 19 36 16 8 30 19 30 23 -1 4 -9 46 -19 94 -21 102 -17 114 44 123 39 6 41 5 63 -35 26 -45 103 -100 143 -100 19 0 49 25 125 103 56 56 114 122 131 147 17 25 40 54 52 64 12 11 32 37 43 58 16 27 28 38 45 38 24 0 76 22 103 45 8 6 40 20 70 29 30 10 71 30 90 45 19 15 76 44 126 65 l91 38 102 -15 c101 -15 102 -15 174 9 40 14 133 39 206 55 113 26 144 37 193 71 114 77 291 124 518 138 124 8 140 11 191 39 50 27 70 32 155 37 65 3 150 18 248 42 148 37 150 37 194 85 25 26 68 60 96 76 28 17 94 65 146 109 108 90 148 113 178 105 12 -3 52 0 89 7 87 15 152 63 238 177 57 75 65 93 104 225 24 78 62 197 86 263 31 87 46 149 55 225 7 61 25 142 42 194 27 77 30 98 26 170 -4 78 -6 85 -45 136 l-41 54 17 35 c30 59 43 109 37 139 -6 23 -19 32 -104 66 -98 40 -153 48 -216 31 -33 -9 -41 0 -57 62 -9 35 -16 43 -41 48 -46 10 -155 -14 -188 -41 -15 -13 -33 -24 -40 -24 -9 0 -9 -4 -3 -12 18 -23 24 -77 9 -85 -7 -4 -15 -18 -18 -30 -5 -17 -2 -23 11 -23 39 0 57 -53 21 -63 -12 -3 -20 0 -20 8 0 18 -26 26 -58 19 -15 -4 -63 -24 -108 -44 -91 -42 -146 -56 -253 -66 -41 -3 -92 -15 -115 -25 -61 -28 -100 -25 -125 9 -23 32 -63 47 -184 66 -45 8 -104 24 -129 36 -48 22 -150 122 -184 179 -12 21 -28 31 -53 36 -20 4 -47 13 -60 22 -18 12 -44 14 -112 11 -81 -4 -91 -7 -119 -33 -16 -16 -33 -38 -36 -49 -3 -12 -17 -37 -31 -57 -29 -44 -89 -64 -144 -49 -79 23 -125 2 -181 -84 l-28 -41 36 -36 c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10 -34 -22 -11 -15 -16 -17 -16 -8 1 22 19 41 76 79 34 23 59 49 73 77 28 58 53 72 152 85 93 12 122 33 135 95 4 24 18 40 54 63 27 18 52 42 56 54 4 12 14 33 23 46 9 14 21 50 27 80 11 54 11 58 -19 111 -17 30 -59 88 -95 128 -79 90 -87 122 -48 207 14 32 26 70 26 86 0 27 -3 29 -39 29 -21 0 -65 3 -98 6 l-61 7 -35 -56 c-20 -31 -50 -63 -66 -72 -44 -22 -71 -81 -71 -156 l0 -61 -97 7 -98 7 -34 -36 c-22 -22 -48 -38 -70 -42 -20 -4 -46 -16 -58 -27 -20 -18 -23 -30 -23 -97 0 -85 -9 -100 -80 -135 -19 -9 -50 -33 -68 -53 l-33 -37 15 39 c9 21 16 40 16 41 0 2 20 12 43 23 63 30 78 58 75 140 -2 52 1 75 15 95 24 36 199 124 266 133 64 8 77 23 57 62 -22 42 -82 89 -141 111 -78 29 -238 46 -309 32 -33 -6 -62 -8 -65 -4 -3 5 -27 40 -52 79 -55 83 -119 139 -170 149 -40 7 -178 -10 -216 -28 -16 -7 -28 -27 -41 -71 -11 -34 -38 -90 -61 -125 -33 -52 -58 -76 -128 -122 -48 -32 -99 -61 -114 -64 -18 -4 -31 -16 -38 -35 -5 -16 -28 -41 -50 -56 -37 -24 -46 -26 -98 -20 -32 4 -71 8 -88 9 l-30 2 -5 -78 c-5 -72 -22 -106 -28 -55 -7 59 -12 70 -27 58 -13 -11 -15 -7 -15 23 0 27 10 46 45 85 63 70 62 73 -37 87 -26 3 -57 15 -70 26 l-23 20 45 -4 c72 -7 149 -32 178 -60 35 -32 87 -58 104 -52 7 3 23 23 36 45 12 22 27 40 33 40 6 0 43 15 83 33 92 43 130 94 140 189 9 92 93 263 148 301 49 34 79 95 68 140 -10 46 -118 187 -143 187 -36 0 -207 -153 -207 -186 0 -33 -10 -54 -26 -54 -17 0 -18 14 -3 42 13 23 -1 38 -37 38 -44 0 -53 -19 -45 -97 7 -71 6 -72 -24 -96 -17 -13 -41 -28 -54 -32 -22 -7 -22 -5 10 41 32 47 34 53 31 125 -3 73 -2 77 24 94 24 16 28 16 36 2 8 -14 16 -13 71 10 73 32 108 58 155 119 29 39 33 51 27 80 -3 19 -19 49 -34 66 l-28 31 -48 -16 c-27 -10 -70 -17 -96 -17 l-47 0 5 -38 c7 -52 -13 -69 -65 -54 -20 6 -60 8 -88 5 -38 -4 -58 -1 -77 12 -23 15 -28 15 -56 1 -40 -21 -75 -21 -67 0 3 9 6 18 6 21 0 3 7 0 15 -7 13 -11 20 -9 40 10 24 22 27 23 94 11 38 -7 89 -10 113 -6 43 6 43 7 43 46 0 61 20 74 113 70 62 -2 81 1 91 13 12 14 10 22 -12 55 -44 66 -108 110 -204 140 -48 15 -98 33 -110 39 -18 10 -28 8 -59 -10 -27 -16 -36 -18 -32 -8 3 8 9 23 13 32 10 24 -28 44 -113 59 -54 9 -78 9 -97 1 -21 -10 -30 -7 -72 27 -44 34 -131 73 -157 70 -6 -1 -87 -7 -181 -14z" />
+                    <path d="M8453 6960 c-12 -5 -25 -21 -29 -35 -6 -23 -10 -25 -65 -25 -52 0 -59 -2 -59 -20 0 -11 20 -52 45 -91 42 -65 51 -73 118 -103 40 -18 89 -39 110 -46 22 -7 69 -33 105 -58 37 -25 94 -54 127 -64 78 -25 96 -37 120 -84 11 -22 25 -42 30 -46 18 -14 35 -8 35 10 0 27 25 58 35 43 4 -7 3 -17 -3 -23 -14 -14 49 -129 79 -145 13 -6 29 -23 36 -37 16 -30 14 -29 85 -15 220 44 278 63 278 95 0 7 10 16 23 19 20 7 43 24 84 67 15 15 18 15 46 -3 28 -16 45 -18 161 -12 167 7 194 26 146 98 -14 21 -20 47 -20 88 0 51 -4 62 -28 87 -26 26 -50 35 -133 54 -16 3 -40 -2 -63 -14 -29 -14 -36 -15 -32 -4 6 17 2 17 -46 3 -25 -6 -38 -16 -38 -27 0 -17 -67 -62 -92 -62 -6 0 5 18 27 40 21 22 36 42 33 46 -4 3 -116 8 -250 10 -134 2 -258 6 -277 10 -24 4 -58 27 -115 80 -44 41 -86 74 -92 74 -6 0 -38 12 -70 26 -149 67 -252 88 -311 64z" />
+                    <path d="M8071 6598 c0 -18 8 -53 18 -78 16 -39 23 -46 56 -52 21 -5 40 -7 42 -5 2 3 -2 26 -9 52 -10 35 -23 56 -54 81 -23 19 -44 34 -48 34 -3 0 -6 -15 -5 -32z" />
+                    <path d="M8804 6413 c2 -10 7 -33 11 -51 5 -26 23 -44 83 -90 135 -100 142 -102 142 -34 0 56 -20 82 -64 82 -30 0 -86 26 -86 39 0 5 -13 23 -29 40 -32 34 -65 42 -57 14z" />
                   </g>
                 </g>
 
@@ -3647,6 +3718,54 @@
 
           <!-- Right Column (Cards) -->
           <div class="map-col right-col">
+            <!-- Tata Trusts -->
+            <div class="map-card" data-city="mh" data-project="tatatrusts">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Tata Trusts</h4>
+                <p class="mc-tag">Philanthropy & Social Impact &middot; Mumbai, Maharashtra</p>
+              </div>
+            </div>
+            <!-- Fragaria -->
+            <div class="map-card" data-city="ka" data-project="fragaria">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Fragaria</h4>
+                <p class="mc-tag">Food & Beverage Tech &middot; Bengaluru, India</p>
+              </div>
+            </div>
+            <!-- Labor Naka -->
+            <div class="map-card" data-city="mh" data-project="labornaka">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Labor Naka</h4>
+                <p class="mc-tag">Unorganised Labour Welfare &middot; India</p>
+              </div>
+            </div>
+            <!-- Deepranjani Card -->
+            <div class="map-card" data-city="wb" data-project="deepranjani">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Deepranjani Foundation</h4>
+                <p class="mc-tag">Social Welfare &middot; West Bengal, India</p>
+              </div>
+            </div>
+            <!-- ChefScripts Card -->
+            <div class="map-card" data-city="ka" data-project="chefscripts">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>ChefScripts</h4>
+                <p class="mc-tag">Culinary Tech &middot; Bengaluru, India</p>
+              </div>
+            </div>
+            <!-- Guntur Impact Fund Card -->
+            <div class="map-card" data-city="ap" data-project="gunturfund">
+              <div class="mc-icon">&#128269;</div>
+              <div class="mc-content">
+                <h4>Guntur Impact Fund</h4>
+                <p class="mc-tag">NGO for Employment &middot; Guntur, India</p>
+              </div>
+            </div>
             <!-- 1.5 Degree -->
             <div class="map-card" data-city="dl" data-project="degreep5">
               <div class="mc-icon">&#128269;</div>
@@ -3717,14 +3836,6 @@
               <div class="mc-content">
                 <h4>Cry India</h4>
                 <p class="mc-tag">NGO for Children &middot; Hyderabad, India</p>
-              </div>
-            </div>
-            <!-- Guntur Impact Fund -->
-            <div class="map-card" data-city="ap" data-project="gunturfund">
-              <div class="mc-icon">&#128269;</div>
-              <div class="mc-content">
-                <h4>Guntur Impact Fund</h4>
-                <p class="mc-tag">NGO for Employment &middot; Guntur, India</p>
               </div>
             </div>
             <!-- Kakinada Seaport -->
