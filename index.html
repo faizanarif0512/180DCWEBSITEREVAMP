@@ -408,12 +408,159 @@
       transition-delay: .1s
     }
 
-    .d2 {
-      transition-delay: .2s
-    }
-
     .d3 {
       transition-delay: .3s
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════
+       MOBILE OPTIMIZED ERROR & TOAST SYSTEM
+       ═══════════════════════════════════════════════════════════════════ */
+    .toast-container {
+      position: fixed;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    /* Desktop View Toast (Top Right) */
+    @media (min-width: 769px) {
+      .toast-container {
+        top: 24px;
+        right: 24px;
+        max-width: 380px;
+        width: 100%;
+      }
+    }
+
+    /* Mobile View Toast (Bottom Floating Bar for easy thumb reach) */
+    @media (max-width: 768px) {
+      .toast-container {
+        bottom: 24px;
+        left: 16px;
+        right: 16px;
+        width: calc(100% - 32px);
+        max-width: 100%;
+      }
+    }
+
+    .toast-card {
+      pointer-events: auto;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: rgba(14, 22, 19, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+      color: var(--w);
+      font-size: 13.5px;
+      line-height: 1.5;
+      transform: translateY(30px) scale(0.95);
+      opacity: 0;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .toast-card.show {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    .toast-card.error {
+      border-left: 4px solid #ef4444;
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.14), rgba(14, 22, 19, 0.96));
+    }
+
+    .toast-card.success {
+      border-left: 4px solid var(--gl);
+      background: linear-gradient(135deg, rgba(134, 188, 42, 0.14), rgba(14, 22, 19, 0.96));
+    }
+
+    .toast-card.warning {
+      border-left: 4px solid #f59e0b;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(14, 22, 19, 0.96));
+    }
+
+    .toast-icon {
+      font-size: 18px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .toast-content {
+      flex: 1;
+    }
+
+    .toast-title {
+      font-weight: 600;
+      font-size: 13.5px;
+      margin-bottom: 2px;
+    }
+
+    .toast-card.error .toast-title { color: #f87171; }
+    .toast-card.success .toast-title { color: var(--gl); }
+    .toast-card.warning .toast-title { color: #fbbf24; }
+
+    .toast-desc {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .toast-close {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      padding: 0 4px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .toast-close:hover { color: #fff; }
+
+    /* Inline Mobile Form Error Styles */
+    .fg.has-error input,
+    .fg.has-error select,
+    .fg.has-error textarea {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+      background: rgba(239, 68, 68, 0.05) !important;
+    }
+
+    .field-error-msg {
+      display: none;
+      font-size: 11.5px;
+      color: #f87171;
+      margin-top: 5px;
+      align-items: center;
+      gap: 4px;
+      font-weight: 400;
+      animation: fadeInError 0.25s ease forwards;
+    }
+
+    .fg.has-error .field-error-msg {
+      display: flex;
+    }
+
+    @keyframes fadeInError {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fieldShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .fg.shake {
+      animation: fieldShake 0.4s ease;
     }
 
     /* ──────────────────────────────────────────────
@@ -5124,23 +5271,45 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="cf reveal d1">
           <h3>Send Us a Message</h3>
-          <form id="contactForm" onsubmit="handleForm(event)">
+          <form id="contactForm" onsubmit="handleForm(event)" novalidate>
             <div class="fr">
-              <div class="fg"><label>First Name</label><input type="text" placeholder="Arjun" required /></div>
-              <div class="fg"><label>Last Name</label><input type="text" placeholder="Mehta" required /></div>
+              <div class="fg">
+                <label>First Name</label>
+                <input type="text" id="fnInput" placeholder="Arjun" required />
+                <div class="field-error-msg">⚠️ First name is required.</div>
+              </div>
+              <div class="fg">
+                <label>Last Name</label>
+                <input type="text" id="lnInput" placeholder="Mehta" required />
+                <div class="field-error-msg">⚠️ Last name is required.</div>
+              </div>
             </div>
-            <div class="fg"><label>Email</label><input type="email" placeholder="you@organisation.org" required /></div>
-            <div class="fg"><label>Organisation</label><input type="text" placeholder="NGO / Company name" /></div>
-            <div class="fg"><label>Type of Inquiry</label><select>
+            <div class="fg">
+              <label>Email</label>
+              <input type="email" id="emailInput" placeholder="you@organisation.org" required />
+              <div class="field-error-msg">⚠️ Please enter a valid email address.</div>
+            </div>
+            <div class="fg">
+              <label>Organisation</label>
+              <input type="text" placeholder="NGO / Company name" />
+            </div>
+            <div class="fg">
+              <label>Type of Inquiry</label>
+              <select id="inquirySelect" required>
                 <option value="">Select one</option>
                 <option>Become a Client</option>
                 <option>Join the Team</option>
                 <option>Partnership / Sponsorship</option>
                 <option>Media / Press</option>
                 <option>Other</option>
-              </select></div>
-            <div class="fg"><label>Message</label><textarea
-                placeholder="Tell us about your organisation and how we can help..."></textarea></div>
+              </select>
+              <div class="field-error-msg">⚠️ Please select an inquiry type.</div>
+            </div>
+            <div class="fg">
+              <label>Message</label>
+              <textarea id="msgInput" placeholder="Tell us about your organisation and how we can help..." required></textarea>
+              <div class="field-error-msg">⚠️ Message cannot be empty.</div>
+            </div>
             <button type="submit" class="bp" style="width:100%;justify-content:center">Send Message &rarr;</button>
           </form>
           <div class="fs-msg" id="formSuccess">&#10003; Thank you! Your message has been received. We&rsquo;ll respond
@@ -5745,9 +5914,108 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       initInteractiveMap();
     }, 150);
 
+    /* ── MOBILE OPTIMIZED TOAST & ERROR SYSTEM */
+    function showToast(message, title = "Alert", type = "error", duration = 4500) {
+      let container = document.getElementById("toastContainer");
+      if (!container) {
+        container = document.createElement("div");
+        container.id = "toastContainer";
+        container.className = "toast-container";
+        document.body.appendChild(container);
+      }
 
-    function handleForm(e) { e.preventDefault(); document.getElementById("contactForm").style.display = "none"; document.getElementById("formSuccess").style.display = "block" }
+      const icons = {
+        error: "⚠️",
+        success: "✓",
+        warning: "🔔"
+      };
+
+      const card = document.createElement("div");
+      card.className = `toast-card ${type}`;
+      card.innerHTML = `
+        <div class="toast-icon">${icons[type] || 'ℹ️'}</div>
+        <div class="toast-content">
+          <div class="toast-title">${title}</div>
+          <div class="toast-desc">${message}</div>
+        </div>
+        <button class="toast-close" onclick="this.parentElement.remove()">✕</button>
+      `;
+
+      container.appendChild(card);
+
+      requestAnimationFrame(() => {
+        card.classList.add("show");
+      });
+
+      if (duration > 0) {
+        setTimeout(() => {
+          card.classList.remove("show");
+          setTimeout(() => card.remove(), 350);
+        }, duration);
+      }
+    }
+
+    /* Global JavaScript Mobile Error Listener */
+    window.addEventListener("error", function (e) {
+      if (window.innerWidth <= 768) {
+        showToast("A minor layout script issue was handled smoothly.", "Mobile View Handler", "warning", 4000);
+      }
+    });
+
+    /* Form Validation Handler with Mobile Optimization */
+    function handleForm(e) {
+      e.preventDefault();
+      const form = document.getElementById("contactForm");
+      if (!form) return;
+
+      const requiredInputs = form.querySelectorAll("[required]");
+      let hasError = false;
+      let firstInvalidEl = null;
+
+      requiredInputs.forEach(input => {
+        const fg = input.closest(".fg");
+        if (fg) {
+          fg.classList.remove("has-error", "shake");
+        }
+
+        let isInvalid = false;
+        if (!input.value.trim()) {
+          isInvalid = true;
+        } else if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+          isInvalid = true;
+        }
+
+        if (isInvalid) {
+          hasError = true;
+          if (fg) {
+            fg.classList.add("has-error", "shake");
+            setTimeout(() => fg.classList.remove("shake"), 450);
+          }
+          if (!firstInvalidEl) firstInvalidEl = input;
+        }
+      });
+
+      if (hasError) {
+        showToast(
+          "Please fill in all highlighted fields before submitting.",
+          "Validation Error",
+          "error",
+          4500
+        );
+
+        if (firstInvalidEl) {
+          firstInvalidEl.focus();
+          firstInvalidEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        return;
+      }
+
+      form.style.display = "none";
+      document.getElementById("formSuccess").style.display = "block";
+      showToast("Thank you! Your message has been successfully submitted.", "Message Sent", "success", 5000);
+    }
   </script>
+  <div id="toastContainer" class="toast-container"></div>
 </body>
 
 </html>
