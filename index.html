@@ -248,20 +248,28 @@
     }
 
     .mob-menu {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      right: 0;
+      z-index: 499;
       display: flex;
       flex-direction: column;
-      background: rgba(14, 22, 19, 0.95);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid var(--bdr);
+      background: rgba(14, 22, 19, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--bdr);
       padding: 0 24px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height .4s cubic-bezier(.4, 0, .2, 1), padding .4s ease, border-color .4s ease
+      transition: max-height .4s cubic-bezier(.4, 0, .2, 1), padding .4s ease, border-color .4s ease;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
     }
 
     .mob-menu.open {
       max-height: 500px;
-      padding: 16px 24px 24px
+      padding: 16px 24px 24px;
+      border-top: 1px solid var(--bdr);
     }
 
     .mob-menu button,
@@ -3089,21 +3097,8 @@
         white-space: nowrap;
       }
 
-      /* Mobile Menu Row for Side-by-Side Services & Projects */
-      .mob-menu-row {
-        display: flex;
-        gap: 10px;
-        width: 100%;
-        border-bottom: 1px solid var(--bdr);
-      }
-
-      .mob-menu-row button {
-        flex: 1;
-        text-align: center;
-        border-bottom: none !important;
-        padding: 12px 0;
-        font-weight: 600;
-        color: var(--gl);
+      .mob-menu {
+        top: 62px;
       }
 
       /* Hero Side-by-Side CTAs in Mobile */
@@ -3226,10 +3221,8 @@
   </nav>
   <div class="mob-menu" id="mobMenu">
     <button onclick="goto('home');closeMob()">Home</button>
-    <div class="mob-menu-row">
-      <button onclick="goto('services');closeMob()">Services</button>
-      <button onclick="goto('projects');closeMob()">Projects</button>
-    </div>
+    <button onclick="goto('services');closeMob()">Services</button>
+    <button onclick="goto('projects');closeMob()">Projects</button>
     <button onclick="goto('team');closeMob()">Team</button>
     <button onclick="goto('testimonials');closeMob()">Testimonials</button>
     <button onclick="goto('contact');closeMob()">Contact Us</button>
