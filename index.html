@@ -2987,7 +2987,7 @@
       }
     }
 
-    /* RESPONSIVE */
+    /* RESPONSIVE & MOBILE OPTIMIZATIONS ACROSS ALL TABS */
     @media(max-width:1024px) {
       .sc-grid {
         grid-template-columns: repeat(2, 1fr)
@@ -2995,9 +2995,15 @@
     }
 
     @media(max-width:900px) {
+      html, body {
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100% !important;
+      }
+
       #hero {
         grid-template-columns: 1fr;
-        padding: 90px 18px 48px
+        padding: 84px 16px 40px;
       }
 
       .h-right {
@@ -3010,11 +3016,19 @@
         right: 0
       }
 
+      .h-h1 {
+        font-size: clamp(24px, 5.5vw, 34px) !important;
+        line-height: 1.25 !important;
+      }
+
+      .snum, .snum .ctr {
+        font-size: clamp(34px, 8vw, 46px) !important;
+      }
+
       .h-stats {
         grid-template-columns: repeat(2, 1fr)
       }
 
-      .three-grid,
       .proj-grid,
       .dir-grid,
       .cp-grid,
@@ -3043,15 +3057,16 @@
       }
 
       .tlt {
-        grid-template-columns: repeat(2, 1fr)
-      }
-
-      .test-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
 
       .tlt::before {
         display: none
+      }
+
+      .test-grid {
+        grid-template-columns: 1fr
       }
 
       .bc {
@@ -3101,7 +3116,7 @@
         top: 62px;
       }
 
-      /* Hero Side-by-Side CTAs in Mobile */
+      /* Hero Side-by-Side CTAs on Home Page in Mobile */
       .h-ctas {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
@@ -3119,7 +3134,7 @@
         white-space: nowrap !important;
       }
 
-      /* Three Grid Cards Side-by-Side in Mobile */
+      /* Three Grid Cards Side-by-Side on Home Page in Mobile */
       .three-grid {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
@@ -3138,6 +3153,113 @@
         font-size: 14.5px;
       }
 
+      /* Projects Page Interactive Map Mobile Layout */
+      .india-map-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+        margin-top: 16px !important;
+      }
+
+      .map-canvas-container {
+        order: 1 !important;
+        width: 100% !important;
+        height: 320px !important;
+        min-height: 280px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        border-radius: 12px !important;
+      }
+
+      .map-svg-element {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 300px !important;
+      }
+
+      .map-col {
+        order: 2 !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 240px !important;
+        direction: ltr !important;
+        padding: 6px !important;
+        box-sizing: border-box !important;
+        background: rgba(255, 255, 255, 0.01) !important;
+        border: 1px solid var(--bdr) !important;
+        border-radius: 8px !important;
+      }
+
+      .map-col.left-col { order: 2 !important; }
+      .map-col.right-col { order: 3 !important; }
+
+      .map-card, .submap-card {
+        padding: 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Executive Directors & Org Structure Mobile Layout */
+      .org-row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+      }
+
+      .org-row .on {
+        padding: 10px 8px !important;
+        text-align: center !important;
+      }
+
+      .org-row .on h4 {
+        font-size: 12px !important;
+      }
+
+      .org-line {
+        display: none !important;
+      }
+
+      /* Award Card Mobile Layout */
+      .award-card-inner {
+        flex-direction: column-reverse !important;
+        text-align: center !important;
+        gap: 20px !important;
+        align-items: center !important;
+        padding: 24px 16px !important;
+      }
+
+      .award-card-img {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+      .award-card-img img {
+        max-width: 220px !important;
+        height: auto !important;
+      }
+
+      .award-stats {
+        justify-content: center !important;
+      }
+
+      /* Contact Form Mobile Layout */
+      .cp-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+
+      .cf {
+        padding: 20px 16px !important;
+        border-radius: 12px !important;
+      }
+
+      .fr {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+      }
+
       .sec,
       .sp,
       .pp,
@@ -3147,8 +3269,8 @@
       .three,
       .tls,
       .fqs {
-        padding-left: 18px;
-        padding-right: 18px
+        padding-left: 16px !important;
+        padding-right: 16px !important;
       }
 
       #companies,
@@ -3157,12 +3279,8 @@
       #award-section,
       .mq,
       .cta {
-        padding-left: 18px;
-        padding-right: 18px
-      }
-
-      .fr {
-        grid-template-columns: 1fr
+        padding-left: 16px !important;
+        padding-right: 16px !important;
       }
     }
 
@@ -3172,7 +3290,7 @@
       }
 
       .fg2 {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr !important;
       }
 
       .ac-grid {
@@ -3185,6 +3303,26 @@
 
       .dir-grid {
         grid-template-columns: 1fr
+      }
+
+      .org-row {
+        grid-template-columns: 1fr !important;
+      }
+
+      .tlt {
+        grid-template-columns: 1fr !important;
+      }
+
+      .three-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .three-grid .tcard:nth-child(3) {
+        grid-column: span 1 !important;
+      }
+
+      .h-ctas {
+        grid-template-columns: 1fr !important;
       }
     }
   </style>
