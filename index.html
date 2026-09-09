@@ -78,6 +78,392 @@
       --tr: .32s cubic-bezier(.4, 0, .2, 1)
     }
 
+    /* ═══════════════════════════════════════════════════════════════════
+       LIGHT MODE  -  toggled by adding class="light" on <html>
+       Greens stay vivid; backgrounds flip to clean whites/pale greens;
+       text goes dark charcoal for readability.
+       ═══════════════════════════════════════════════════════════════════ */
+    html.light {
+      --g: #006b30;
+      --gm: #005a27;
+      --gd: #cce8d6;
+      --gl: #5a9a00;
+      --gp: #e8f5e0;
+      --k: #f4f8f5;
+      --k2: #eaf2ec;
+      --k3: #deeee4;
+      --w: #1a2a1e;
+      --mut: #4a6655;
+      --bdr: rgba(0, 107, 48, .18)
+    }
+
+    /* Light mode specific overrides that can't be done via CSS vars alone */
+    html.light body { color: var(--w) }
+
+    html.light nav.scrolled {
+      background: rgba(244, 248, 245, .92) !important;
+      box-shadow: 0 1px 0 rgba(0, 107, 48, .15)
+    }
+
+    html.light .nav-tab {
+      color: rgba(26, 42, 30, .6)
+    }
+
+    html.light .mob-menu {
+      background: rgba(234, 242, 236, 0.98)
+    }
+
+    html.light .mob-menu button,
+    html.light .mob-menu a {
+      color: rgba(26, 42, 30, .75);
+      border-bottom-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .h-h1,
+    html.light .h-desc,
+    html.light .h-tagline { color: var(--w) }
+
+    html.light .h-bg svg line,
+    html.light .h-bg svg circle { stroke: rgba(0, 107, 48, .08) }
+
+    html.light .h-why {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .2)
+    }
+
+    html.light .h-why-a { color: rgba(26, 42, 30, .65) }
+    html.light .h-why-a em { color: rgba(26, 42, 30, .5) }
+
+    html.light .h-stats { border-top-color: rgba(26, 42, 30, .12) }
+
+    html.light .stat+.stat { border-left-color: rgba(0, 107, 48, .2) }
+
+    html.light .snum,
+    html.light .snum .ctr { text-shadow: 0 0 30px rgba(0, 107, 48, .25) }
+
+    html.light .slbls { color: rgba(26, 42, 30, .55) }
+
+    html.light .h-panel {
+      background: rgba(255, 255, 255, .6);
+      border-color: rgba(0, 107, 48, .25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .1)
+    }
+
+    html.light .h-stat-row { border-bottom-color: rgba(26, 42, 30, .08) }
+
+    html.light .h-stat-icon {
+      background: rgba(0, 107, 48, .1);
+      border-color: rgba(0, 107, 48, .2)
+    }
+
+    html.light .h-stat-lbl { color: rgba(26, 42, 30, .5) }
+
+    html.light .h-panel-bar { background: rgba(26, 42, 30, .08) }
+
+    html.light .mq {
+      background: rgba(255, 255, 255, .5);
+      border-color: rgba(0, 107, 48, .3)
+    }
+
+    html.light .m-pill {
+      background: rgba(255, 255, 255, .8);
+      border-color: rgba(0, 107, 48, .15);
+      color: rgba(26, 42, 30, .9)
+    }
+
+    html.light .m-pill:hover {
+      background: rgba(0, 107, 48, .1);
+      border-color: var(--gl)
+    }
+
+    html.light .tcard {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .tcard p { color: rgba(26, 42, 30, .55) }
+
+    html.light .tcard:hover {
+      border-color: rgba(0, 107, 48, .4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .12)
+    }
+
+    html.light .ti { background: rgba(0, 107, 48, .1) }
+
+    html.light .award-card {
+      background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(200,235,210,.4));
+      border-color: rgba(0, 107, 48, .25);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .1)
+    }
+
+    html.light .award-card-content p { color: rgba(26, 42, 30, .6) }
+
+    html.light #companies { background: var(--k3) }
+
+    html.light .co-chip {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(26, 42, 30, .12);
+      color: rgba(26, 42, 30, .85)
+    }
+
+    html.light .co-chip:hover { background: rgba(0, 107, 48, .1) }
+
+    html.light #impact::before {
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(0, 107, 48, .07), transparent 70%)
+    }
+
+    html.light .ic { background: rgba(255, 255, 255, .6) }
+
+    html.light .in { text-shadow: 0 0 40px rgba(0, 107, 48, .2) }
+
+    html.light .il { color: rgba(26, 42, 30, .6) }
+
+    html.light .bc {
+      background: rgba(255, 255, 255, .75);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .bc:hover { border-color: rgba(0, 107, 48, .35) }
+
+    html.light .bc-desc { color: rgba(26, 42, 30, .5) }
+
+    html.light .bc-meta { color: rgba(26, 42, 30, .5) }
+
+    html.light .cbt {
+      border-color: rgba(26, 42, 30, .15);
+      color: rgba(26, 42, 30, .5)
+    }
+
+    html.light .cbt:hover { border-color: var(--gl); color: var(--w) }
+
+    html.light .cdot { background: rgba(26, 42, 30, .15) }
+
+    html.light .cta {
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .cta::before {
+      background: radial-gradient(circle, rgba(0, 107, 48, .06), transparent 70%)
+    }
+
+    html.light .sc {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .sc:hover { border-color: rgba(0, 107, 48, .35) }
+
+    html.light .si {
+      background: rgba(255, 255, 255, .5);
+      border-color: rgba(0, 107, 48, .1);
+      color: rgba(26, 42, 30, .6)
+    }
+
+    html.light .si:hover { background: rgba(0, 107, 48, .08); color: var(--w) }
+
+    html.light .fi { border-top-color: rgba(26, 42, 30, .08) }
+    html.light .fi:last-child { border-bottom-color: rgba(26, 42, 30, .08) }
+
+    html.light .fq { color: rgba(26, 42, 30, .65) }
+    html.light .fq:hover { color: var(--w) }
+
+    html.light .ficon {
+      border-color: rgba(26, 42, 30, .15);
+      color: rgba(26, 42, 30, .5)
+    }
+
+    html.light .fa { color: rgba(26, 42, 30, .6) }
+
+    html.light .map-wrap {
+      background: rgba(255, 255, 255, .6);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .pc {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .pc p { color: rgba(26, 42, 30, .5) }
+
+    html.light .pq {
+      background: rgba(255, 255, 255, .4);
+      color: rgba(26, 42, 30, .5)
+    }
+
+    html.light .map-card {
+      background: rgba(255, 255, 255, .5);
+      border-color: rgba(0, 107, 48, .12)
+    }
+
+    html.light .map-canvas-container {
+      background: rgba(255, 255, 255, .5);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .map-states path { fill: rgba(0, 107, 48, .06) }
+
+    html.light .submap-card {
+      background: rgba(255, 255, 255, .5);
+      border-color: rgba(0, 107, 48, .12)
+    }
+
+    html.light .dc {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .ac {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .on { border-color: rgba(26, 42, 30, .1) }
+    html.light .on.top {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .3)
+    }
+    html.light .on span { color: rgba(26, 42, 30, .65) }
+
+    html.light .org-line { background: rgba(0, 107, 48, .2) }
+
+    html.light .test-card {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .test-quote { color: rgba(26, 42, 30, .8) }
+
+    html.light .test-author p { color: rgba(26, 42, 30, .5) }
+
+    html.light .test-cta {
+      background: rgba(255, 255, 255, .4);
+      border-color: rgba(0, 107, 48, .2)
+    }
+
+    html.light .test-cta p { color: rgba(26, 42, 30, .55) }
+
+    html.light .ci-item h4 { color: rgba(26, 42, 30, .55) }
+
+    html.light .ci-item p,
+    html.light .ci-item a { color: var(--w) }
+
+    html.light .soc {
+      border-color: rgba(26, 42, 30, .15);
+      color: rgba(26, 42, 30, .5)
+    }
+
+    html.light .soc:hover { border-color: var(--gl); color: var(--gl) }
+
+    html.light .cf {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .08)
+    }
+
+    html.light .fg input,
+    html.light .fg textarea,
+    html.light .fg select {
+      background: rgba(255, 255, 255, .8);
+      border-color: rgba(26, 42, 30, .15);
+      color: var(--w)
+    }
+
+    html.light .fg input:focus,
+    html.light .fg textarea:focus,
+    html.light .fg select:focus { border-color: var(--g) }
+
+    html.light .fg select option { background: #fff; color: #1a2a1e }
+
+    html.light .rc {
+      background: rgba(255, 255, 255, .7);
+      border-color: rgba(0, 107, 48, .15)
+    }
+
+    html.light .rc p { color: rgba(26, 42, 30, .5) }
+
+    html.light footer { background: var(--k3) }
+
+    html.light .fb p { color: rgba(26, 42, 30, .6) }
+
+    html.light .fc h5 { color: rgba(26, 42, 30, .3) }
+
+    html.light .fc a,
+    html.light .fc button { color: rgba(26, 42, 30, .55) }
+
+    html.light .fc a:hover,
+    html.light .fc button:hover { color: var(--w) }
+
+    html.light .ftbot { border-top-color: rgba(0, 107, 48, .15) }
+
+    html.light .ftbot p { color: rgba(26, 42, 30, .25) }
+
+    html.light .fts {
+      border-color: rgba(26, 42, 30, .12);
+      color: rgba(26, 42, 30, .5)
+    }
+
+    html.light .fts:hover { border-color: var(--gl); color: var(--gl) }
+
+    html.light .toast-card {
+      background: rgba(240, 248, 242, .97);
+      border-color: rgba(26, 42, 30, .12)
+    }
+
+    html.light .toast-desc { color: rgba(26, 42, 30, .75) }
+
+    html.light .toast-close { color: rgba(26, 42, 30, .4) }
+    html.light .toast-close:hover { color: var(--w) }
+
+    html.light .nav-logo img {
+      filter: none;
+      mix-blend-mode: normal
+    }
+
+    /* Light mode toggle button */
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(134, 188, 42, .25);
+      background: rgba(255, 255, 255, .04);
+      color: var(--mut);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--tr);
+      flex-shrink: 0;
+      padding: 0
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--gl);
+      color: var(--gl);
+      background: rgba(134, 188, 42, .08)
+    }
+
+    html.light .theme-toggle {
+      border-color: rgba(0, 107, 48, .25);
+      color: rgba(26, 42, 30, .5);
+      background: rgba(255, 255, 255, .5)
+    }
+
+    html.light .theme-toggle:hover {
+      border-color: var(--g);
+      color: var(--g);
+      background: rgba(0, 107, 48, .1)
+    }
+
+    /* Sun/moon icon inside toggle */
+    .theme-toggle .t-moon,
+    .theme-toggle .t-sun { transition: opacity .2s, transform .2s }
+
+    html:not(.light) .theme-toggle .t-sun { opacity: 0; transform: rotate(90deg) scale(0.5); position: absolute }
+    html:not(.light) .theme-toggle .t-moon { opacity: 1; transform: rotate(0deg) }
+
+    html.light .theme-toggle .t-moon { opacity: 0; transform: rotate(-90deg) scale(0.5); position: absolute }
+    html.light .theme-toggle .t-sun { opacity: 1; transform: rotate(0deg) }
+
     body {
       font-family: "Outfit", sans-serif;
       background: var(--k);
@@ -1610,8 +1996,6 @@
       padding: 13px 16px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
       gap: 9px
     }
 
@@ -1623,9 +2007,7 @@
       font-size: 12.5px;
       font-weight: 600;
       letter-spacing: .05em;
-      text-transform: uppercase;
-      text-align: center;
-      width: 100%;
+      text-transform: uppercase
     }
 
     .sc-body {
@@ -3351,6 +3733,20 @@
       <button class="nav-tab" id="tab-resources" onclick="goto('resources')">Resources</button>
     </div>
     <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+        <!-- Moon (dark mode icon) -->
+        <svg class="t-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Sun (light mode icon) -->
+        <svg class="t-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
       <a href="mailto:iitkgp@180dc.org" class="nav-cta">Work With Us</a>
       <button class="ham" id="ham" aria-label="menu"><span></span><span></span><span></span></button>
     </div>
@@ -3364,6 +3760,12 @@
     <button onclick="goto('contact');closeMob()">Contact Us</button>
     <button onclick="goto('resources');closeMob()">Resources</button>
     <a href="mailto:iitkgp@180dc.org" class="nav-cta">Work With Us</a>
+    <button onclick="toggleTheme()" style="display:flex;align-items:center;gap:10px;color:var(--mut);font-size:14px;padding:12px 0;border-bottom:none;margin-top:4px" id="mobThemeBtn">
+      <span id="mobThemeIcon" style="display:flex;align-items:center">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+      <span id="mobThemeLabel">Switch to Light Mode</span>
+    </button>
   </div>
 
   <!-- ══════════════════════════════════════
@@ -3498,18 +3900,21 @@
     <div class="three">
       <div class="three-grid">
         <div class="tcard reveal" onclick="goto('services')">
+          <div class="ti"></div>
           <h3>Our Services</h3>
           <p>Six consulting verticals  -  operations, marketing, data analytics, market entry, social impact measurement,
             and fundraising  -  at zero cost.</p>
           <button class="tbtn">Explore Services &rarr;</button>
         </div>
         <div class="tcard reveal d1" onclick="goto('projects')">
+          <div class="ti"></div>
           <h3>Past Projects</h3>
           <p>45+ real-world engagements across India, USA, Singapore, and the UK  -  hover over the world map to explore
             every client.</p>
           <button class="tbtn">View Projects &rarr;</button>
         </div>
         <div class="tcard reveal d2" onclick="goto('team')">
+          <div class="ti"></div>
           <h3>Team Structure</h3>
           <p>Meet our Executive Directors, handpicked through a rigorous process with a &lt;2.5% acceptance rate.</p>
           <button class="tbtn">Meet the Team &rarr;</button>
@@ -3805,7 +4210,7 @@
       <!-- REAL WORLD MAP -->
       <div class="map-wrap reveal">
         <div style="text-align:center;margin-bottom:20px">
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;margin-bottom:6px">Interactive Projects Map</h3>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;margin-bottom:6px"> Interactive Projects Map</h3>
           <p style="font-size:13.5px;color:var(--mut)">Hover over a project card or a map pin to highlight the
             connection</p>
         </div>
@@ -3815,6 +4220,7 @@
           <div class="map-col left-col">
             <!-- Tech Mahindra Foundation -->
             <div class="map-card" data-city="wb" data-project="techmahindra">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Tech Mahindra Foundation</h4>
                 <p class="mc-tag">CSR & Education &middot; Kolkata, West Bengal</p>
@@ -3822,6 +4228,7 @@
             </div>
             <!-- Neofusion Creative Foundation -->
             <div class="map-card" data-city="hr" data-project="neofusion">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Neofusion Creative Foundation</h4>
                 <p class="mc-tag">Youth & Empowerment &middot; Gurgaon, Haryana</p>
@@ -3829,6 +4236,7 @@
             </div>
             <!-- Crashfree India -->
             <div class="map-card" data-city="dl" data-project="crashfree">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Crashfree India</h4>
                 <p class="mc-tag">Road Safety & Advocacy &middot; New Delhi, India</p>
@@ -3836,6 +4244,7 @@
             </div>
             <!-- Gubbachi -->
             <div class="map-card" data-city="ka" data-project="gubbachi">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Gubbachi</h4>
                 <p class="mc-tag">Child Education &middot; Bengaluru, India</p>
@@ -3843,6 +4252,7 @@
             </div>
             <!-- Indeanta Card -->
             <div class="map-card" data-city="ka" data-project="indeanta">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Indeanta</h4>
                 <p class="mc-tag">Campus Mobility &middot; Bengaluru, India</p>
@@ -3850,6 +4260,7 @@
             </div>
             <!-- Trumio Card -->
             <div class="map-card" data-city="usa" data-project="trumio">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Trumio</h4>
                 <p class="mc-tag">AI Workplace &middot; San Francisco, USA</p>
@@ -3857,6 +4268,7 @@
             </div>
             <!-- CHK Sneakers Card -->
             <div class="map-card" data-city="ka" data-project="chk">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>CHK Sneakers</h4>
                 <p class="mc-tag">Footwear & D2C &middot; Bengaluru, India</p>
@@ -3864,6 +4276,7 @@
             </div>
             <!-- Mancrafters Card -->
             <div class="map-card" data-city="dl" data-project="mancrafters">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Mancrafters</h4>
                 <p class="mc-tag">Men's Outfitters &middot; New Delhi, India</p>
@@ -3871,6 +4284,7 @@
             </div>
             <!-- Nutriorg Card -->
             <div class="map-card" data-city="rj" data-project="nutriorg">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Nutriorg</h4>
                 <p class="mc-tag">Organic Foods &middot; Jaipur, India</p>
@@ -3878,6 +4292,7 @@
             </div>
             <!-- Arya Homestays Card -->
             <div class="map-card" data-city="mh" data-project="arya">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Arya Homestays</h4>
                 <p class="mc-tag">Hospitality &middot; Mumbai, India</p>
@@ -3885,6 +4300,7 @@
             </div>
             <!-- Callido Learning Card -->
             <div class="map-card" data-city="mh" data-project="callido">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Callido Learning</h4>
                 <p class="mc-tag">Education &middot; Mumbai, India</p>
@@ -3892,6 +4308,7 @@
             </div>
             <!-- ThinkSharp Card -->
             <div class="map-card" data-city="mh" data-project="thinksharp">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>ThinkSharp Foundation</h4>
                 <p class="mc-tag">Education &middot; Mumbai, India</p>
@@ -3899,6 +4316,7 @@
             </div>
             <!-- Mahila Saksham Card -->
             <div class="map-card" data-city="mh" data-project="mahila">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Mahila Saksham Foundation</h4>
                 <p class="mc-tag">Women Empowerment &middot; Thane, India</p>
@@ -3906,6 +4324,7 @@
             </div>
             <!-- Flomobility Card -->
             <div class="map-card" data-city="ka" data-project="flomobility">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Flomobility</h4>
                 <p class="mc-tag">Autonomous Robotics &middot; Bengaluru, India</p>
@@ -3913,6 +4332,7 @@
             </div>
             <!-- Pragyata Foundation -->
             <div class="map-card" data-city="hr" data-project="pragyata">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Pragyata Foundation</h4>
                 <p class="mc-tag">Human Rights &middot; Gurugram, India</p>
@@ -3920,6 +4340,7 @@
             </div>
             <!-- Genesis Foundation -->
             <div class="map-card" data-city="hr" data-project="genesis">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Genesis Foundation</h4>
                 <p class="mc-tag">CHD treatment &middot; Gurugram, India</p>
@@ -3927,6 +4348,7 @@
             </div>
             <!-- Empass -->
             <div class="map-card" data-city="hr" data-project="empass">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Empass</h4>
                 <p class="mc-tag">Education &middot; Haryana, India</p>
@@ -3934,6 +4356,7 @@
             </div>
             <!-- Robin Hood Army -->
             <div class="map-card" data-city="dl" data-project="robinhood">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Robin Hood Army</h4>
                 <p class="mc-tag">Hunger Alleviation &middot; New Delhi, India</p>
@@ -4089,6 +4512,7 @@
           <div class="map-col right-col">
             <!-- Tata Trusts -->
             <div class="map-card" data-city="mh" data-project="tatatrusts">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Tata Trusts</h4>
                 <p class="mc-tag">Philanthropy & Social Impact &middot; Mumbai, Maharashtra</p>
@@ -4096,6 +4520,7 @@
             </div>
             <!-- Fragaria -->
             <div class="map-card" data-city="ka" data-project="fragaria">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Fragaria</h4>
                 <p class="mc-tag">Food & Beverage Tech &middot; Bengaluru, India</p>
@@ -4103,6 +4528,7 @@
             </div>
             <!-- Labor Naka -->
             <div class="map-card" data-city="mh" data-project="labornaka">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Labor Naka</h4>
                 <p class="mc-tag">Unorganised Labour Welfare &middot; India</p>
@@ -4110,6 +4536,7 @@
             </div>
             <!-- Deepranjani Card -->
             <div class="map-card" data-city="wb" data-project="deepranjani">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Deepranjani Foundation</h4>
                 <p class="mc-tag">Social Welfare &middot; West Bengal, India</p>
@@ -4117,6 +4544,7 @@
             </div>
             <!-- ChefScripts Card -->
             <div class="map-card" data-city="ka" data-project="chefscripts">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>ChefScripts</h4>
                 <p class="mc-tag">Culinary Tech &middot; Bengaluru, India</p>
@@ -4124,6 +4552,7 @@
             </div>
             <!-- Guntur Impact Fund Card -->
             <div class="map-card" data-city="ap" data-project="gunturfund">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Guntur Impact Fund</h4>
                 <p class="mc-tag">NGO for Employment &middot; Guntur, India</p>
@@ -4131,6 +4560,7 @@
             </div>
             <!-- 1.5 Degree -->
             <div class="map-card" data-city="dl" data-project="degreep5">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>1.5 Degree</h4>
                 <p class="mc-tag">Plant-based dairy &middot; New Delhi, India</p>
@@ -4138,6 +4568,7 @@
             </div>
             <!-- Madhya Pradesh Govt -->
             <div class="map-card" data-city="mp" data-project="mpgovt">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Madhya Pradesh Govt.</h4>
                 <p class="mc-tag">Commercial Tax Dept &middot; MP, India</p>
@@ -4145,6 +4576,7 @@
             </div>
             <!-- Cuddles Foundation -->
             <div class="map-card" data-city="mh" data-project="cuddles">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Cuddles Foundation</h4>
                 <p class="mc-tag">Cancer Nutrition &middot; Mumbai, India</p>
@@ -4152,6 +4584,7 @@
             </div>
             <!-- Patil Kaki -->
             <div class="map-card" data-city="mh" data-project="patilkaki">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Patil Kaki</h4>
                 <p class="mc-tag">Traditional Foods &middot; Mumbai, India</p>
@@ -4159,6 +4592,7 @@
             </div>
             <!-- Regale -->
             <div class="map-card" data-city="wb" data-project="regale">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Regale</h4>
                 <p class="mc-tag">Catering Services &middot; West Bengal, India</p>
@@ -4166,6 +4600,7 @@
             </div>
             <!-- Vegies -->
             <div class="map-card" data-city="wb" data-project="vegies">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Vegies</h4>
                 <p class="mc-tag">Restaurant &middot; West Bengal, India</p>
@@ -4173,6 +4608,7 @@
             </div>
             <!-- Hecoll -->
             <div class="map-card" data-city="tg" data-project="hecoll">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Hecoll</h4>
                 <p class="mc-tag">Fabrics &middot; Hyderabad, India</p>
@@ -4180,6 +4616,7 @@
             </div>
             <!-- Agrilife -->
             <div class="map-card" data-city="tg" data-project="agrilife">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Agrilife</h4>
                 <p class="mc-tag">Agriculture &middot; Hyderabad, India</p>
@@ -4187,6 +4624,7 @@
             </div>
             <!-- Cry India -->
             <div class="map-card" data-city="tg" data-project="cryindia">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Cry India</h4>
                 <p class="mc-tag">NGO for Children &middot; Hyderabad, India</p>
@@ -4194,6 +4632,7 @@
             </div>
             <!-- Kakinada Seaport -->
             <div class="map-card" data-city="ap" data-project="kakinada">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>Kakinada Seaport</h4>
                 <p class="mc-tag">Seaport Logistics &middot; Kakinada, India</p>
@@ -4201,6 +4640,7 @@
             </div>
             <!-- World Vision India -->
             <div class="map-card" data-city="tn" data-project="worldvision">
+              <div class="mc-icon"></div>
               <div class="mc-content">
                 <h4>World Vision India</h4>
                 <p class="mc-tag">Children Welfare &middot; Chennai, India</p>
@@ -4824,6 +5264,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         Engagements</h3>
       <div class="proj-grid">
         <article class="pc reveal">
+          <div class="pt" style="background:linear-gradient(135deg,#061810,#0f2818)"></div>
           <div class="pb"><span class="ptag">Education &middot; NGO</span>
             <h3>Learning Outcomes Assessment Framework</h3>
             <p>M&amp;E framework enabling data-driven improvements across 200+ schools in rural West Bengal.</p>
@@ -4832,6 +5273,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           </div>
         </article>
         <article class="pc reveal d1">
+          <div class="pt" style="background:linear-gradient(135deg,#061408,#0a1e10)"></div>
           <div class="pb"><span class="ptag">Agriculture &middot; Social Enterprise</span>
             <h3>Farmer Income Diversification Strategy</h3>
             <p>Go-to-market strategy for an agri-enterprise expanding into four districts of Andhra Pradesh.</p>
@@ -4839,6 +5281,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           </div>
         </article>
         <article class="pc reveal d2">
+          <div class="pt" style="background:linear-gradient(135deg,#080e06,#101808)"></div>
           <div class="pb"><span class="ptag">Government &middot; MP</span>
             <h3>Commercial Tax Dept. Process Optimisation</h3>
             <p>Operations consulting for MP Government&rsquo;s Department of Commercial Tax, streamlining taxpayer
@@ -4846,18 +5289,21 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           </div>
         </article>
         <article class="pc reveal">
+          <div class="pt" style="background:linear-gradient(135deg,#060c0a,#0e1812)">&#65039;</div>
           <div class="pb"><span class="ptag">Technology &middot; USA</span>
             <h3>Trumio AI Workplace GTM Strategy</h3>
             <p>Go-to-market strategy for an AI-based workplace platform in San Francisco for US market entry.</p>
           </div>
         </article>
         <article class="pc reveal d1">
+          <div class="pt" style="background:linear-gradient(135deg,#060a08,#0c1410)"></div>
           <div class="pb"><span class="ptag">Social Enterprise &middot; UK</span>
             <h3>The Washing Machine Project</h3>
             <p>Market expansion strategy for a UK-based social enterprise providing affordable washing solutions.</p>
           </div>
         </article>
         <article class="pc reveal d2">
+          <div class="pt" style="background:linear-gradient(135deg,#081006,#101c0a)"></div>
           <div class="pb"><span class="ptag">Agriculture &middot; Singapore</span>
             <h3>The Soil Regeneration Project</h3>
             <p>Research and expansion strategy for a Singapore-based agriculture social enterprise.</p>
@@ -4946,8 +5392,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       <div class="dir-grid">
         <div class="dc reveal">
           <div class="dc-av">
-            <img src="assets/rachit.jpg" alt="Rachit Arora" onerror="this.remove()" />
-            R
+            <img src="assets/rachit.jpg" alt="Rachit Arora" onerror="this.remove()" /> R
           </div>
           <h4><a href="https://www.linkedin.com/in/rachit-arora-544084323/" target="_blank" rel="noopener noreferrer">Rachit Arora</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -4957,8 +5402,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal d1">
           <div class="dc-av">
-            <img src="assets/nidhi.jpg" alt="Nidhi Swamy" onerror="this.remove()" />
-            N
+            <img src="assets/nidhi.jpg" alt="Nidhi Swamy" onerror="this.remove()" /> N
           </div>
           <h4><a href="https://www.linkedin.com/in/nidhi-swamy-a368a3323/" target="_blank" rel="noopener noreferrer">Nidhi Swamy</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -4968,8 +5412,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal d2">
           <div class="dc-av">
-            <img src="assets/dhruv.jpg" alt="Dhruv Gupta" onerror="this.remove()" />
-            D
+            <img src="assets/dhruv.jpg" alt="Dhruv Gupta" onerror="this.remove()" /> D
           </div>
           <h4><a href="https://www.linkedin.com/in/dhruv-gupta-466213319/" target="_blank" rel="noopener noreferrer">Dhruv Gupta</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -4979,8 +5422,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal">
           <div class="dc-av">
-            <img src="assets/kabir.jpg" alt="Kabir Ladha" onerror="this.remove()" />
-            K
+            <img src="assets/kabir.jpg" alt="Kabir Ladha" onerror="this.remove()" /> K
           </div>
           <h4><a href="https://www.linkedin.com/in/kabir-ladha-56b91329a/" target="_blank" rel="noopener noreferrer">Kabir Ladha</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -4990,8 +5432,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal d1">
           <div class="dc-av">
-            <img src="assets/baqir.jpg" alt="Baqir Amir Merchant" onerror="this.remove()" />
-            B
+            <img src="assets/baqir.jpg" alt="Baqir Amir Merchant" onerror="this.remove()" /> B
           </div>
           <h4><a href="https://www.linkedin.com/in/baqir-merchant-a31977312/" target="_blank" rel="noopener noreferrer">Baqir Amir Merchant</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -5001,8 +5442,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal d2">
           <div class="dc-av">
-            <img src="assets/kavya.jpg" alt="Kavya Jain" onerror="this.remove()" />
-            K
+            <img src="assets/kavya.jpg" alt="Kavya Jain" onerror="this.remove()" /> K
           </div>
           <h4><a href="https://www.linkedin.com/in/kavya-jain-78926b323/" target="_blank" rel="noopener noreferrer">Kavya Jain</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -5012,8 +5452,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal">
           <div class="dc-av">
-            <img src="assets/parth.jpg" alt="Parth Sethi" onerror="this.remove()" />
-            P
+            <img src="assets/parth.jpg" alt="Parth Sethi" onerror="this.remove()" /> P
           </div>
           <h4><a href="https://www.linkedin.com/in/parth-sethi-178204191/" target="_blank" rel="noopener noreferrer">Parth Sethi</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -5023,8 +5462,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         </div>
         <div class="dc reveal d1">
           <div class="dc-av">
-            <img src="assets/dev.jpg" alt="Dev Kotecha" onerror="this.remove()" />
-            D
+            <img src="assets/dev.jpg" alt="Dev Kotecha" onerror="this.remove()" /> D
           </div>
           <h4><a href="https://www.linkedin.com/in/dev-kotecha-066236324/" target="_blank" rel="noopener noreferrer">Dev Kotecha</a></h4>
           <div class="dc-role">Executive Director</div>
@@ -5347,36 +5785,40 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       <div class="cp-grid">
         <div class="reveal">
           <div class="ci-item">
+            <div class="ci-icon"></div>
             <div>
               <h4>Email</h4><a href="mailto:iitkgp@180dc.org">iitkgp@180dc.org</a>
             </div>
           </div>
           <div class="ci-item">
+            <div class="ci-icon"></div>
             <div>
               <h4>Location</h4>
               <p>Indian Institute of Technology Kharagpur<br>Kharagpur, West Bengal - 721302, India</p>
             </div>
           </div>
           <div class="ci-item">
+            <div class="ci-icon"></div>
             <div>
               <h4>Website</h4><a href="https://www.180dciitkgp.in" target="_blank">www.180dciitkgp.in</a>
             </div>
           </div>
           <div class="ci-item">
+            <div class="ci-icon"></div>
             <div>
               <h4>Client Applications</h4>
               <p>Rolling basis, current intake: <strong style="color:var(--gl)">Winter 2026</strong></p>
             </div>
           </div>
           <div class="soc-row">
-            <a href="https://www.linkedin.com/company/180dc-iit-kharagpur" target="_blank" class="soc"
+            <a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/home/" target="_blank" class="soc"
               aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
                 <rect x="2" y="9" width="4" height="12" />
                 <circle cx="4" cy="4" r="2" />
               </svg></a>
-            <a href="https://www.instagram.com/180dciitkgp" target="_blank" class="soc" aria-label="Instagram"><svg
+            <a href="https://www.instagram.com/180dc.iitkgp/" target="_blank" class="soc" aria-label="Instagram"><svg
                 width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -5396,18 +5838,18 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
               <div class="fg">
                 <label>First Name</label>
                 <input type="text" id="fnInput" placeholder="Arjun" required />
-                <div class="field-error-msg">First name is required.</div>
+                <div class="field-error-msg"> First name is required.</div>
               </div>
               <div class="fg">
                 <label>Last Name</label>
                 <input type="text" id="lnInput" placeholder="Mehta" required />
-                <div class="field-error-msg">Last name is required.</div>
+                <div class="field-error-msg"> Last name is required.</div>
               </div>
             </div>
             <div class="fg">
               <label>Email</label>
               <input type="email" id="emailInput" placeholder="you@organisation.org" required />
-              <div class="field-error-msg">Please enter a valid email address.</div>
+              <div class="field-error-msg"> Please enter a valid email address.</div>
             </div>
             <div class="fg">
               <label>Organisation</label>
@@ -5423,16 +5865,16 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
                 <option>Media / Press</option>
                 <option>Other</option>
               </select>
-              <div class="field-error-msg">Please select an inquiry type.</div>
+              <div class="field-error-msg"> Please select an inquiry type.</div>
             </div>
             <div class="fg">
               <label>Message</label>
               <textarea id="msgInput" placeholder="Tell us about your organisation and how we can help..." required></textarea>
-              <div class="field-error-msg">Message cannot be empty.</div>
+              <div class="field-error-msg"> Message cannot be empty.</div>
             </div>
             <button type="submit" class="bp" style="width:100%;justify-content:center">Send Message &rarr;</button>
           </form>
-          <div class="fs-msg" id="formSuccess">&#10003; Thank you! Your message has been received. We&rsquo;ll respond
+          <div class="fs-msg" id="formSuccess"> Thank you! Your message has been received. We&rsquo;ll respond
             within 3-5 business days.</div>
         </div>
       </div>
@@ -5456,36 +5898,42 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       </div>
       <div class="res-grid">
         <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal">
+          <div class="rc-icon"></div>
           <h3>Consulting Playbook</h3>
           <p>Our structured problem-solving methodology, from scoping to final presentation. Used across all 45+
             projects.</p>
           <span class="rc-link">Access Resource &#8599;</span>
         </a>
         <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal d1">
+          <div class="rc-icon"></div>
           <h3>Impact Measurement Guide</h3>
           <p>A practical guide to designing KPIs and M&E frameworks for NGOs and social enterprises with limited
             bandwidth.</p>
           <span class="rc-link">Access Resource &#8599;</span>
         </a>
         <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal d2">
+          <div class="rc-icon"></div>
           <h3>Case Interview Prep</h3>
           <p>Resources to help you crack case interviews and build the analytical frameworks used in top consulting
             firms.</p>
           <span class="rc-link">Access Resource &#8599;</span>
         </a>
         <a href="https://www.180dciitkgp.in/blogs" target="_blank" class="rc reveal">
+          <div class="rc-icon"></div>
           <h3>Blog Archive</h3>
           <p>All published articles from our team on strategy, social impact, policy, and development sector insights.
           </p>
           <span class="rc-link">Read All Blogs &#8599;</span>
         </a>
         <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal d1">
+          <div class="rc-icon"></div>
           <h3>Annual Report</h3>
           <p>Our semester reports documenting project outcomes, team achievements, and impact statistics across cohorts.
           </p>
           <span class="rc-link">View Reports &#8599;</span>
         </a>
         <a href="mailto:iitkgp@180dc.org" class="rc reveal d2">
+          <div class="rc-icon"></div>
           <h3>Partner With Us</h3>
           <p>Interested in sponsoring or partnering with 180DC IIT KGP? Explore collaboration opportunities with our
             team.</p>
@@ -5523,7 +5971,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           onclick="goto('services')">Social Impact</button><button onclick="goto('services')">Fundraising</button>
       </div>
       <div class="fc">
-        <h5>Connect</h5><a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/" target="_blank">LinkedIn</a><a
+        <h5>Connect</h5><a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/home/" target="_blank">LinkedIn</a><a
           href="https://www.instagram.com/180dc.iitkgp/" target="_blank">Instagram</a><a
           href="https://www.180dciitkgp.in/blogs" target="_blank">Blog</a><a href="mailto:iitkgp@180dc.org">Email
           Us</a><a href="https://www.180dc.org" target="_blank">180DC Global</a>
@@ -5532,7 +5980,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     <div class="ftbot">
       <p>&copy; 2025 180 Degrees Consulting IIT Kharagpur. All rights reserved.</p>
       <div class="ftsoc">
-        <a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/" target="_blank" class="fts"
+        <a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/home/" target="_blank" class="fts"
           aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -6044,15 +6492,15 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       }
 
       const icons = {
-        error: "!",
+        error: "",
         success: "✓",
-        warning: "!"
+        warning: ""
       };
 
       const card = document.createElement("div");
       card.className = `toast-card ${type}`;
       card.innerHTML = `
-        <div class="toast-icon">${icons[type] || ''}</div>
+        <div class="toast-icon">${icons[type] || 'ℹ'}</div>
         <div class="toast-content">
           <div class="toast-title">${title}</div>
           <div class="toast-desc">${message}</div>
@@ -6133,6 +6581,50 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       document.getElementById("formSuccess").style.display = "block";
       showToast("Thank you! Your message has been successfully submitted.", "Message Sent", "success", 5000);
     }
+
+    /* ─────────────────────────────────────────────────────
+       THEME TOGGLE  -  light / dark mode
+       Preference persisted in localStorage as "theme"
+    ───────────────────────────────────────────────────── */
+    const MOON_SVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    const SUN_SVG  = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+
+    function applyTheme(isLight) {
+      const html = document.documentElement;
+      if (isLight) {
+        html.classList.add('light');
+      } else {
+        html.classList.remove('light');
+      }
+      // Update mobile menu label & icon
+      const mobIcon  = document.getElementById('mobThemeIcon');
+      const mobLabel = document.getElementById('mobThemeLabel');
+      if (mobIcon)  mobIcon.innerHTML  = isLight ? SUN_SVG  : MOON_SVG;
+      if (mobLabel) mobLabel.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    }
+
+    function toggleTheme() {
+      const isCurrentlyLight = document.documentElement.classList.contains('light');
+      const next = !isCurrentlyLight;
+      localStorage.setItem('theme', next ? 'light' : 'dark');
+      applyTheme(next);
+    }
+
+    // Apply saved preference on load
+    (function() {
+      const saved = localStorage.getItem('theme');
+      // Also respect OS preference if no saved preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isLight = saved === 'light' || (saved === null && !prefersDark);
+      // Default is dark (matching original design) — only go light if explicitly saved or OS prefers light
+      if (saved === 'light') applyTheme(true);
+    })();
+
+    // Wire up desktop toggle button
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('themeToggle');
+      if (btn) btn.addEventListener('click', toggleTheme);
+    });
   </script>
   <div id="toastContainer" class="toast-container"></div>
 </body>
