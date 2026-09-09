@@ -2426,15 +2426,21 @@
       display: flex;
       gap: 10px;
       justify-content: center;
-      flex-wrap: wrap
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1150px;
     }
 
     .org-row:nth-child(3) .on {
-      min-width: 185px;
+      flex: 1;
+      min-width: 200px;
+      max-width: 225px;
     }
 
     .org-row:nth-child(5) .on {
+      flex: 1;
       min-width: 175px;
+      max-width: 200px;
     }
 
     .org-line {
@@ -2445,7 +2451,7 @@
     }
 
     .on {
-      padding: 10px 18px;
+      padding: 10px 12px;
       border-radius: 5px;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, .07);
@@ -2455,6 +2461,7 @@
       align-items: center;
       justify-content: center;
       min-height: 48px;
+      box-sizing: border-box;
     }
 
     .on:hover {
