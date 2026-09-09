@@ -80,345 +80,395 @@
 
     /* ═══════════════════════════════════════════════════════════════════
        LIGHT MODE  -  toggled by adding class="light" on <html>
-       Greens stay vivid; backgrounds flip to clean whites/pale greens;
-       text goes dark charcoal for readability.
+       Pure white backgrounds · near-black text · vivid greens · WCAG AA
        ═══════════════════════════════════════════════════════════════════ */
     html.light {
-      --g: #006b30;
-      --gm: #005a27;
-      --gd: #cce8d6;
-      --gl: #5a9a00;
-      --gp: #e8f5e0;
-      --k: #f4f8f5;
-      --k2: #eaf2ec;
-      --k3: #deeee4;
-      --w: #1a2a1e;
-      --mut: #4a6655;
-      --bdr: rgba(0, 107, 48, .18)
+      --g:   #00843d;
+      --gm:  #006b30;
+      --gd:  #d4eddd;
+      --gl:  #3d7200;
+      --gp:  #edf7f1;
+      --k:   #ffffff;
+      --k2:  #f5faf7;
+      --k3:  #ebf5ef;
+      --w:   #0f1a12;
+      --mut: #3d5c47;
+      --bdr: rgba(0, 132, 61, .2)
     }
 
-    /* Light mode specific overrides that can't be done via CSS vars alone */
-    html.light body { color: var(--w) }
+    /* ── body & base ─────────────────────────────────────────────────── */
+    html.light body { color: var(--w); background: var(--k) }
 
+    /* ── nav ─────────────────────────────────────────────────────────── */
     html.light nav.scrolled {
-      background: rgba(244, 248, 245, .92) !important;
-      box-shadow: 0 1px 0 rgba(0, 107, 48, .15)
+      background: rgba(255, 255, 255, .95) !important;
+      box-shadow: 0 1px 0 rgba(0, 132, 61, .15), 0 2px 12px rgba(0,0,0,.07)
     }
+    html.light .nav-tabs {
+      background: rgba(0, 0, 0, .03);
+      border-color: rgba(0, 132, 61, .2)
+    }
+    html.light .nav-tab { color: #3d5c47 }
+    html.light .nav-tab.on,
+    html.light .nav-tab:hover { color: #fff }
 
-    html.light .nav-tab {
-      color: rgba(26, 42, 30, .6)
-    }
+    html.light .ham span { background: var(--w) }
 
     html.light .mob-menu {
-      background: rgba(234, 242, 236, 0.98)
+      background: rgba(255, 255, 255, .98);
+      border-color: rgba(0, 132, 61, .15)
     }
-
     html.light .mob-menu button,
     html.light .mob-menu a {
-      color: rgba(26, 42, 30, .75);
-      border-bottom-color: rgba(0, 107, 48, .15)
+      color: #1a3022;
+      border-bottom-color: rgba(0, 132, 61, .12)
     }
+    html.light .mob-menu button:hover,
+    html.light .mob-menu a:hover { color: var(--g) }
 
-    html.light .h-h1,
-    html.light .h-desc,
-    html.light .h-tagline { color: var(--w) }
-
-    html.light .h-bg svg line,
-    html.light .h-bg svg circle { stroke: rgba(0, 107, 48, .08) }
+    /* ── hero ────────────────────────────────────────────────────────── */
+    html.light #hero { background: linear-gradient(160deg, #ffffff 60%, #edf7f1 100%) }
+    html.light .h-eye { color: var(--g) }
+    html.light .h-eye::before { background: var(--g) }
+    html.light .h-h1 { color: #0a1a0d }
+    html.light .h-h1 em { color: var(--g) }
+    html.light .h-desc { color: #2d4a35 }
+    html.light .h-tagline { color: #3d5c47 }
 
     html.light .h-why {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .2)
+      background: #fff;
+      border-color: rgba(0, 132, 61, .25);
+      box-shadow: 0 2px 12px rgba(0,132,61,.08)
     }
+    html.light .h-why-q { color: var(--g) }
+    html.light .h-why-a { color: #2d4a35 }
+    html.light .h-why-a em { color: #3d5c47 }
+    html.light .h-why-a strong { color: var(--g) }
 
-    html.light .h-why-a { color: rgba(26, 42, 30, .65) }
-    html.light .h-why-a em { color: rgba(26, 42, 30, .5) }
-
-    html.light .h-stats { border-top-color: rgba(26, 42, 30, .12) }
-
-    html.light .stat+.stat { border-left-color: rgba(0, 107, 48, .2) }
-
+    html.light .h-stats { border-top-color: rgba(0, 0, 0, .1) }
+    html.light .stat+.stat { border-left-color: rgba(0, 132, 61, .2) }
     html.light .snum,
-    html.light .snum .ctr { text-shadow: 0 0 30px rgba(0, 107, 48, .25) }
-
-    html.light .slbls { color: rgba(26, 42, 30, .55) }
+    html.light .snum .ctr { color: #0a1a0d; text-shadow: none }
+    html.light .slbls { color: #3d5c47 }
 
     html.light .h-panel {
-      background: rgba(255, 255, 255, .6);
-      border-color: rgba(0, 107, 48, .25);
+      background: #fff;
+      border-color: rgba(0, 132, 61, .25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, .1)
     }
-
-    html.light .h-stat-row { border-bottom-color: rgba(26, 42, 30, .08) }
-
+    html.light .h-panel::before { background: radial-gradient(ellipse at top right, rgba(0,132,61,.07), transparent 65%) }
+    html.light .h-panel-title { color: var(--g) }
+    html.light .h-stat-row { border-bottom-color: rgba(0, 0, 0, .07) }
     html.light .h-stat-icon {
-      background: rgba(0, 107, 48, .1);
-      border-color: rgba(0, 107, 48, .2)
+      background: rgba(0, 132, 61, .08);
+      border-color: rgba(0, 132, 61, .18)
+    }
+    html.light .h-stat-val { color: #0a1a0d }
+    html.light .h-stat-lbl { color: #3d5c47 }
+    html.light .h-panel-bar { background: rgba(0,0,0,.08) }
+
+    html.light .bg {
+      border-color: rgba(0,0,0,.2);
+      color: #0f1a12;
+      background: rgba(0,0,0,.03)
+    }
+    html.light .bg:hover {
+      border-color: var(--g);
+      color: var(--g);
+      background: rgba(0, 132, 61, .06)
     }
 
-    html.light .h-stat-lbl { color: rgba(26, 42, 30, .5) }
-
-    html.light .h-panel-bar { background: rgba(26, 42, 30, .08) }
-
+    /* ── marquee ─────────────────────────────────────────────────────── */
     html.light .mq {
-      background: rgba(255, 255, 255, .5);
-      border-color: rgba(0, 107, 48, .3)
+      background: #f0f8f3;
+      border-color: rgba(0, 132, 61, .25)
     }
-
+    html.light .mq-lbl { color: var(--g) }
     html.light .m-pill {
-      background: rgba(255, 255, 255, .8);
-      border-color: rgba(0, 107, 48, .15);
-      color: rgba(26, 42, 30, .9)
+      background: #fff;
+      border-color: rgba(0, 0, 0, .1);
+      color: #0f1a12
     }
-
     html.light .m-pill:hover {
-      background: rgba(0, 107, 48, .1);
-      border-color: var(--gl)
+      border-color: var(--g);
+      background: rgba(0,132,61,.06)
     }
 
+    /* ── three cards ─────────────────────────────────────────────────── */
+    html.light .three { background: var(--k2); border-top-color: rgba(0,0,0,.07) }
     html.light .tcard {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0, 0, 0, .1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-
-    html.light .tcard p { color: rgba(26, 42, 30, .55) }
-
+    html.light .tcard h3 { color: #0a1a0d }
+    html.light .tcard p { color: #3d5c47 }
     html.light .tcard:hover {
-      border-color: rgba(0, 107, 48, .4);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, .12)
+      border-color: var(--g);
+      box-shadow: 0 12px 32px rgba(0,132,61,.12)
     }
+    html.light .ti { background: rgba(0, 132, 61, .1) }
+    html.light .tbtn { color: var(--g) }
+    html.light .tbtn:hover { color: #0a1a0d }
 
-    html.light .ti { background: rgba(0, 107, 48, .1) }
-
+    /* ── award ───────────────────────────────────────────────────────── */
+    html.light #award-section { background: var(--k) }
     html.light .award-card {
-      background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(200,235,210,.4));
-      border-color: rgba(0, 107, 48, .25);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, .1)
+      background: linear-gradient(135deg, #fff, #edf7f1);
+      border-color: rgba(0, 132, 61, .3);
+      box-shadow: 0 8px 28px rgba(0,0,0,.08)
+    }
+    html.light .award-card::before {
+      background: linear-gradient(90deg, #a8d5b5, var(--gl), #c8e6cc)
+    }
+    html.light .award-badge {
+      background: rgba(0, 132, 61, .1);
+      border-color: rgba(0, 132, 61, .3);
+      color: var(--g)
+    }
+    html.light .award-card-content h3 { color: #0a1a0d }
+    html.light .award-card-content p { color: #2d4a35 }
+    html.light .award-card-content p strong { color: #0a1a0d }
+    html.light .award-stat-num { color: var(--g) }
+    html.light .award-stat-lbl { color: #3d5c47 }
+    html.light .award-card-img {
+      background: #f0f8f3;
+      border-color: rgba(0,0,0,.08)
     }
 
-    html.light .award-card-content p { color: rgba(26, 42, 30, .6) }
-
+    /* ── companies ───────────────────────────────────────────────────── */
     html.light #companies { background: var(--k3) }
-
     html.light .co-chip {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(26, 42, 30, .12);
-      color: rgba(26, 42, 30, .85)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      color: #0f1a12
     }
+    html.light .co-chip:hover { background: rgba(0,132,61,.08); border-color: var(--g) }
 
-    html.light .co-chip:hover { background: rgba(0, 107, 48, .1) }
-
-    html.light #impact::before {
-      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(0, 107, 48, .07), transparent 70%)
+    /* ── impact ──────────────────────────────────────────────────────── */
+    html.light #impact { background: var(--k2) }
+    html.light #impact::before { background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(0,132,61,.06), transparent 70%) }
+    html.light .imp-grid {
+      background: rgba(0,0,0,.05);
+      border-color: rgba(0,0,0,.08)
     }
+    html.light .ic {
+      background: #fff;
+      border-bottom-color: rgba(0,0,0,.06)
+    }
+    html.light .in { color: #0a1a0d; text-shadow: none }
+    html.light .il { color: #3d5c47 }
 
-    html.light .ic { background: rgba(255, 255, 255, .6) }
-
-    html.light .in { text-shadow: 0 0 40px rgba(0, 107, 48, .2) }
-
-    html.light .il { color: rgba(26, 42, 30, .6) }
-
+    /* ── blogs ───────────────────────────────────────────────────────── */
+    html.light #blogs { background: var(--k) }
     html.light .bc {
-      background: rgba(255, 255, 255, .75);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
+    html.light .bc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .bc-title { color: #0a1a0d }
+    html.light .bc-desc { color: #3d5c47 }
+    html.light .bc-meta { color: #3d5c47 }
+    html.light .bc-cat { background: rgba(0,132,61,.1); color: var(--g) }
+    html.light .bc-link { color: var(--g) }
+    html.light .bc-link:hover { color: #0a1a0d }
+    html.light .cbt { border-color: rgba(0,0,0,.15); color: #3d5c47 }
+    html.light .cbt:hover { border-color: var(--g); color: var(--g) }
+    html.light .cdot { background: rgba(0,0,0,.15) }
 
-    html.light .bc:hover { border-color: rgba(0, 107, 48, .35) }
-
-    html.light .bc-desc { color: rgba(26, 42, 30, .5) }
-
-    html.light .bc-meta { color: rgba(26, 42, 30, .5) }
-
-    html.light .cbt {
-      border-color: rgba(26, 42, 30, .15);
-      color: rgba(26, 42, 30, .5)
-    }
-
-    html.light .cbt:hover { border-color: var(--gl); color: var(--w) }
-
-    html.light .cdot { background: rgba(26, 42, 30, .15) }
-
+    /* ── CTA strip ───────────────────────────────────────────────────── */
     html.light .cta {
-      border-color: rgba(0, 107, 48, .15)
+      background: var(--k2);
+      border-color: rgba(0,132,61,.2)
     }
+    html.light .cta::before { background: radial-gradient(circle, rgba(0,132,61,.07), transparent 70%) }
+    html.light .sttl { color: #0a1a0d }
+    html.light .ssub { color: #2d4a35 }
+    html.light .slbl { color: var(--g) }
 
-    html.light .cta::before {
-      background: radial-gradient(circle, rgba(0, 107, 48, .06), transparent 70%)
-    }
-
+    /* ── services ────────────────────────────────────────────────────── */
     html.light .sc {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-
-    html.light .sc:hover { border-color: rgba(0, 107, 48, .35) }
-
+    html.light .sc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .sc-head { background: var(--g) }
     html.light .si {
-      background: rgba(255, 255, 255, .5);
-      border-color: rgba(0, 107, 48, .1);
-      color: rgba(26, 42, 30, .6)
+      background: #f5faf7;
+      border-color: rgba(0,132,61,.15);
+      color: #1a3022
     }
+    html.light .si:hover { background: rgba(0,132,61,.1); color: var(--g); border-color: var(--g) }
 
-    html.light .si:hover { background: rgba(0, 107, 48, .08); color: var(--w) }
+    html.light .fi { border-top-color: rgba(0,0,0,.08) }
+    html.light .fi:last-child { border-bottom-color: rgba(0,0,0,.08) }
+    html.light .fq { color: #1a3022 }
+    html.light .fq:hover { color: var(--g) }
+    html.light .ficon { border-color: rgba(0,0,0,.15); color: #3d5c47 }
+    html.light .fa { color: #3d5c47 }
 
-    html.light .fi { border-top-color: rgba(26, 42, 30, .08) }
-    html.light .fi:last-child { border-bottom-color: rgba(26, 42, 30, .08) }
-
-    html.light .fq { color: rgba(26, 42, 30, .65) }
-    html.light .fq:hover { color: var(--w) }
-
-    html.light .ficon {
-      border-color: rgba(26, 42, 30, .15);
-      color: rgba(26, 42, 30, .5)
-    }
-
-    html.light .fa { color: rgba(26, 42, 30, .6) }
-
+    /* ── projects ────────────────────────────────────────────────────── */
+    html.light .pp { background: var(--k) }
     html.light .map-wrap {
-      background: rgba(255, 255, 255, .6);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,132,61,.2);
+      box-shadow: 0 4px 16px rgba(0,0,0,.07)
     }
-
     html.light .pc {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-
-    html.light .pc p { color: rgba(26, 42, 30, .5) }
-
-    html.light .pq {
-      background: rgba(255, 255, 255, .4);
-      color: rgba(26, 42, 30, .5)
-    }
-
+    html.light .pc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .pc h3 { color: #0a1a0d }
+    html.light .pc p { color: #3d5c47 }
+    html.light .ptag { background: rgba(0,132,61,.1); color: var(--g) }
+    html.light .pq { background: #f0f8f3; border-left-color: var(--g); color: #3d5c47 }
     html.light .map-card {
-      background: rgba(255, 255, 255, .5);
-      border-color: rgba(0, 107, 48, .12)
+      background: #fff;
+      border-color: rgba(0,0,0,.1)
     }
-
+    html.light .map-card:hover,
+    html.light .map-card.active {
+      background: rgba(0,132,61,.07);
+      border-color: var(--g)
+    }
+    html.light .mc-content h4 { color: #0a1a0d }
+    html.light .mc-tag { color: #3d5c47 }
     html.light .map-canvas-container {
-      background: rgba(255, 255, 255, .5);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,132,61,.2)
     }
-
-    html.light .map-states path { fill: rgba(0, 107, 48, .06) }
-
+    html.light .map-states path { fill: rgba(0,132,61,.06); stroke: rgba(0,132,61,.4) }
     html.light .submap-card {
-      background: rgba(255, 255, 255, .5);
-      border-color: rgba(0, 107, 48, .12)
+      background: #fff;
+      border-color: rgba(0,0,0,.1)
     }
+    html.light .submap-info h4 { color: #0a1a0d }
+    html.light .submap-info p { color: #3d5c47 }
 
+    /* ── team ────────────────────────────────────────────────────────── */
+    html.light .tp { background: var(--k) }
     html.light .dc {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-
-    html.light .ac {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
-    }
-
-    html.light .on { border-color: rgba(26, 42, 30, .1) }
+    html.light .dc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .dc h4 { color: #0a1a0d }
+    html.light .dc-dept { color: #3d5c47 }
+    html.light .dc-av { background: #d4eddd; border-color: rgba(0,132,61,.3) }
+    html.light .on { border-color: rgba(0,0,0,.1) }
+    html.light .on h4 { color: #0a1a0d }
+    html.light .on span { color: #3d5c47 }
     html.light .on.top {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .3)
+      background: #fff;
+      border-color: rgba(0,132,61,.35);
+      box-shadow: 0 2px 8px rgba(0,0,0,.07)
     }
-    html.light .on span { color: rgba(26, 42, 30, .65) }
+    html.light .org-line { background: rgba(0,132,61,.25) }
+    html.light .ac {
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.04)
+    }
+    html.light .ac:hover { border-color: var(--g); box-shadow: 0 8px 20px rgba(0,132,61,.12) }
+    html.light .ac-name { color: #0a1a0d }
+    html.light .ac-av { background: #d4eddd; border-color: rgba(0,132,61,.3) }
 
-    html.light .org-line { background: rgba(0, 107, 48, .2) }
-
+    /* ── testimonials ────────────────────────────────────────────────── */
     html.light .test-card {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-
-    html.light .test-quote { color: rgba(26, 42, 30, .8) }
-
-    html.light .test-author p { color: rgba(26, 42, 30, .5) }
-
+    html.light .test-card:hover { border-color: var(--g); box-shadow: 0 12px 28px rgba(0,132,61,.12) }
+    html.light .test-quote { color: #1a3022 }
+    html.light .test-author h4 { color: #0a1a0d }
+    html.light .test-author p { color: #3d5c47 }
     html.light .test-cta {
-      background: rgba(255, 255, 255, .4);
-      border-color: rgba(0, 107, 48, .2)
+      background: #f0f8f3;
+      border-color: rgba(0,132,61,.25)
     }
+    html.light .test-cta h3 { color: #0a1a0d }
+    html.light .test-cta p { color: #3d5c47 }
 
-    html.light .test-cta p { color: rgba(26, 42, 30, .55) }
-
-    html.light .ci-item h4 { color: rgba(26, 42, 30, .55) }
-
+    /* ── contact ─────────────────────────────────────────────────────── */
+    html.light .cp { background: var(--k) }
+    html.light .ci-icon { background: rgba(0,132,61,.1) }
+    html.light .ci-item h4 { color: #3d5c47 }
     html.light .ci-item p,
-    html.light .ci-item a { color: var(--w) }
-
-    html.light .soc {
-      border-color: rgba(26, 42, 30, .15);
-      color: rgba(26, 42, 30, .5)
-    }
-
-    html.light .soc:hover { border-color: var(--gl); color: var(--gl) }
-
+    html.light .ci-item a { color: #0f1a12 }
+    html.light .ci-item a:hover { color: var(--g) }
+    html.light .soc { border-color: rgba(0,0,0,.15); color: #3d5c47 }
+    html.light .soc:hover { border-color: var(--g); color: var(--g) }
     html.light .cf {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, .08)
+      background: #fff;
+      border-color: rgba(0,132,61,.2);
+      box-shadow: 0 8px 28px rgba(0,0,0,.08)
     }
-
+    html.light .cf h3 { color: #0a1a0d }
+    html.light .fg label { color: #3d5c47 }
     html.light .fg input,
     html.light .fg textarea,
     html.light .fg select {
-      background: rgba(255, 255, 255, .8);
-      border-color: rgba(26, 42, 30, .15);
-      color: var(--w)
+      background: #fff;
+      border-color: rgba(0,0,0,.18);
+      color: #0f1a12
     }
-
+    html.light .fg input::placeholder,
+    html.light .fg textarea::placeholder { color: #8aaa95 }
     html.light .fg input:focus,
     html.light .fg textarea:focus,
-    html.light .fg select:focus { border-color: var(--g) }
+    html.light .fg select:focus {
+      border-color: var(--g);
+      box-shadow: 0 0 0 3px rgba(0,132,61,.12)
+    }
+    html.light .fg select option { background: #fff; color: #0f1a12 }
 
-    html.light .fg select option { background: #fff; color: #1a2a1e }
-
+    /* ── resources ───────────────────────────────────────────────────── */
+    html.light .rp { background: var(--k) }
     html.light .rc {
-      background: rgba(255, 255, 255, .7);
-      border-color: rgba(0, 107, 48, .15)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
+    html.light .rc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .rc h3 { color: #0a1a0d }
+    html.light .rc p { color: #3d5c47 }
+    html.light .rc-link { color: var(--g) }
 
-    html.light .rc p { color: rgba(26, 42, 30, .5) }
-
-    html.light footer { background: var(--k3) }
-
-    html.light .fb p { color: rgba(26, 42, 30, .6) }
-
-    html.light .fc h5 { color: rgba(26, 42, 30, .3) }
-
+    /* ── footer ──────────────────────────────────────────────────────── */
+    html.light footer {
+      background: #ebf5ef;
+      border-top-color: rgba(0,132,61,.2)
+    }
+    html.light .fb p { color: #3d5c47 }
+    html.light .fc h5 { color: #3d5c47; opacity: .6 }
     html.light .fc a,
-    html.light .fc button { color: rgba(26, 42, 30, .55) }
-
+    html.light .fc button { color: #3d5c47 }
     html.light .fc a:hover,
-    html.light .fc button:hover { color: var(--w) }
+    html.light .fc button:hover { color: var(--g) }
+    html.light .ftbot { border-top-color: rgba(0,132,61,.15) }
+    html.light .ftbot p { color: #8aaa95 }
+    html.light .fts { border-color: rgba(0,0,0,.15); color: #3d5c47 }
+    html.light .fts:hover { border-color: var(--g); color: var(--g) }
 
-    html.light .ftbot { border-top-color: rgba(0, 107, 48, .15) }
-
-    html.light .ftbot p { color: rgba(26, 42, 30, .25) }
-
-    html.light .fts {
-      border-color: rgba(26, 42, 30, .12);
-      color: rgba(26, 42, 30, .5)
-    }
-
-    html.light .fts:hover { border-color: var(--gl); color: var(--gl) }
-
+    /* ── toasts ──────────────────────────────────────────────────────── */
     html.light .toast-card {
-      background: rgba(240, 248, 242, .97);
-      border-color: rgba(26, 42, 30, .12)
+      background: #fff;
+      border-color: rgba(0,0,0,.1);
+      box-shadow: 0 8px 24px rgba(0,0,0,.12)
     }
+    html.light .toast-card .toast-title { color: #0a1a0d }
+    html.light .toast-desc { color: #3d5c47 }
+    html.light .toast-close { color: #8aaa95 }
+    html.light .toast-close:hover { color: #0a1a0d }
 
-    html.light .toast-desc { color: rgba(26, 42, 30, .75) }
-
-    html.light .toast-close { color: rgba(26, 42, 30, .4) }
-    html.light .toast-close:hover { color: var(--w) }
-
-    html.light .nav-logo img {
-      filter: none;
-      mix-blend-mode: normal
-    }
+    /* ── logo in light mode ──────────────────────────────────────────── */
+    html.light .nav-logo img { filter: none; mix-blend-mode: normal }
 
     /* Light mode toggle button */
     .theme-toggle {
