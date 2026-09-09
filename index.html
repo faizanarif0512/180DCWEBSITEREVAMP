@@ -6674,6 +6674,32 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
     });
   </script>
   <div id="toastContainer" class="toast-container"></div>
+
+  <!-- FONT STUDY WIDGET -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Nunito:wght@400;600;700&family=Slabo+27px&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style id="fontStudyStyle"></style>
+  <div id="fontStudyWidget" style="position:fixed;bottom:20px;right:20px;background:rgba(10,26,13,0.95);border:1px solid var(--g);padding:15px;border-radius:12px;z-index:99999;box-shadow:0 10px 30px rgba(0,0,0,0.5);width:160px;backdrop-filter:blur(10px)">
+    <h4 style="color:var(--g);font-size:12px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;font-family:sans-serif">Font Study</h4>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <button onclick="applyFont('')" style="background:#fff;color:#000;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer">Default</button>
+      <button onclick="applyFont('\'Source Sans 3\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Source Sans 3', sans-serif">Scoutie / Source</button>
+      <button onclick="applyFont('\'Raleway\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Raleway', sans-serif">Raleway</button>
+      <button onclick="applyFont('\'Nunito\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Nunito', sans-serif">Nunito</button>
+      <button onclick="applyFont('\'Slabo 27px\', serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Slabo 27px', serif">Slabo</button>
+      <button onclick="applyFont('\'Merriweather\', serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Merriweather', serif">Merriweather</button>
+    </div>
+  </div>
+  <script>
+    function applyFont(font) {
+      if (!font) {
+        document.getElementById('fontStudyStyle').innerHTML = '';
+      } else {
+        document.getElementById('fontStudyStyle').innerHTML = `
+          * { font-family: ${font} !important; }
+        `;
+      }
+    }
+  </script>
 </body>
 
 </html>
