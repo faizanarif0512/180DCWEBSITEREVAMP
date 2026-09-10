@@ -5982,8 +5982,8 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       </div>
       <div class="fc">
         <h5>Connect</h5><a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/home/" target="_blank">LinkedIn</a><a
-          href="https://www.instagram.com/180dc.iitkgp/" target="_blank">Instagram</a><a
-          href="https://www.180dciitkgp.in/blogs" target="_blank">Blog</a><a href="mailto:iitkgp@180dc.org">Email
+          href="https://www.instagram.com/180dc.iitkgp/" target="_blank">Instagram</a><button
+          onclick="gotoBlog()">Blog</button><a href="mailto:iitkgp@180dc.org">Email
           Us</a><a href="https://www.180dc.org" target="_blank">180DC Global</a>
       </div>
     </div>
@@ -6272,6 +6272,23 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       closeMob();
       setTimeout(() => { observeReveal(); initCounters() }, 120);
     }
+
+    function gotoBlog() {
+      goto('home');
+      setTimeout(() => {
+        const el = document.getElementById("blogs");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    }
+
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('load', function () {
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+      }
+    });
 
     /* ── SCROLL REVEAL */
     const revealObserver = new IntersectionObserver(e => {
