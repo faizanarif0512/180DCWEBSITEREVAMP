@@ -1853,7 +1853,7 @@
     }
 
     .bc {
-      flex: 0 0 calc(33.333% - 12px);
+      flex: 0 0 calc(50% - 9px);
       border: 1px solid var(--bdr);
       border-radius: 8px;
       overflow: hidden;
@@ -4036,32 +4036,6 @@
                 <h3 class="bc-title">GST Unplugged: From Popcorn to Policies!</h3>
                 <p class="bc-desc">Breaking down GST's evolution in India through everyday examples  -  what it means for
                   small businesses and nonprofits navigating compliance.</p>
-                <span class="bc-link">Read Article &#8599;</span>
-              </div>
-            </a>
-          </article>
-          <article class="bc reveal d2">
-            <a href="https://www.180dciitkgp.in/blogs" target="_blank" rel="noopener"
-              style="text-decoration:none;display:block">
-              <div class="bc-img" style="background:url('https://lh3.googleusercontent.com/sitesv/AG8ngQUjvHk-Xg0r5BYIR-M8jXBM41Npmas0F9E7L9Xx0bmJuOtA-XBKtuH3LqInlbNGPS7qZSQ5o0O4qrQZKMBBQ97XLsm7J77IwFjXo61klZAB0iVVpIq3vRApGF1cVdFxgK13nCcd3LjgMXN2WgTmzU-HeUaDkNg_-GX3G92yd5eh7mbxKoNkyqMntov91rs=w1280') center/cover"></div>
-              <div class="bc-body">
-                <div class="bc-meta"><span class="bc-cat">Impact</span><span>Oct 2024</span></div>
-                <h3 class="bc-title">Measuring What Matters: M&E in the NGO Sector</h3>
-                <p class="bc-desc">Why most NGOs measure the wrong things, and how a rigorous M&E framework transforms
-                  programme design and donor confidence.</p>
-                <span class="bc-link">Read Article &#8599;</span>
-              </div>
-            </a>
-          </article>
-          <article class="bc reveal d3">
-            <a href="https://www.180dciitkgp.in/blogs" target="_blank" rel="noopener"
-              style="text-decoration:none;display:block">
-              <div class="bc-img" style="background:url('https://lh3.googleusercontent.com/sitesv/AG8ngQWHCaJwm8mlxfthm5bCDmadkfFhisOmSac-VTDfL78ziBEd7n6_akkbmnzfjR47sDi5VjtZeQxA74QhwhDIwvZVZRSRq6M76yoB10H1HiEZXRTVOH49vAaGxssApzeniVWFxqYGdZTR0byvz46gezTJ8ZKDKsuywvjHUkd1TRdzbvo7jtZjcB4lj2vM=w1280') center/cover"></div>
-              <div class="bc-body">
-                <div class="bc-meta"><span class="bc-cat">Consulting</span><span>Sep 2024</span></div>
-                <h3 class="bc-title">The Last Mile: Distribution in Rural India</h3>
-                <p class="bc-desc">How social enterprises in rural India can rethink distribution channels to reach more
-                  beneficiaries cost-effectively.</p>
                 <span class="bc-link">Read Article &#8599;</span>
               </div>
             </a>
@@ -6361,7 +6335,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       const cards = track.querySelectorAll(".bc");
       const dotsEl = document.getElementById("bcDots");
       let cur = 0;
-      const vis = () => window.innerWidth <= 900 ? 1 : 3;
+      const vis = () => window.innerWidth <= 900 ? 1 : 2;
       const mx = () => Math.max(0, cards.length - vis());
       function buildDots() { dotsEl.innerHTML = ""; for (let i = 0; i <= mx(); i++) { const d = document.createElement("button"); d.className = "cdot" + (i === 0 ? " on" : ""); d.setAttribute("aria-label", "Slide " + (i + 1)); d.addEventListener("click", () => go(i)); dotsEl.appendChild(d) } }
       function go(i) { cur = Math.max(0, Math.min(i, mx())); track.style.transform = `translateX(-${cur * (cards[0].offsetWidth + 18)}px)`; dotsEl.querySelectorAll(".cdot").forEach((d, j) => d.classList.toggle("on", j === cur)) }
