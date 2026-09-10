@@ -1041,10 +1041,10 @@
 
     #three-canvas {
       position: absolute;
-      top: 50px;
+      top: 0;
       right: 0;
       width: 50%;
-      height: calc(100% - 50px);
+      height: 100vh;
       z-index: 1;
       pointer-events: none
     }
@@ -6119,7 +6119,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       });
 
       const globe = new THREE.Points(geometry, material);
-      globe.position.y = -25;
+      globe.position.y = -10;
       scene.add(globe);
 
       const lineMaterial = new THREE.LineBasicMaterial({
@@ -6143,7 +6143,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
 
       lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
       const connections = new THREE.LineSegments(lineGeometry, lineMaterial);
-      connections.position.y = -25;
+      connections.position.y = -10;
       scene.add(connections);
 
       let mouseX = 0, mouseY = 0;
