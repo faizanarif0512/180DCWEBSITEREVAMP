@@ -66,17 +66,17 @@
        --tr  : global transition timing (animations)
        ═══════════════════════════════════════════════════════════════════ */
     :root {
-      --g: #00843d;
-      --gm: #007335;
-      --gd: #004720;
-      --gl: #86bc2a;
+      --g: #71a333;
+      --gm: #5e8b28;
+      --gd: #385617;
+      --gl: #81b73a;
       --gp: #f0f7e6;
       --k: #050807;
       --k2: #0b100e;
       --k3: #0e1613;
       --w: #f3f4f6;
       --mut: #8b9e95;
-      --bdr: rgba(134, 188, 42, .15);
+      --bdr: rgba(129, 183, 58, .18);
       --tr: .32s cubic-bezier(.4, 0, .2, 1)
     }
 
@@ -85,17 +85,17 @@
        Pure white backgrounds · near-black text · vivid greens · WCAG AA
        ═══════════════════════════════════════════════════════════════════ */
     html.light {
-      --g:   #00843d;
-      --gm:  #006b30;
-      --gd:  #d4eddd;
-      --gl:  #3d7200;
+      --g:   #71a333;
+      --gm:  #5e8b28;
+      --gd:  #d8ead0;
+      --gl:  #49721f;
       --gp:  #edf7f1;
       --k:   #ffffff;
       --k2:  #f5faf7;
       --k3:  #ebf5ef;
       --w:   #0f1a12;
       --mut: #3d5c47;
-      --bdr: rgba(0, 132, 61, .2)
+      --bdr: rgba(113, 163, 51, .2)
     }
 
     /* ── body & base ─────────────────────────────────────────────────── */
@@ -104,11 +104,11 @@
     /* ── nav ─────────────────────────────────────────────────────────── */
     html.light nav.scrolled {
       background: rgba(255, 255, 255, .95) !important;
-      box-shadow: 0 1px 0 rgba(0, 132, 61, .15), 0 2px 12px rgba(0,0,0,.07)
+      box-shadow: 0 1px 0 rgba(113, 163, 51, .15), 0 2px 12px rgba(0,0,0,.07)
     }
     html.light .nav-tabs {
       background: rgba(0, 0, 0, .03);
-      border-color: rgba(0, 132, 61, .2)
+      border-color: rgba(113, 163, 51, .2)
     }
     html.light .nav-tab { color: #3d5c47 }
     html.light .nav-tab.on,
@@ -118,12 +118,12 @@
 
     html.light .mob-menu {
       background: rgba(255, 255, 255, .98);
-      border-color: rgba(0, 132, 61, .15)
+      border-color: rgba(113, 163, 51, .15)
     }
     html.light .mob-menu button,
     html.light .mob-menu a {
       color: #1a3022;
-      border-bottom-color: rgba(0, 132, 61, .12)
+      border-bottom-color: rgba(113, 163, 51, .12)
     }
     html.light .mob-menu button:hover,
     html.light .mob-menu a:hover { color: var(--g) }
@@ -139,8 +139,8 @@
 
     html.light .h-why {
       background: #fff;
-      border-color: rgba(0, 132, 61, .25);
-      box-shadow: 0 2px 12px rgba(0,132,61,.08)
+      border-color: rgba(113, 163, 51, .25);
+      box-shadow: 0 2px 12px rgba(113, 163, 51,.08)
     }
     html.light .h-why-q { color: var(--g) }
     html.light .h-why-a { color: #2d4a35 }
@@ -148,22 +148,22 @@
     html.light .h-why-a strong { color: var(--g) }
 
     html.light .h-stats { border-top-color: rgba(0, 0, 0, .1) }
-    html.light .stat+.stat { border-left-color: rgba(0, 132, 61, .2) }
+    html.light .stat+.stat { border-left-color: rgba(113, 163, 51, .2) }
     html.light .snum,
     html.light .snum .ctr { color: #0a1a0d; text-shadow: none }
     html.light .slbls { color: #3d5c47 }
 
     html.light .h-panel {
       background: #fff;
-      border-color: rgba(0, 132, 61, .25);
+      border-color: rgba(113, 163, 51, .25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, .1)
     }
-    html.light .h-panel::before { background: radial-gradient(ellipse at top right, rgba(0,132,61,.07), transparent 65%) }
+    html.light .h-panel::before { background: radial-gradient(ellipse at top right, rgba(113, 163, 51,.07), transparent 65%) }
     html.light .h-panel-title { color: var(--g) }
     html.light .h-stat-row { border-bottom-color: rgba(0, 0, 0, .07) }
     html.light .h-stat-icon {
-      background: rgba(0, 132, 61, .08);
-      border-color: rgba(0, 132, 61, .18)
+      background: rgba(113, 163, 51, .08);
+      border-color: rgba(113, 163, 51, .18)
     }
     html.light .h-stat-val { color: #0a1a0d }
     html.light .h-stat-lbl { color: #3d5c47 }
@@ -177,13 +177,13 @@
     html.light .bg:hover {
       border-color: var(--g);
       color: var(--g);
-      background: rgba(0, 132, 61, .06)
+      background: rgba(113, 163, 51, .06)
     }
 
     /* ── marquee ─────────────────────────────────────────────────────── */
     html.light .mq {
       background: #f0f8f3;
-      border-color: rgba(0, 132, 61, .25)
+      border-color: rgba(113, 163, 51, .25)
     }
     html.light .mq-lbl { color: var(--g) }
     html.light .m-pill {
@@ -193,7 +193,7 @@
     }
     html.light .m-pill:hover {
       border-color: var(--g);
-      background: rgba(0,132,61,.06)
+      background: rgba(113, 163, 51,.06)
     }
 
     /* ── three cards ─────────────────────────────────────────────────── */
@@ -207,9 +207,9 @@
     html.light .tcard p { color: #3d5c47 }
     html.light .tcard:hover {
       border-color: var(--g);
-      box-shadow: 0 12px 32px rgba(0,132,61,.12)
+      box-shadow: 0 12px 32px rgba(113, 163, 51,.12)
     }
-    html.light .ti { background: rgba(0, 132, 61, .1) }
+    html.light .ti { background: rgba(113, 163, 51, .1) }
     html.light .tbtn { color: var(--g) }
     html.light .tbtn:hover { color: #0a1a0d }
 
@@ -217,15 +217,15 @@
     html.light #award-section { background: var(--k) }
     html.light .award-card {
       background: linear-gradient(135deg, #fff, #edf7f1);
-      border-color: rgba(0, 132, 61, .3);
+      border-color: rgba(113, 163, 51, .3);
       box-shadow: 0 8px 28px rgba(0,0,0,.08)
     }
     html.light .award-card::before {
       background: linear-gradient(90deg, #a8d5b5, var(--gl), #c8e6cc)
     }
     html.light .award-badge {
-      background: rgba(0, 132, 61, .1);
-      border-color: rgba(0, 132, 61, .3);
+      background: rgba(113, 163, 51, .1);
+      border-color: rgba(113, 163, 51, .3);
       color: var(--g)
     }
     html.light .award-card-content h3 { color: #0a1a0d }
@@ -245,11 +245,11 @@
       border-color: rgba(0,0,0,.1);
       color: #0f1a12
     }
-    html.light .co-chip:hover { background: rgba(0,132,61,.08); border-color: var(--g) }
+    html.light .co-chip:hover { background: rgba(113, 163, 51,.08); border-color: var(--g) }
 
     /* ── impact ──────────────────────────────────────────────────────── */
     html.light #impact { background: var(--k2) }
-    html.light #impact::before { background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(0,132,61,.06), transparent 70%) }
+    html.light #impact::before { background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(113, 163, 51,.06), transparent 70%) }
     html.light .imp-grid {
       background: rgba(0,0,0,.05);
       border-color: rgba(0,0,0,.08)
@@ -268,11 +268,11 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .bc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .bc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
     html.light .bc-title { color: #0a1a0d }
     html.light .bc-desc { color: #3d5c47 }
     html.light .bc-meta { color: #3d5c47 }
-    html.light .bc-cat { background: rgba(0,132,61,.1); color: var(--g) }
+    html.light .bc-cat { background: rgba(113, 163, 51,.1); color: var(--g) }
     html.light .bc-link { color: var(--g) }
     html.light .bc-link:hover { color: #0a1a0d }
     html.light .cbt { border-color: rgba(0,0,0,.15); color: #3d5c47 }
@@ -282,9 +282,9 @@
     /* ── CTA strip ───────────────────────────────────────────────────── */
     html.light .cta {
       background: var(--k2);
-      border-color: rgba(0,132,61,.2)
+      border-color: rgba(113, 163, 51,.2)
     }
-    html.light .cta::before { background: radial-gradient(circle, rgba(0,132,61,.07), transparent 70%) }
+    html.light .cta::before { background: radial-gradient(circle, rgba(113, 163, 51,.07), transparent 70%) }
     html.light .sttl { color: #0a1a0d }
     html.light .ssub { color: #2d4a35 }
     html.light .slbl { color: var(--g) }
@@ -295,14 +295,14 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .sc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .sc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
     html.light .sc-head { background: var(--g) }
     html.light .si {
       background: #f5faf7;
-      border-color: rgba(0,132,61,.15);
+      border-color: rgba(113, 163, 51,.15);
       color: #1a3022
     }
-    html.light .si:hover { background: rgba(0,132,61,.1); color: var(--g); border-color: var(--g) }
+    html.light .si:hover { background: rgba(113, 163, 51,.1); color: var(--g); border-color: var(--g) }
 
     html.light .fi { border-top-color: rgba(0,0,0,.08) }
     html.light .fi:last-child { border-bottom-color: rgba(0,0,0,.08) }
@@ -315,7 +315,7 @@
     html.light .pp { background: var(--k) }
     html.light .map-wrap {
       background: #fff;
-      border-color: rgba(0,132,61,.2);
+      border-color: rgba(113, 163, 51,.2);
       box-shadow: 0 4px 16px rgba(0,0,0,.07)
     }
     html.light .pc {
@@ -323,10 +323,10 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .pc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .pc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
     html.light .pc h3 { color: #0a1a0d }
     html.light .pc p { color: #3d5c47 }
-    html.light .ptag { background: rgba(0,132,61,.1); color: var(--g) }
+    html.light .ptag { background: rgba(113, 163, 51,.1); color: var(--g) }
     html.light .pq { background: #f0f8f3; border-left-color: var(--g); color: #3d5c47 }
     html.light .map-card {
       background: #fff;
@@ -334,16 +334,16 @@
     }
     html.light .map-card:hover,
     html.light .map-card.active {
-      background: rgba(0,132,61,.07);
+      background: rgba(113, 163, 51,.07);
       border-color: var(--g)
     }
     html.light .mc-content h4 { color: #0a1a0d }
     html.light .mc-tag { color: #3d5c47 }
     html.light .map-canvas-container {
       background: #fff;
-      border-color: rgba(0,132,61,.2)
+      border-color: rgba(113, 163, 51,.2)
     }
-    html.light .map-states path { fill: rgba(0,132,61,.06); stroke: rgba(0,132,61,.4) }
+    html.light .map-states path { fill: rgba(113, 163, 51,.06); stroke: rgba(113, 163, 51,.4) }
     html.light .submap-card {
       background: #fff;
       border-color: rgba(0,0,0,.1)
@@ -358,27 +358,27 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .dc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .dc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
     html.light .dc h4 { color: #0a1a0d }
     html.light .dc-dept { color: #3d5c47 }
-    html.light .dc-av { background: #d4eddd; border-color: rgba(0,132,61,.3) }
+    html.light .dc-av { background: #d8ead0; border-color: rgba(113, 163, 51,.3) }
     html.light .on { border-color: rgba(0,0,0,.1) }
     html.light .on h4 { color: #0a1a0d }
     html.light .on span { color: #3d5c47 }
     html.light .on.top {
       background: #fff;
-      border-color: rgba(0,132,61,.35);
+      border-color: rgba(113, 163, 51,.35);
       box-shadow: 0 2px 8px rgba(0,0,0,.07)
     }
-    html.light .org-line { background: rgba(0,132,61,.25) }
+    html.light .org-line { background: rgba(113, 163, 51,.25) }
     html.light .ac {
       background: #fff;
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.04)
     }
-    html.light .ac:hover { border-color: var(--g); box-shadow: 0 8px 20px rgba(0,132,61,.12) }
+    html.light .ac:hover { border-color: var(--g); box-shadow: 0 8px 20px rgba(113, 163, 51,.12) }
     html.light .ac-name { color: #0a1a0d }
-    html.light .ac-av { background: #d4eddd; border-color: rgba(0,132,61,.3) }
+    html.light .ac-av { background: #d8ead0; border-color: rgba(113, 163, 51,.3) }
 
     /* ── testimonials ────────────────────────────────────────────────── */
     html.light .test-card {
@@ -386,20 +386,20 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .test-card:hover { border-color: var(--g); box-shadow: 0 12px 28px rgba(0,132,61,.12) }
+    html.light .test-card:hover { border-color: var(--g); box-shadow: 0 12px 28px rgba(113, 163, 51,.12) }
     html.light .test-quote { color: #1a3022 }
     html.light .test-author h4 { color: #0a1a0d }
     html.light .test-author p { color: #3d5c47 }
     html.light .test-cta {
       background: #f0f8f3;
-      border-color: rgba(0,132,61,.25)
+      border-color: rgba(113, 163, 51,.25)
     }
     html.light .test-cta h3 { color: #0a1a0d }
     html.light .test-cta p { color: #3d5c47 }
 
     /* ── contact ─────────────────────────────────────────────────────── */
     html.light .cp { background: var(--k) }
-    html.light .ci-icon { background: rgba(0,132,61,.1) }
+    html.light .ci-icon { background: rgba(113, 163, 51,.1) }
     html.light .ci-item h4 { color: #3d5c47 }
     html.light .ci-item p,
     html.light .ci-item a { color: #0f1a12 }
@@ -408,7 +408,7 @@
     html.light .soc:hover { border-color: var(--g); color: var(--g) }
     html.light .cf {
       background: #fff;
-      border-color: rgba(0,132,61,.2);
+      border-color: rgba(113, 163, 51,.2);
       box-shadow: 0 8px 28px rgba(0,0,0,.08)
     }
     html.light .cf h3 { color: #0a1a0d }
@@ -426,7 +426,7 @@
     html.light .fg textarea:focus,
     html.light .fg select:focus {
       border-color: var(--g);
-      box-shadow: 0 0 0 3px rgba(0,132,61,.12)
+      box-shadow: 0 0 0 3px rgba(113, 163, 51,.12)
     }
     html.light .fg select option { background: #fff; color: #0f1a12 }
 
@@ -437,7 +437,7 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .rc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
+    html.light .rc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
     html.light .rc h3 { color: #0a1a0d }
     html.light .rc p { color: #3d5c47 }
     html.light .rc-link { color: var(--g) }
@@ -445,7 +445,7 @@
     /* ── footer ──────────────────────────────────────────────────────── */
     html.light footer {
       background: #ebf5ef;
-      border-top-color: rgba(0,132,61,.2)
+      border-top-color: rgba(113, 163, 51,.2)
     }
     html.light .fb p { color: #3d5c47 }
     html.light .fc h5 { color: #3d5c47; opacity: .6 }
@@ -453,7 +453,7 @@
     html.light .fc button { color: #3d5c47 }
     html.light .fc a:hover,
     html.light .fc button:hover { color: var(--g) }
-    html.light .ftbot { border-top-color: rgba(0,132,61,.15) }
+    html.light .ftbot { border-top-color: rgba(113, 163, 51,.15) }
     html.light .ftbot p { color: #8aaa95 }
     html.light .fts { border-color: rgba(0,0,0,.15); color: #3d5c47 }
     html.light .fts:hover { border-color: var(--g); color: var(--g) }
@@ -477,7 +477,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      border: 1px solid rgba(134, 188, 42, .25);
+      border: 1px solid rgba(129, 183, 58, .25);
       background: rgba(255, 255, 255, .04);
       color: var(--mut);
       display: flex;
@@ -491,7 +491,7 @@
     .theme-toggle:hover {
       border-color: var(--gl);
       color: var(--gl);
-      background: rgba(134, 188, 42, .08)
+      background: rgba(129, 183, 58, .08)
     }
 
     html.light .theme-toggle {
@@ -552,7 +552,7 @@
     #cur.big {
       width: 28px;
       height: 28px;
-      background: rgba(134, 188, 42, .22);
+      background: rgba(129, 183, 58, .22);
       pointer-events: none !important
     }
 
@@ -581,7 +581,7 @@
     nav.scrolled {
       background: rgba(5, 8, 7, .85);
       backdrop-filter: blur(14px);
-      box-shadow: 0 1px 0 rgba(0, 132, 61, .1)
+      box-shadow: 0 1px 0 rgba(113, 163, 51, .1)
     }
 
     .nav-logo {
@@ -621,7 +621,7 @@
       gap: 4px;
       background: rgba(255, 255, 255, .02);
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(134, 188, 42, .15);
+      border: 1px solid rgba(129, 183, 58, .18);
       border-radius: 30px;
       padding: 4px
     }
@@ -642,7 +642,7 @@
     .nav-tab:hover {
       background: linear-gradient(135deg, var(--g), var(--gl));
       color: #fff;
-      box-shadow: 0 4px 12px rgba(0, 132, 61, 0.25)
+      box-shadow: 0 4px 12px rgba(113, 163, 51, 0.25)
     }
 
     .nav-right {
@@ -658,14 +658,14 @@
       border-radius: 30px;
       font-size: 13px;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0, 132, 61, 0.2);
+      box-shadow: 0 4px 12px rgba(113, 163, 51, 0.2);
       transition: all var(--tr)
     }
 
     .nav-cta:hover {
       background: var(--gm);
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(0, 132, 61, 0.35)
+      box-shadow: 0 6px 16px rgba(113, 163, 51, 0.35)
     }
 
     .ham {
@@ -768,14 +768,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 14px rgba(0, 132, 61, 0.25);
+      box-shadow: 0 4px 14px rgba(113, 163, 51, 0.25);
       transition: all var(--tr)
     }
 
     .bp:hover {
       background: var(--gm);
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(0, 132, 61, .4)
+      box-shadow: 0 10px 24px rgba(113, 163, 51, .4)
     }
 
     .bg {
@@ -794,8 +794,8 @@
     .bg:hover {
       border-color: var(--gl);
       color: #fff;
-      background: rgba(0, 132, 61, .1);
-      box-shadow: 0 4px 14px rgba(0, 132, 61, 0.15)
+      background: rgba(113, 163, 51, .1);
+      box-shadow: 0 4px 14px rgba(113, 163, 51, 0.15)
     }
 
     /* SECTION UTILS */
@@ -927,7 +927,7 @@
 
     .toast-card.success {
       border-left: 4px solid var(--gl);
-      background: linear-gradient(135deg, rgba(134, 188, 42, 0.14), rgba(14, 22, 19, 0.96));
+      background: linear-gradient(135deg, rgba(129, 183, 58, 0.14), rgba(14, 22, 19, 0.96));
     }
 
     .toast-card.warning {
@@ -1333,14 +1333,14 @@
     .h-stat-icon {
       width: 48px;
       height: 48px;
-      background: rgba(58, 125, 68, .12);
+      background: rgba(113, 163, 51, .12);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 22px;
       flex-shrink: 0;
-      border: 1px solid rgba(58, 125, 68, .2)
+      border: 1px solid rgba(113, 163, 51, .2)
     }
 
     .h-stat-right {
@@ -1457,7 +1457,7 @@
     }
 
     .tcard:hover {
-      border-color: rgba(52, 211, 153, .35);
+      border-color: rgba(129, 183, 58, .35);
       transform: translateY(-4px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, .6), 0 0 15px rgba(16, 185, 129, 0.05)
     }
@@ -1469,7 +1469,7 @@
     .ti {
       width: 42px;
       height: 42px;
-      background: rgba(58, 125, 68, .12);
+      background: rgba(113, 163, 51, .12);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -1519,9 +1519,9 @@
 
     .award-card {
       margin-top: 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(134, 188, 42, 0.04) 100%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(129, 183, 58, 0.04) 100%);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(134, 188, 42, 0.25);
+      border: 1px solid rgba(129, 183, 58, 0.25);
       border-radius: 16px;
       padding: 32px;
       position: relative;
@@ -1541,8 +1541,8 @@
     }
 
     .award-card:hover {
-      border-color: rgba(134, 188, 42, 0.45);
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(134, 188, 42, 0.12);
+      border-color: rgba(129, 183, 58, 0.45);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(129, 183, 58, 0.12);
       transform: translateY(-2px);
     }
 
@@ -1558,8 +1558,8 @@
       align-items: center;
       gap: 6px;
       padding: 5px 13px;
-      background: rgba(134, 188, 42, 0.12);
-      border: 1px solid rgba(134, 188, 42, 0.3);
+      background: rgba(129, 183, 58, 0.12);
+      border: 1px solid rgba(129, 183, 58, 0.3);
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
@@ -1653,8 +1653,8 @@
     /* MARQUEE (companies) */
     .mq {
       background: rgba(255, 255, 255, .05);
-      border-top: 1.5px solid rgba(58, 125, 68, 0.35);
-      border-bottom: 1.5px solid rgba(58, 125, 68, 0.35);
+      border-top: 1.5px solid rgba(113, 163, 51, 0.35);
+      border-bottom: 1.5px solid rgba(113, 163, 51, 0.35);
       padding: 44px 0;
       overflow: hidden
     }
@@ -1713,7 +1713,7 @@
     .m-pill:hover {
       color: var(--w);
       border-color: var(--gl);
-      background: rgba(58, 125, 68, .15)
+      background: rgba(113, 163, 51, .15)
     }
 
     .m-logo {
@@ -1766,7 +1766,7 @@
     }
 
     .co-chip:hover {
-      background: rgba(58, 125, 68, .1);
+      background: rgba(113, 163, 51, .1);
       border-color: var(--gl);
       color: var(--w)
     }
@@ -1790,7 +1790,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(58, 125, 68, .06), transparent 70%);
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(113, 163, 51, .06), transparent 70%);
       pointer-events: none
     }
 
@@ -1866,7 +1866,7 @@
 
     .bc:hover {
       transform: translateY(-4px);
-      border-color: rgba(52, 211, 153, .3);
+      border-color: rgba(129, 183, 58, .3);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 10px rgba(16, 185, 129, 0.05)
     }
 
@@ -1892,7 +1892,7 @@
     }
 
     .bc-cat {
-      background: rgba(58, 125, 68, .14);
+      background: rgba(113, 163, 51, .14);
       color: var(--gl);
       padding: 2px 8px;
       border-radius: 40px;
@@ -1957,7 +1957,7 @@
     .cbt:hover {
       border-color: var(--gl);
       color: var(--w);
-      background: rgba(58, 125, 68, .1)
+      background: rgba(113, 163, 51, .1)
     }
 
     .cdots {
@@ -1995,7 +1995,7 @@
       position: absolute;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(58, 125, 68, .1), transparent 70%);
+      background: radial-gradient(circle, rgba(113, 163, 51, .1), transparent 70%);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -2039,7 +2039,7 @@
     }
 
     .sc:hover {
-      border-color: rgba(52, 211, 153, .35);
+      border-color: rgba(129, 183, 58, .35);
       box-shadow: 0 12px 32px rgba(0, 0, 0, .5), 0 0 12px rgba(16, 185, 129, 0.05)
     }
 
@@ -2070,7 +2070,7 @@
       padding: 8px 11px;
       margin-bottom: 5px;
       background: rgba(255, 255, 255, .03);
-      border: 1px solid rgba(58, 125, 68, .1);
+      border: 1px solid rgba(113, 163, 51, .1);
       border-radius: 4px;
       font-size: 12.5px;
       color: rgba(255, 255, 255, .58);
@@ -2083,7 +2083,7 @@
     }
 
     .si:hover {
-      background: rgba(58, 125, 68, .12);
+      background: rgba(113, 163, 51, .12);
       color: var(--w);
       border-color: var(--g)
     }
@@ -2343,7 +2343,7 @@
     .pc:hover {
       transform: translateY(-5px);
       box-shadow: 0 24px 48px rgba(0, 0, 0, .6), 0 0 15px rgba(16, 185, 129, 0.05);
-      border-color: rgba(52, 211, 153, .3)
+      border-color: rgba(129, 183, 58, .3)
     }
 
     .pt {
@@ -2361,7 +2361,7 @@
     .ptag {
       display: inline-block;
       padding: 3px 9px;
-      background: rgba(58, 125, 68, .14);
+      background: rgba(113, 163, 51, .14);
       color: var(--gl);
       border-radius: 40px;
       font-size: 10px;
@@ -2434,7 +2434,7 @@
     .org-line {
       width: 1px;
       height: 22px;
-      background: rgba(58, 125, 68, .25);
+      background: rgba(113, 163, 51, .25);
       margin: 0 auto
     }
 
@@ -2457,7 +2457,7 @@
 
     .on.top {
       background: var(--k2);
-      border-color: rgba(58, 125, 68, .4);
+      border-color: rgba(113, 163, 51, .4);
       min-width: 180px
     }
 
@@ -2507,7 +2507,7 @@
     }
 
     .dc:hover {
-      border-color: rgba(52, 211, 153, .3);
+      border-color: rgba(129, 183, 58, .3);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .5);
       transform: translateY(-3px)
     }
@@ -2517,7 +2517,7 @@
       height: 120px;
       border-radius: 50%;
       background: var(--gd);
-      border: 3px solid rgba(58, 125, 68, .35);
+      border: 3px solid rgba(113, 163, 51, .35);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2571,7 +2571,7 @@
 
     .dc-email {
       font-size: 11px;
-      color: rgba(134, 188, 42, .7);
+      color: rgba(129, 183, 58, .7);
       transition: color var(--tr);
       display: block
     }
@@ -2590,7 +2590,7 @@
     .dc h4 a:hover, 
     .ac-name a:hover {
       color: var(--gl);
-      text-shadow: 0 0 8px rgba(134, 188, 42, 0.4);
+      text-shadow: 0 0 8px rgba(129, 183, 58, 0.4);
     }
 
     /* ═══ TEAM BANNERS  -  Big group photos under "Meet the Team" ═══ */
@@ -2672,7 +2672,7 @@
     }
 
     .ac:hover {
-      border-color: rgba(52, 211, 153, .3);
+      border-color: rgba(129, 183, 58, .3);
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4)
     }
@@ -2691,7 +2691,7 @@
       color: var(--gl);
       margin: 0 auto 16px;
       font-family: "Cormorant Garamond", serif;
-      border: 2.5px solid rgba(58, 125, 68, .3);
+      border: 2.5px solid rgba(113, 163, 51, .3);
       overflow: hidden;
       position: relative;
     }
@@ -2757,7 +2757,7 @@
     .ci-icon {
       width: 40px;
       height: 40px;
-      background: rgba(58, 125, 68, .12);
+      background: rgba(113, 163, 51, .12);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -2881,7 +2881,7 @@
 
     .fs-msg {
       display: none;
-      background: rgba(58, 125, 68, .1);
+      background: rgba(113, 163, 51, .1);
       border: 1px solid var(--g);
       border-radius: 4px;
       padding: 14px;
@@ -2915,7 +2915,7 @@
     }
 
     .rc:hover {
-      border-color: rgba(52, 211, 153, .3);
+      border-color: rgba(129, 183, 58, .3);
       transform: translateY(-4px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 10px rgba(16, 185, 129, 0.05)
     }
@@ -3000,14 +3000,14 @@
     }
 
     .map-col::-webkit-scrollbar-thumb {
-      background: rgba(134, 188, 42, 0.35);
+      background: rgba(129, 183, 58, 0.35);
       border-radius: 4px;
       cursor: pointer;
       transition: background var(--tr);
     }
 
     .map-col::-webkit-scrollbar-thumb:hover {
-      background: rgba(134, 188, 42, 0.85);
+      background: rgba(129, 183, 58, 0.85);
     }
 
     .map-card {
@@ -3028,10 +3028,10 @@
 
     .map-card:hover,
     .map-card.active {
-      background: rgba(134, 188, 42, 0.08);
+      background: rgba(129, 183, 58, 0.08);
       border-color: var(--gl);
       transform: translateY(-2px);
-      box-shadow: 0 0 15px rgba(134, 188, 42, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px rgba(129, 183, 58, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .mc-icon {
@@ -3076,8 +3076,8 @@
 
     /* SVG Map States styling */
     .map-states path {
-      fill: rgba(0, 132, 61, 0.08);
-      stroke: rgba(134, 188, 42, 0.45);
+      fill: rgba(113, 163, 51, 0.08);
+      stroke: rgba(129, 183, 58, 0.45);
       stroke-width: 1;
       vector-effect: non-scaling-stroke;
       cursor: pointer;
@@ -3088,10 +3088,10 @@
     /* Highlight specific states on hover */
     .map-states path:hover,
     .map-states path.active {
-      fill: rgba(0, 132, 61, 0.25);
-      stroke: rgba(134, 188, 42, 1);
+      fill: rgba(113, 163, 51, 0.25);
+      stroke: rgba(129, 183, 58, 1);
       stroke-width: 1.8;
-      filter: drop-shadow(0 0 8px rgba(134, 188, 42, 0.65))
+      filter: drop-shadow(0 0 8px rgba(129, 183, 58, 0.65))
     }
 
     /* Glowing dots */
@@ -3124,8 +3124,8 @@
 
     /* Submap drawing on the main map */
     .map-submap-island path {
-      fill: rgba(0, 132, 61, 0.08) !important;
-      stroke: rgba(134, 188, 42, 0.45) !important;
+      fill: rgba(113, 163, 51, 0.08) !important;
+      stroke: rgba(129, 183, 58, 0.45) !important;
       stroke-width: 1 !important;
       vector-effect: non-scaling-stroke;
       transition: fill var(--tr), stroke var(--tr), filter var(--tr)
@@ -3133,10 +3133,10 @@
 
     .map-submap-island:hover path,
     .map-submap-island.active path {
-      fill: rgba(0, 132, 61, 0.25) !important;
-      stroke: rgba(134, 188, 42, 1) !important;
+      fill: rgba(113, 163, 51, 0.25) !important;
+      stroke: rgba(129, 183, 58, 1) !important;
       stroke-width: 1.8 !important;
-      filter: drop-shadow(0 0 8px rgba(134, 188, 42, 0.65))
+      filter: drop-shadow(0 0 8px rgba(129, 183, 58, 0.65))
     }
 
     .map-submap-label {
@@ -3187,10 +3187,10 @@
 
     .submap-card:hover,
     .submap-card.active {
-      background: rgba(134, 188, 42, 0.08);
+      background: rgba(129, 183, 58, 0.08);
       border-color: var(--gl);
       transform: translateY(-2px);
-      box-shadow: 0 0 15px rgba(134, 188, 42, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px rgba(129, 183, 58, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .submap-svg {
@@ -3200,8 +3200,8 @@
     }
 
     .submap-svg g {
-      fill: rgba(0, 132, 61, 0.08) !important;
-      stroke: rgba(134, 188, 42, 0.45) !important;
+      fill: rgba(113, 163, 51, 0.08) !important;
+      stroke: rgba(129, 183, 58, 0.45) !important;
       stroke-width: 15 !important;
       vector-effect: non-scaling-stroke;
       transition: fill var(--tr), stroke var(--tr)
@@ -3209,8 +3209,8 @@
 
     .submap-card:hover .submap-svg g,
     .submap-card.active .submap-svg g {
-      fill: rgba(0, 132, 61, 0.3) !important;
-      stroke: rgba(134, 188, 42, 0.95) !important
+      fill: rgba(113, 163, 51, 0.3) !important;
+      stroke: rgba(129, 183, 58, 0.95) !important
     }
 
     .submap-info h4 {
@@ -3247,7 +3247,7 @@
     }
 
     .test-card:hover {
-      border-color: rgba(134, 188, 42, .35);
+      border-color: rgba(129, 183, 58, .35);
       transform: translateY(-4px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, .4)
     }
@@ -3836,10 +3836,10 @@
     <section id="hero">
       <div class="h-bg" aria-hidden="true">
         <svg viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="0" x2="1400" y2="800" stroke="rgba(58,125,68,.04)" stroke-width="1" />
-          <line x1="700" y1="0" x2="1400" y2="400" stroke="rgba(58,125,68,.06)" stroke-width="1" />
-          <circle cx="900" cy="400" r="300" fill="none" stroke="rgba(58,125,68,.04)" stroke-width="1" />
-          <circle cx="900" cy="400" r="460" fill="none" stroke="rgba(58,125,68,.02)" stroke-width="1" />
+          <line x1="0" y1="0" x2="1400" y2="800" stroke="rgba(113, 163, 51,.04)" stroke-width="1" />
+          <line x1="700" y1="0" x2="1400" y2="400" stroke="rgba(113, 163, 51,.06)" stroke-width="1" />
+          <circle cx="900" cy="400" r="300" fill="none" stroke="rgba(113, 163, 51,.04)" stroke-width="1" />
+          <circle cx="900" cy="400" r="460" fill="none" stroke="rgba(113, 163, 51,.02)" stroke-width="1" />
         </svg>
       </div>
       <div class="h-glow" aria-hidden="true"></div>
@@ -6100,7 +6100,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       scene.add(globe);
 
       const lineMaterial = new THREE.LineBasicMaterial({
-        color: 0x86bc2a,
+        color: 0x81b73a,
         transparent: true,
         opacity: 0.08
       });
