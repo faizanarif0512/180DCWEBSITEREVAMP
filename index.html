@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Raleway:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <!-- Three.js: powers the animated 3D globe on the hero section. Do not remove. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -40,12 +40,24 @@
     *::after {
       box-sizing: border-box;
       margin: 0;
-      padding: 0
+      padding: 0;
+      font-variant-numeric: lining-nums;
+      -webkit-font-feature-settings: "lnum" 1;
+      font-feature-settings: "lnum" 1;
     }
 
     html {
       font-size: 16px;
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      font-variant-numeric: lining-nums;
+      -webkit-font-feature-settings: "lnum" 1;
+      font-feature-settings: "lnum" 1;
+    }
+
+    body {
+      font-variant-numeric: lining-nums;
+      -webkit-font-feature-settings: "lnum" 1;
+      font-feature-settings: "lnum" 1;
     }
 
     /* ═══════════════════════════════════════════════════════════════════
@@ -6689,10 +6701,10 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
   <script>
     function applyFont(font) {
       if (!font) {
-        document.getElementById('fontStudyStyle').innerHTML = '';
+        document.getElementById('fontStudyStyle').innerHTML = '* { font-variant-numeric: lining-nums !important; -webkit-font-feature-settings: "lnum" 1 !important; font-feature-settings: "lnum" 1 !important; }';
       } else {
         document.getElementById('fontStudyStyle').innerHTML = `
-          * { font-family: ${font} !important; }
+          * { font-family: ${font} !important; font-variant-numeric: lining-nums !important; -webkit-font-feature-settings: "lnum" 1 !important; font-feature-settings: "lnum" 1 !important; }
         `;
       }
     }
