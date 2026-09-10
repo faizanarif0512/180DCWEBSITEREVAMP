@@ -25,7 +25,7 @@
   <title>180 Degrees Consulting | IIT Kharagpur</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
-  <!-- FONTS: Cormorant Garamond (headings), Outfit (body text), DM Mono (labels)
+  <!-- FONTS: Cormorant Garamond (headings), Raleway (body text), DM Mono (labels)
        To change fonts, update the Google Fonts URL below and the font-family in :root -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -529,7 +529,7 @@
     html.light .theme-toggle .t-sun { opacity: 1; transform: rotate(0deg) }
 
     body {
-      font-family: "Outfit", sans-serif;
+      font-family: "Raleway", sans-serif;
       background: var(--k);
       color: var(--w);
       overflow-x: hidden;
@@ -2203,7 +2203,7 @@
       padding: 16px 0;
       background: none;
       border: none;
-      font-family: "Outfit", sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 14.5px;
       color: rgba(255, 255, 255, .65);
       gap: 16px;
@@ -2863,7 +2863,7 @@
       padding: 11px 14px;
       border: 1.5px solid rgba(255, 255, 255, .08);
       border-radius: 4px;
-      font-family: "Outfit", sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 14px;
       background: rgba(255, 255, 255, .04);
       color: var(--w);
@@ -6681,53 +6681,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
   </script>
   <div id="toastContainer" class="toast-container"></div>
 
-  <!-- FONT STUDY WIDGET -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Nunito:wght@400;600;700&family=Slabo+27px&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <style id="fontStudyStyle"></style>
-  <div id="fontStudyWidget" style="position:fixed;bottom:20px;right:20px;background:rgba(10,26,13,0.95);border:1px solid var(--g);padding:15px;border-radius:12px;z-index:99999;box-shadow:0 10px 30px rgba(0,0,0,0.5);width:160px;backdrop-filter:blur(10px)">
-    <h4 style="color:var(--g);font-size:12px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;font-family:sans-serif">Font Study</h4>
-    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
-      <button onclick="applyFont('')" style="background:#fff;color:#000;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer">Default</button>
-      <button onclick="applyFont('\'Source Sans 3\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Source Sans 3', sans-serif">Scoutie / Source</button>
-      <button onclick="applyFont('\'Raleway\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Raleway', sans-serif">Raleway</button>
-      <button onclick="applyFont('\'Nunito\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Nunito', sans-serif">Nunito</button>
-      <button onclick="applyFont('\'Slabo 27px\', serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Slabo 27px', serif">Slabo</button>
-      <button onclick="applyFont('\'Merriweather\', serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Merriweather', serif">Merriweather</button>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:10px">
-      <button onclick="toggleFontSize()" id="fontSizeBtn" style="background:transparent;border:1px solid var(--g);color:var(--g);padding:6px;border-radius:4px;font-size:12px;cursor:pointer;width:100%">Toggle Large Text</button>
-    </div>
-  </div>
-  <script>
-    function applyFont(font) {
-      if (!font) {
-        document.getElementById('fontStudyStyle').innerHTML = '* { font-variant-numeric: lining-nums !important; -webkit-font-feature-settings: "lnum" 1 !important; font-feature-settings: "lnum" 1 !important; }';
-      } else {
-        document.getElementById('fontStudyStyle').innerHTML = `
-          * { font-family: ${font} !important; font-variant-numeric: lining-nums !important; -webkit-font-feature-settings: "lnum" 1 !important; font-feature-settings: "lnum" 1 !important; }
-        `;
-      }
-    }
 
-    let isLargeText = false;
-    function toggleFontSize() {
-      isLargeText = !isLargeText;
-      document.getElementById('fontSizeBtn').style.background = isLargeText ? 'var(--g)' : 'transparent';
-      document.getElementById('fontSizeBtn').style.color = isLargeText ? '#fff' : 'var(--g)';
-      
-      const elements = document.querySelectorAll('body *:not(script):not(style):not(#fontStudyWidget):not(#fontStudyWidget *)');
-      elements.forEach(el => {
-        if (!el.dataset.origSize) {
-          const style = window.getComputedStyle(el);
-          el.dataset.origSize = parseFloat(style.fontSize);
-        }
-        const baseSize = parseFloat(el.dataset.origSize);
-        if (baseSize) {
-          el.style.fontSize = isLargeText ? (baseSize * 1.25) + 'px' : baseSize + 'px';
-        }
-      });
-    }
-  </script>
 </body>
 
 </html>
