@@ -4041,12 +4041,6 @@
             </a>
           </article>
         </div>
-      </div>
-      <div class="cc">
-        <button class="cbt" id="bcPrev" aria-label="Previous">&#8592;</button>
-        <div class="cdots" id="bcDots"></div>
-        <button class="cbt" id="bcNext" aria-label="Next">&#8594;</button>
-      </div>
     </section>
 
 
@@ -6334,13 +6328,15 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       const track = document.getElementById("bcTrack"); if (!track) return;
       const cards = track.querySelectorAll(".bc");
       const dotsEl = document.getElementById("bcDots");
+      const prevBtn = document.getElementById("bcPrev");
+      const nextBtn = document.getElementById("bcNext");
       let cur = 0;
       const vis = () => window.innerWidth <= 900 ? 1 : 2;
       const mx = () => Math.max(0, cards.length - vis());
-      function buildDots() { dotsEl.innerHTML = ""; for (let i = 0; i <= mx(); i++) { const d = document.createElement("button"); d.className = "cdot" + (i === 0 ? " on" : ""); d.setAttribute("aria-label", "Slide " + (i + 1)); d.addEventListener("click", () => go(i)); dotsEl.appendChild(d) } }
-      function go(i) { cur = Math.max(0, Math.min(i, mx())); track.style.transform = `translateX(-${cur * (cards[0].offsetWidth + 18)}px)`; dotsEl.querySelectorAll(".cdot").forEach((d, j) => d.classList.toggle("on", j === cur)) }
-      document.getElementById("bcPrev").addEventListener("click", () => go(cur - 1));
-      document.getElementById("bcNext").addEventListener("click", () => go(cur + 1));
+      function buildDots() { if (!dotsEl) return; dotsEl.innerHTML = ""; for (let i = 0; i <= mx(); i++) { const d = document.createElement("button"); d.className = "cdot" + (i === 0 ? " on" : ""); d.setAttribute("aria-label", "Slide " + (i + 1)); d.addEventListener("click", () => go(i)); dotsEl.appendChild(d) } }
+      function go(i) { cur = Math.max(0, Math.min(i, mx())); track.style.transform = `translateX(-${cur * (cards[0].offsetWidth + 18)}px)`; if (dotsEl) dotsEl.querySelectorAll(".cdot").forEach((d, j) => d.classList.toggle("on", j === cur)) }
+      if (prevBtn) prevBtn.addEventListener("click", () => go(cur - 1));
+      if (nextBtn) nextBtn.addEventListener("click", () => go(cur + 1));
       window.addEventListener("resize", () => { buildDots(); go(Math.min(cur, mx())) });
       buildDots();
     })();
