@@ -484,49 +484,7 @@
     /* ── logo in light mode ──────────────────────────────────────────── */
     html.light .nav-logo img { filter: none; mix-blend-mode: normal }
 
-    /* Light mode toggle button */
-    .theme-toggle {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(129, 183, 58, .25);
-      background: rgba(255, 255, 255, .04);
-      color: var(--mut);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all var(--tr);
-      flex-shrink: 0;
-      padding: 0
-    }
 
-    .theme-toggle:hover {
-      border-color: var(--gl);
-      color: var(--gl);
-      background: rgba(129, 183, 58, .08)
-    }
-
-    html.light .theme-toggle {
-      border-color: rgba(0, 107, 48, .25);
-      color: rgba(26, 42, 30, .5);
-      background: rgba(255, 255, 255, .5)
-    }
-
-    html.light .theme-toggle:hover {
-      border-color: var(--g);
-      color: var(--g);
-      background: rgba(0, 107, 48, .1)
-    }
-
-    /* Sun/moon icon inside toggle */
-    .theme-toggle .t-moon,
-    .theme-toggle .t-sun { transition: opacity .2s, transform .2s }
-
-    html:not(.light) .theme-toggle .t-sun { opacity: 0; transform: rotate(90deg) scale(0.5); position: absolute }
-    html:not(.light) .theme-toggle .t-moon { opacity: 1; transform: rotate(0deg) }
-
-    html.light .theme-toggle .t-moon { opacity: 0; transform: rotate(-90deg) scale(0.5); position: absolute }
-    html.light .theme-toggle .t-sun { opacity: 1; transform: rotate(0deg) }
 
     body {
       font-family: "Raleway", sans-serif;
@@ -3799,20 +3757,7 @@
       <button class="nav-tab" id="tab-resources" onclick="goto('resources')">Resources</button>
     </div>
     <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
-        <!-- Moon (dark mode icon) -->
-        <svg class="t-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <!-- Sun (light mode icon) -->
-        <svg class="t-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </button>
+
       <a href="mailto:iitkgp@180dc.org" class="nav-cta">Work With Us</a>
       <button class="ham" id="ham" aria-label="menu"><span></span><span></span><span></span></button>
     </div>
@@ -3826,12 +3771,7 @@
     <button onclick="goto('contact');closeMob()">Contact Us</button>
     <button onclick="goto('resources');closeMob()">Resources</button>
     <a href="mailto:iitkgp@180dc.org" class="nav-cta">Work With Us</a>
-    <button onclick="toggleTheme()" style="display:flex;align-items:center;gap:10px;color:var(--mut);font-size:14px;padding:12px 0;border-bottom:none;margin-top:4px" id="mobThemeBtn">
-      <span id="mobThemeIcon" style="display:flex;align-items:center">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </span>
-      <span id="mobThemeLabel">Switch to Light Mode</span>
-    </button>
+
   </div>
 
   <!-- ══════════════════════════════════════
@@ -6637,49 +6577,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       showToast("Thank you! Your message has been successfully submitted.", "Message Sent", "success", 5000);
     }
 
-    /* ─────────────────────────────────────────────────────
-       THEME TOGGLE  -  light / dark mode
-       Preference persisted in localStorage as "theme"
-    ───────────────────────────────────────────────────── */
-    const MOON_SVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-    const SUN_SVG  = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
 
-    function applyTheme(isLight) {
-      const html = document.documentElement;
-      if (isLight) {
-        html.classList.add('light');
-      } else {
-        html.classList.remove('light');
-      }
-      // Update mobile menu label & icon
-      const mobIcon  = document.getElementById('mobThemeIcon');
-      const mobLabel = document.getElementById('mobThemeLabel');
-      if (mobIcon)  mobIcon.innerHTML  = isLight ? SUN_SVG  : MOON_SVG;
-      if (mobLabel) mobLabel.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-    }
-
-    function toggleTheme() {
-      const isCurrentlyLight = document.documentElement.classList.contains('light');
-      const next = !isCurrentlyLight;
-      localStorage.setItem('theme', next ? 'light' : 'dark');
-      applyTheme(next);
-    }
-
-    // Apply saved preference on load
-    (function() {
-      const saved = localStorage.getItem('theme');
-      // Also respect OS preference if no saved preference
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isLight = saved === 'light' || (saved === null && !prefersDark);
-      // Default is dark (matching original design) — only go light if explicitly saved or OS prefers light
-      if (saved === 'light') applyTheme(true);
-    })();
-
-    // Wire up desktop toggle button
-    document.addEventListener('DOMContentLoaded', function() {
-      const btn = document.getElementById('themeToggle');
-      if (btn) btn.addEventListener('click', toggleTheme);
-    });
   </script>
   <div id="toastContainer" class="toast-container"></div>
 
