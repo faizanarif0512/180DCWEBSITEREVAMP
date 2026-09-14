@@ -23,14 +23,12 @@
   <meta name="description" content="180 Degrees Consulting IIT Kharagpur" />
   <!-- Update page title here -->
   <title>180 Degrees Consulting | IIT Kharagpur</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/favicon.png" />
-  <!-- FONTS: Cormorant Garamond (headings), Raleway (body text), DM Mono (labels)
+  <!-- FONTS: Cormorant Garamond (headings), Outfit (body text), DM Mono (labels)
        To change fonts, update the Google Fonts URL below and the font-family in :root -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Raleway:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <!-- Three.js: powers the animated 3D globe on the hero section. Do not remove. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -40,24 +38,12 @@
     *::after {
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
-      font-variant-numeric: lining-nums;
-      -webkit-font-feature-settings: "lnum" 1;
-      font-feature-settings: "lnum" 1;
+      padding: 0
     }
 
     html {
       font-size: 16px;
-      scroll-behavior: smooth;
-      font-variant-numeric: lining-nums;
-      -webkit-font-feature-settings: "lnum" 1;
-      font-feature-settings: "lnum" 1;
-    }
-
-    body {
-      font-variant-numeric: lining-nums;
-      -webkit-font-feature-settings: "lnum" 1;
-      font-feature-settings: "lnum" 1;
+      scroll-behavior: smooth
     }
 
     /* ═══════════════════════════════════════════════════════════════════
@@ -78,17 +64,17 @@
        --tr  : global transition timing (animations)
        ═══════════════════════════════════════════════════════════════════ */
     :root {
-      --g: #71a333;
-      --gm: #5e8b28;
-      --gd: #385617;
-      --gl: #81b73a;
+      --g: #00843d;
+      --gm: #007335;
+      --gd: #004720;
+      --gl: #86bc2a;
       --gp: #f0f7e6;
       --k: #050807;
       --k2: #0b100e;
       --k3: #0e1613;
       --w: #f3f4f6;
       --mut: #8b9e95;
-      --bdr: rgba(129, 183, 58, .18);
+      --bdr: rgba(134, 188, 42, .15);
       --tr: .32s cubic-bezier(.4, 0, .2, 1)
     }
 
@@ -97,17 +83,17 @@
        Pure white backgrounds · near-black text · vivid greens · WCAG AA
        ═══════════════════════════════════════════════════════════════════ */
     html.light {
-      --g:   #71a333;
-      --gm:  #5e8b28;
-      --gd:  #d8ead0;
-      --gl:  #49721f;
+      --g:   #00843d;
+      --gm:  #006b30;
+      --gd:  #d4eddd;
+      --gl:  #3d7200;
       --gp:  #edf7f1;
       --k:   #ffffff;
       --k2:  #f5faf7;
       --k3:  #ebf5ef;
       --w:   #0f1a12;
       --mut: #3d5c47;
-      --bdr: rgba(113, 163, 51, .2)
+      --bdr: rgba(0, 132, 61, .2)
     }
 
     /* ── body & base ─────────────────────────────────────────────────── */
@@ -116,11 +102,11 @@
     /* ── nav ─────────────────────────────────────────────────────────── */
     html.light nav.scrolled {
       background: rgba(255, 255, 255, .95) !important;
-      box-shadow: 0 1px 0 rgba(113, 163, 51, .15), 0 2px 12px rgba(0,0,0,.07)
+      box-shadow: 0 1px 0 rgba(0, 132, 61, .15), 0 2px 12px rgba(0,0,0,.07)
     }
     html.light .nav-tabs {
       background: rgba(0, 0, 0, .03);
-      border-color: rgba(113, 163, 51, .2)
+      border-color: rgba(0, 132, 61, .2)
     }
     html.light .nav-tab { color: #3d5c47 }
     html.light .nav-tab.on,
@@ -130,12 +116,12 @@
 
     html.light .mob-menu {
       background: rgba(255, 255, 255, .98);
-      border-color: rgba(113, 163, 51, .15)
+      border-color: rgba(0, 132, 61, .15)
     }
     html.light .mob-menu button,
     html.light .mob-menu a {
       color: #1a3022;
-      border-bottom-color: rgba(113, 163, 51, .12)
+      border-bottom-color: rgba(0, 132, 61, .12)
     }
     html.light .mob-menu button:hover,
     html.light .mob-menu a:hover { color: var(--g) }
@@ -151,8 +137,8 @@
 
     html.light .h-why {
       background: #fff;
-      border-color: rgba(113, 163, 51, .25);
-      box-shadow: 0 2px 12px rgba(113, 163, 51,.08)
+      border-color: rgba(0, 132, 61, .25);
+      box-shadow: 0 2px 12px rgba(0,132,61,.08)
     }
     html.light .h-why-q { color: var(--g) }
     html.light .h-why-a { color: #2d4a35 }
@@ -160,22 +146,22 @@
     html.light .h-why-a strong { color: var(--g) }
 
     html.light .h-stats { border-top-color: rgba(0, 0, 0, .1) }
-    html.light .stat+.stat { border-left-color: rgba(113, 163, 51, .2) }
+    html.light .stat+.stat { border-left-color: rgba(0, 132, 61, .2) }
     html.light .snum,
     html.light .snum .ctr { color: #0a1a0d; text-shadow: none }
     html.light .slbls { color: #3d5c47 }
 
     html.light .h-panel {
       background: #fff;
-      border-color: rgba(113, 163, 51, .25);
+      border-color: rgba(0, 132, 61, .25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, .1)
     }
-    html.light .h-panel::before { background: radial-gradient(ellipse at top right, rgba(113, 163, 51,.07), transparent 65%) }
+    html.light .h-panel::before { background: radial-gradient(ellipse at top right, rgba(0,132,61,.07), transparent 65%) }
     html.light .h-panel-title { color: var(--g) }
     html.light .h-stat-row { border-bottom-color: rgba(0, 0, 0, .07) }
     html.light .h-stat-icon {
-      background: rgba(113, 163, 51, .08);
-      border-color: rgba(113, 163, 51, .18)
+      background: rgba(0, 132, 61, .08);
+      border-color: rgba(0, 132, 61, .18)
     }
     html.light .h-stat-val { color: #0a1a0d }
     html.light .h-stat-lbl { color: #3d5c47 }
@@ -189,13 +175,13 @@
     html.light .bg:hover {
       border-color: var(--g);
       color: var(--g);
-      background: rgba(113, 163, 51, .06)
+      background: rgba(0, 132, 61, .06)
     }
 
     /* ── marquee ─────────────────────────────────────────────────────── */
     html.light .mq {
       background: #f0f8f3;
-      border-color: rgba(113, 163, 51, .25)
+      border-color: rgba(0, 132, 61, .25)
     }
     html.light .mq-lbl { color: var(--g) }
     html.light .m-pill {
@@ -205,7 +191,7 @@
     }
     html.light .m-pill:hover {
       border-color: var(--g);
-      background: rgba(113, 163, 51,.06)
+      background: rgba(0,132,61,.06)
     }
 
     /* ── three cards ─────────────────────────────────────────────────── */
@@ -219,9 +205,9 @@
     html.light .tcard p { color: #3d5c47 }
     html.light .tcard:hover {
       border-color: var(--g);
-      box-shadow: 0 12px 32px rgba(113, 163, 51,.12)
+      box-shadow: 0 12px 32px rgba(0,132,61,.12)
     }
-    html.light .ti { background: rgba(113, 163, 51, .1) }
+    html.light .ti { background: rgba(0, 132, 61, .1) }
     html.light .tbtn { color: var(--g) }
     html.light .tbtn:hover { color: #0a1a0d }
 
@@ -229,15 +215,15 @@
     html.light #award-section { background: var(--k) }
     html.light .award-card {
       background: linear-gradient(135deg, #fff, #edf7f1);
-      border-color: rgba(113, 163, 51, .3);
+      border-color: rgba(0, 132, 61, .3);
       box-shadow: 0 8px 28px rgba(0,0,0,.08)
     }
     html.light .award-card::before {
       background: linear-gradient(90deg, #a8d5b5, var(--gl), #c8e6cc)
     }
     html.light .award-badge {
-      background: rgba(113, 163, 51, .1);
-      border-color: rgba(113, 163, 51, .3);
+      background: rgba(0, 132, 61, .1);
+      border-color: rgba(0, 132, 61, .3);
       color: var(--g)
     }
     html.light .award-card-content h3 { color: #0a1a0d }
@@ -257,11 +243,11 @@
       border-color: rgba(0,0,0,.1);
       color: #0f1a12
     }
-    html.light .co-chip:hover { background: rgba(113, 163, 51,.08); border-color: var(--g) }
+    html.light .co-chip:hover { background: rgba(0,132,61,.08); border-color: var(--g) }
 
     /* ── impact ──────────────────────────────────────────────────────── */
     html.light #impact { background: var(--k2) }
-    html.light #impact::before { background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(113, 163, 51,.06), transparent 70%) }
+    html.light #impact::before { background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(0,132,61,.06), transparent 70%) }
     html.light .imp-grid {
       background: rgba(0,0,0,.05);
       border-color: rgba(0,0,0,.08)
@@ -280,11 +266,11 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .bc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
+    html.light .bc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
     html.light .bc-title { color: #0a1a0d }
     html.light .bc-desc { color: #3d5c47 }
     html.light .bc-meta { color: #3d5c47 }
-    html.light .bc-cat { background: rgba(113, 163, 51,.1); color: var(--g) }
+    html.light .bc-cat { background: rgba(0,132,61,.1); color: var(--g) }
     html.light .bc-link { color: var(--g) }
     html.light .bc-link:hover { color: #0a1a0d }
     html.light .cbt { border-color: rgba(0,0,0,.15); color: #3d5c47 }
@@ -294,9 +280,9 @@
     /* ── CTA strip ───────────────────────────────────────────────────── */
     html.light .cta {
       background: var(--k2);
-      border-color: rgba(113, 163, 51,.2)
+      border-color: rgba(0,132,61,.2)
     }
-    html.light .cta::before { background: radial-gradient(circle, rgba(113, 163, 51,.07), transparent 70%) }
+    html.light .cta::before { background: radial-gradient(circle, rgba(0,132,61,.07), transparent 70%) }
     html.light .sttl { color: #0a1a0d }
     html.light .ssub { color: #2d4a35 }
     html.light .slbl { color: var(--g) }
@@ -307,14 +293,14 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .sc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
+    html.light .sc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
     html.light .sc-head { background: var(--g) }
     html.light .si {
       background: #f5faf7;
-      border-color: rgba(113, 163, 51,.15);
+      border-color: rgba(0,132,61,.15);
       color: #1a3022
     }
-    html.light .si:hover { background: rgba(113, 163, 51,.1); color: var(--g); border-color: var(--g) }
+    html.light .si:hover { background: rgba(0,132,61,.1); color: var(--g); border-color: var(--g) }
 
     html.light .fi { border-top-color: rgba(0,0,0,.08) }
     html.light .fi:last-child { border-bottom-color: rgba(0,0,0,.08) }
@@ -327,7 +313,7 @@
     html.light .pp { background: var(--k) }
     html.light .map-wrap {
       background: #fff;
-      border-color: rgba(113, 163, 51,.2);
+      border-color: rgba(0,132,61,.2);
       box-shadow: 0 4px 16px rgba(0,0,0,.07)
     }
     html.light .pc {
@@ -335,10 +321,10 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .pc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
+    html.light .pc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
     html.light .pc h3 { color: #0a1a0d }
     html.light .pc p { color: #3d5c47 }
-    html.light .ptag { background: rgba(113, 163, 51,.1); color: var(--g) }
+    html.light .ptag { background: rgba(0,132,61,.1); color: var(--g) }
     html.light .pq { background: #f0f8f3; border-left-color: var(--g); color: #3d5c47 }
     html.light .map-card {
       background: #fff;
@@ -346,16 +332,16 @@
     }
     html.light .map-card:hover,
     html.light .map-card.active {
-      background: rgba(113, 163, 51,.07);
+      background: rgba(0,132,61,.07);
       border-color: var(--g)
     }
     html.light .mc-content h4 { color: #0a1a0d }
     html.light .mc-tag { color: #3d5c47 }
     html.light .map-canvas-container {
       background: #fff;
-      border-color: rgba(113, 163, 51,.2)
+      border-color: rgba(0,132,61,.2)
     }
-    html.light .map-states path { fill: rgba(113, 163, 51,.06); stroke: rgba(113, 163, 51,.4) }
+    html.light .map-states path { fill: rgba(0,132,61,.06); stroke: rgba(0,132,61,.4) }
     html.light .submap-card {
       background: #fff;
       border-color: rgba(0,0,0,.1)
@@ -370,27 +356,27 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .dc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
+    html.light .dc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
     html.light .dc h4 { color: #0a1a0d }
     html.light .dc-dept { color: #3d5c47 }
-    html.light .dc-av { background: #d8ead0; border-color: rgba(113, 163, 51,.3) }
+    html.light .dc-av { background: #d4eddd; border-color: rgba(0,132,61,.3) }
     html.light .on { border-color: rgba(0,0,0,.1) }
     html.light .on h4 { color: #0a1a0d }
     html.light .on span { color: #3d5c47 }
     html.light .on.top {
       background: #fff;
-      border-color: rgba(113, 163, 51,.35);
+      border-color: rgba(0,132,61,.35);
       box-shadow: 0 2px 8px rgba(0,0,0,.07)
     }
-    html.light .org-line { background: rgba(113, 163, 51,.25) }
+    html.light .org-line { background: rgba(0,132,61,.25) }
     html.light .ac {
       background: #fff;
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.04)
     }
-    html.light .ac:hover { border-color: var(--g); box-shadow: 0 8px 20px rgba(113, 163, 51,.12) }
+    html.light .ac:hover { border-color: var(--g); box-shadow: 0 8px 20px rgba(0,132,61,.12) }
     html.light .ac-name { color: #0a1a0d }
-    html.light .ac-av { background: #d8ead0; border-color: rgba(113, 163, 51,.3) }
+    html.light .ac-av { background: #d4eddd; border-color: rgba(0,132,61,.3) }
 
     /* ── testimonials ────────────────────────────────────────────────── */
     html.light .test-card {
@@ -398,20 +384,20 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .test-card:hover { border-color: var(--g); box-shadow: 0 12px 28px rgba(113, 163, 51,.12) }
+    html.light .test-card:hover { border-color: var(--g); box-shadow: 0 12px 28px rgba(0,132,61,.12) }
     html.light .test-quote { color: #1a3022 }
     html.light .test-author h4 { color: #0a1a0d }
     html.light .test-author p { color: #3d5c47 }
     html.light .test-cta {
       background: #f0f8f3;
-      border-color: rgba(113, 163, 51,.25)
+      border-color: rgba(0,132,61,.25)
     }
     html.light .test-cta h3 { color: #0a1a0d }
     html.light .test-cta p { color: #3d5c47 }
 
     /* ── contact ─────────────────────────────────────────────────────── */
     html.light .cp { background: var(--k) }
-    html.light .ci-icon { background: rgba(113, 163, 51,.1) }
+    html.light .ci-icon { background: rgba(0,132,61,.1) }
     html.light .ci-item h4 { color: #3d5c47 }
     html.light .ci-item p,
     html.light .ci-item a { color: #0f1a12 }
@@ -420,7 +406,7 @@
     html.light .soc:hover { border-color: var(--g); color: var(--g) }
     html.light .cf {
       background: #fff;
-      border-color: rgba(113, 163, 51,.2);
+      border-color: rgba(0,132,61,.2);
       box-shadow: 0 8px 28px rgba(0,0,0,.08)
     }
     html.light .cf h3 { color: #0a1a0d }
@@ -438,7 +424,7 @@
     html.light .fg textarea:focus,
     html.light .fg select:focus {
       border-color: var(--g);
-      box-shadow: 0 0 0 3px rgba(113, 163, 51,.12)
+      box-shadow: 0 0 0 3px rgba(0,132,61,.12)
     }
     html.light .fg select option { background: #fff; color: #0f1a12 }
 
@@ -449,7 +435,7 @@
       border-color: rgba(0,0,0,.1);
       box-shadow: 0 2px 8px rgba(0,0,0,.05)
     }
-    html.light .rc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(113, 163, 51,.12) }
+    html.light .rc:hover { border-color: var(--g); box-shadow: 0 8px 24px rgba(0,132,61,.12) }
     html.light .rc h3 { color: #0a1a0d }
     html.light .rc p { color: #3d5c47 }
     html.light .rc-link { color: var(--g) }
@@ -457,7 +443,7 @@
     /* ── footer ──────────────────────────────────────────────────────── */
     html.light footer {
       background: #ebf5ef;
-      border-top-color: rgba(113, 163, 51,.2)
+      border-top-color: rgba(0,132,61,.2)
     }
     html.light .fb p { color: #3d5c47 }
     html.light .fc h5 { color: #3d5c47; opacity: .6 }
@@ -465,7 +451,7 @@
     html.light .fc button { color: #3d5c47 }
     html.light .fc a:hover,
     html.light .fc button:hover { color: var(--g) }
-    html.light .ftbot { border-top-color: rgba(113, 163, 51,.15) }
+    html.light .ftbot { border-top-color: rgba(0,132,61,.15) }
     html.light .ftbot p { color: #8aaa95 }
     html.light .fts { border-color: rgba(0,0,0,.15); color: #3d5c47 }
     html.light .fts:hover { border-color: var(--g); color: var(--g) }
@@ -484,10 +470,52 @@
     /* ── logo in light mode ──────────────────────────────────────────── */
     html.light .nav-logo img { filter: none; mix-blend-mode: normal }
 
+    /* Light mode toggle button */
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(134, 188, 42, .25);
+      background: rgba(255, 255, 255, .04);
+      color: var(--mut);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--tr);
+      flex-shrink: 0;
+      padding: 0
+    }
 
+    .theme-toggle:hover {
+      border-color: var(--gl);
+      color: var(--gl);
+      background: rgba(134, 188, 42, .08)
+    }
+
+    html.light .theme-toggle {
+      border-color: rgba(0, 107, 48, .25);
+      color: rgba(26, 42, 30, .5);
+      background: rgba(255, 255, 255, .5)
+    }
+
+    html.light .theme-toggle:hover {
+      border-color: var(--g);
+      color: var(--g);
+      background: rgba(0, 107, 48, .1)
+    }
+
+    /* Sun/moon icon inside toggle */
+    .theme-toggle .t-moon,
+    .theme-toggle .t-sun { transition: opacity .2s, transform .2s }
+
+    html:not(.light) .theme-toggle .t-sun { opacity: 0; transform: rotate(90deg) scale(0.5); position: absolute }
+    html:not(.light) .theme-toggle .t-moon { opacity: 1; transform: rotate(0deg) }
+
+    html.light .theme-toggle .t-moon { opacity: 0; transform: rotate(-90deg) scale(0.5); position: absolute }
+    html.light .theme-toggle .t-sun { opacity: 1; transform: rotate(0deg) }
 
     body {
-      font-family: "Raleway", sans-serif;
+      font-family: "Outfit", sans-serif;
       background: var(--k);
       color: var(--w);
       overflow-x: hidden;
@@ -522,7 +550,7 @@
     #cur.big {
       width: 28px;
       height: 28px;
-      background: rgba(129, 183, 58, .22);
+      background: rgba(134, 188, 42, .22);
       pointer-events: none !important
     }
 
@@ -551,7 +579,7 @@
     nav.scrolled {
       background: rgba(5, 8, 7, .85);
       backdrop-filter: blur(14px);
-      box-shadow: 0 1px 0 rgba(113, 163, 51, .1)
+      box-shadow: 0 1px 0 rgba(0, 132, 61, .1)
     }
 
     .nav-logo {
@@ -591,7 +619,7 @@
       gap: 4px;
       background: rgba(255, 255, 255, .02);
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(129, 183, 58, .18);
+      border: 1px solid rgba(134, 188, 42, .15);
       border-radius: 30px;
       padding: 4px
     }
@@ -612,7 +640,7 @@
     .nav-tab:hover {
       background: linear-gradient(135deg, var(--g), var(--gl));
       color: #fff;
-      box-shadow: 0 4px 12px rgba(113, 163, 51, 0.25)
+      box-shadow: 0 4px 12px rgba(0, 132, 61, 0.25)
     }
 
     .nav-right {
@@ -628,14 +656,14 @@
       border-radius: 30px;
       font-size: 13px;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(113, 163, 51, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 132, 61, 0.2);
       transition: all var(--tr)
     }
 
     .nav-cta:hover {
       background: var(--gm);
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(113, 163, 51, 0.35)
+      box-shadow: 0 6px 16px rgba(0, 132, 61, 0.35)
     }
 
     .ham {
@@ -738,14 +766,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 14px rgba(113, 163, 51, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 132, 61, 0.25);
       transition: all var(--tr)
     }
 
     .bp:hover {
       background: var(--gm);
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(113, 163, 51, .4)
+      box-shadow: 0 10px 24px rgba(0, 132, 61, .4)
     }
 
     .bg {
@@ -764,8 +792,8 @@
     .bg:hover {
       border-color: var(--gl);
       color: #fff;
-      background: rgba(113, 163, 51, .1);
-      box-shadow: 0 4px 14px rgba(113, 163, 51, 0.15)
+      background: rgba(0, 132, 61, .1);
+      box-shadow: 0 4px 14px rgba(0, 132, 61, 0.15)
     }
 
     /* SECTION UTILS */
@@ -897,7 +925,7 @@
 
     .toast-card.success {
       border-left: 4px solid var(--gl);
-      background: linear-gradient(135deg, rgba(129, 183, 58, 0.14), rgba(14, 22, 19, 0.96));
+      background: linear-gradient(135deg, rgba(134, 188, 42, 0.14), rgba(14, 22, 19, 0.96));
     }
 
     .toast-card.warning {
@@ -1303,14 +1331,14 @@
     .h-stat-icon {
       width: 48px;
       height: 48px;
-      background: rgba(113, 163, 51, .12);
+      background: rgba(58, 125, 68, .12);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 22px;
       flex-shrink: 0;
-      border: 1px solid rgba(113, 163, 51, .2)
+      border: 1px solid rgba(58, 125, 68, .2)
     }
 
     .h-stat-right {
@@ -1427,7 +1455,7 @@
     }
 
     .tcard:hover {
-      border-color: rgba(129, 183, 58, .35);
+      border-color: rgba(52, 211, 153, .35);
       transform: translateY(-4px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, .6), 0 0 15px rgba(16, 185, 129, 0.05)
     }
@@ -1439,7 +1467,7 @@
     .ti {
       width: 42px;
       height: 42px;
-      background: rgba(113, 163, 51, .12);
+      background: rgba(58, 125, 68, .12);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -1489,9 +1517,9 @@
 
     .award-card {
       margin-top: 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(129, 183, 58, 0.04) 100%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(134, 188, 42, 0.04) 100%);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(129, 183, 58, 0.25);
+      border: 1px solid rgba(134, 188, 42, 0.25);
       border-radius: 16px;
       padding: 32px;
       position: relative;
@@ -1511,8 +1539,8 @@
     }
 
     .award-card:hover {
-      border-color: rgba(129, 183, 58, 0.45);
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(129, 183, 58, 0.12);
+      border-color: rgba(134, 188, 42, 0.45);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(134, 188, 42, 0.12);
       transform: translateY(-2px);
     }
 
@@ -1528,8 +1556,8 @@
       align-items: center;
       gap: 6px;
       padding: 5px 13px;
-      background: rgba(129, 183, 58, 0.12);
-      border: 1px solid rgba(129, 183, 58, 0.3);
+      background: rgba(134, 188, 42, 0.12);
+      border: 1px solid rgba(134, 188, 42, 0.3);
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
@@ -1623,8 +1651,8 @@
     /* MARQUEE (companies) */
     .mq {
       background: rgba(255, 255, 255, .05);
-      border-top: 1.5px solid rgba(113, 163, 51, 0.35);
-      border-bottom: 1.5px solid rgba(113, 163, 51, 0.35);
+      border-top: 1.5px solid rgba(58, 125, 68, 0.35);
+      border-bottom: 1.5px solid rgba(58, 125, 68, 0.35);
       padding: 44px 0;
       overflow: hidden
     }
@@ -1683,7 +1711,7 @@
     .m-pill:hover {
       color: var(--w);
       border-color: var(--gl);
-      background: rgba(113, 163, 51, .15)
+      background: rgba(58, 125, 68, .15)
     }
 
     .m-logo {
@@ -1736,7 +1764,7 @@
     }
 
     .co-chip:hover {
-      background: rgba(113, 163, 51, .1);
+      background: rgba(58, 125, 68, .1);
       border-color: var(--gl);
       color: var(--w)
     }
@@ -1760,7 +1788,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(113, 163, 51, .06), transparent 70%);
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(58, 125, 68, .06), transparent 70%);
       pointer-events: none
     }
 
@@ -1825,7 +1853,7 @@
     }
 
     .bc {
-      flex: 0 0 calc(50% - 9px);
+      flex: 0 0 calc(33.333% - 12px);
       border: 1px solid var(--bdr);
       border-radius: 8px;
       overflow: hidden;
@@ -1836,7 +1864,7 @@
 
     .bc:hover {
       transform: translateY(-4px);
-      border-color: rgba(129, 183, 58, .3);
+      border-color: rgba(52, 211, 153, .3);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 10px rgba(16, 185, 129, 0.05)
     }
 
@@ -1862,7 +1890,7 @@
     }
 
     .bc-cat {
-      background: rgba(113, 163, 51, .14);
+      background: rgba(58, 125, 68, .14);
       color: var(--gl);
       padding: 2px 8px;
       border-radius: 40px;
@@ -1927,7 +1955,7 @@
     .cbt:hover {
       border-color: var(--gl);
       color: var(--w);
-      background: rgba(113, 163, 51, .1)
+      background: rgba(58, 125, 68, .1)
     }
 
     .cdots {
@@ -1965,7 +1993,7 @@
       position: absolute;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(113, 163, 51, .1), transparent 70%);
+      background: radial-gradient(circle, rgba(58, 125, 68, .1), transparent 70%);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -2009,7 +2037,7 @@
     }
 
     .sc:hover {
-      border-color: rgba(129, 183, 58, .35);
+      border-color: rgba(52, 211, 153, .35);
       box-shadow: 0 12px 32px rgba(0, 0, 0, .5), 0 0 12px rgba(16, 185, 129, 0.05)
     }
 
@@ -2040,7 +2068,7 @@
       padding: 8px 11px;
       margin-bottom: 5px;
       background: rgba(255, 255, 255, .03);
-      border: 1px solid rgba(113, 163, 51, .1);
+      border: 1px solid rgba(58, 125, 68, .1);
       border-radius: 4px;
       font-size: 12.5px;
       color: rgba(255, 255, 255, .58);
@@ -2053,7 +2081,7 @@
     }
 
     .si:hover {
-      background: rgba(113, 163, 51, .12);
+      background: rgba(58, 125, 68, .12);
       color: var(--w);
       border-color: var(--g)
     }
@@ -2161,7 +2189,7 @@
       padding: 16px 0;
       background: none;
       border: none;
-      font-family: "Raleway", sans-serif;
+      font-family: "Outfit", sans-serif;
       font-size: 14.5px;
       color: rgba(255, 255, 255, .65);
       gap: 16px;
@@ -2313,29 +2341,15 @@
     .pc:hover {
       transform: translateY(-5px);
       box-shadow: 0 24px 48px rgba(0, 0, 0, .6), 0 0 15px rgba(16, 185, 129, 0.05);
-      border-color: rgba(129, 183, 58, .3)
+      border-color: rgba(52, 211, 153, .3)
     }
 
     .pt {
-      height: 160px;
+      height: 130px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 38px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .pt img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform var(--tr);
-    }
-
-    .pc:hover .pt img {
-      transform: scale(1.05);
+      font-size: 38px
     }
 
     .pb {
@@ -2345,7 +2359,7 @@
     .ptag {
       display: inline-block;
       padding: 3px 9px;
-      background: rgba(113, 163, 51, .14);
+      background: rgba(58, 125, 68, .14);
       color: var(--gl);
       border-radius: 40px;
       font-size: 10px;
@@ -2418,7 +2432,7 @@
     .org-line {
       width: 1px;
       height: 22px;
-      background: rgba(113, 163, 51, .25);
+      background: rgba(58, 125, 68, .25);
       margin: 0 auto
     }
 
@@ -2441,7 +2455,7 @@
 
     .on.top {
       background: var(--k2);
-      border-color: rgba(113, 163, 51, .4);
+      border-color: rgba(58, 125, 68, .4);
       min-width: 180px
     }
 
@@ -2491,7 +2505,7 @@
     }
 
     .dc:hover {
-      border-color: rgba(129, 183, 58, .3);
+      border-color: rgba(52, 211, 153, .3);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .5);
       transform: translateY(-3px)
     }
@@ -2501,7 +2515,7 @@
       height: 120px;
       border-radius: 50%;
       background: var(--gd);
-      border: 3px solid rgba(113, 163, 51, .35);
+      border: 3px solid rgba(58, 125, 68, .35);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2555,7 +2569,7 @@
 
     .dc-email {
       font-size: 11px;
-      color: rgba(129, 183, 58, .7);
+      color: rgba(134, 188, 42, .7);
       transition: color var(--tr);
       display: block
     }
@@ -2574,7 +2588,7 @@
     .dc h4 a:hover, 
     .ac-name a:hover {
       color: var(--gl);
-      text-shadow: 0 0 8px rgba(129, 183, 58, 0.4);
+      text-shadow: 0 0 8px rgba(134, 188, 42, 0.4);
     }
 
     /* ═══ TEAM BANNERS  -  Big group photos under "Meet the Team" ═══ */
@@ -2656,7 +2670,7 @@
     }
 
     .ac:hover {
-      border-color: rgba(129, 183, 58, .3);
+      border-color: rgba(52, 211, 153, .3);
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4)
     }
@@ -2675,7 +2689,7 @@
       color: var(--gl);
       margin: 0 auto 16px;
       font-family: "Cormorant Garamond", serif;
-      border: 2.5px solid rgba(113, 163, 51, .3);
+      border: 2.5px solid rgba(58, 125, 68, .3);
       overflow: hidden;
       position: relative;
     }
@@ -2741,9 +2755,7 @@
     .ci-icon {
       width: 40px;
       height: 40px;
-      background: rgba(113, 163, 51, .12);
-      border: 1px solid var(--bdr);
-      color: var(--gl);
+      background: rgba(58, 125, 68, .12);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -2835,7 +2847,7 @@
       padding: 11px 14px;
       border: 1.5px solid rgba(255, 255, 255, .08);
       border-radius: 4px;
-      font-family: "Raleway", sans-serif;
+      font-family: "Outfit", sans-serif;
       font-size: 14px;
       background: rgba(255, 255, 255, .04);
       color: var(--w);
@@ -2867,7 +2879,7 @@
 
     .fs-msg {
       display: none;
-      background: rgba(113, 163, 51, .1);
+      background: rgba(58, 125, 68, .1);
       border: 1px solid var(--g);
       border-radius: 4px;
       padding: 14px;
@@ -2901,7 +2913,7 @@
     }
 
     .rc:hover {
-      border-color: rgba(129, 183, 58, .3);
+      border-color: rgba(52, 211, 153, .3);
       transform: translateY(-4px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 10px rgba(16, 185, 129, 0.05)
     }
@@ -2986,14 +2998,14 @@
     }
 
     .map-col::-webkit-scrollbar-thumb {
-      background: rgba(129, 183, 58, 0.35);
+      background: rgba(134, 188, 42, 0.35);
       border-radius: 4px;
       cursor: pointer;
       transition: background var(--tr);
     }
 
     .map-col::-webkit-scrollbar-thumb:hover {
-      background: rgba(129, 183, 58, 0.85);
+      background: rgba(134, 188, 42, 0.85);
     }
 
     .map-card {
@@ -3014,10 +3026,10 @@
 
     .map-card:hover,
     .map-card.active {
-      background: rgba(129, 183, 58, 0.08);
+      background: rgba(134, 188, 42, 0.08);
       border-color: var(--gl);
       transform: translateY(-2px);
-      box-shadow: 0 0 15px rgba(129, 183, 58, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px rgba(134, 188, 42, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .mc-icon {
@@ -3062,8 +3074,8 @@
 
     /* SVG Map States styling */
     .map-states path {
-      fill: rgba(113, 163, 51, 0.08);
-      stroke: rgba(129, 183, 58, 0.45);
+      fill: rgba(0, 132, 61, 0.08);
+      stroke: rgba(134, 188, 42, 0.45);
       stroke-width: 1;
       vector-effect: non-scaling-stroke;
       cursor: pointer;
@@ -3074,10 +3086,10 @@
     /* Highlight specific states on hover */
     .map-states path:hover,
     .map-states path.active {
-      fill: rgba(113, 163, 51, 0.25);
-      stroke: rgba(129, 183, 58, 1);
+      fill: rgba(0, 132, 61, 0.25);
+      stroke: rgba(134, 188, 42, 1);
       stroke-width: 1.8;
-      filter: drop-shadow(0 0 8px rgba(129, 183, 58, 0.65))
+      filter: drop-shadow(0 0 8px rgba(134, 188, 42, 0.65))
     }
 
     /* Glowing dots */
@@ -3110,8 +3122,8 @@
 
     /* Submap drawing on the main map */
     .map-submap-island path {
-      fill: rgba(113, 163, 51, 0.08) !important;
-      stroke: rgba(129, 183, 58, 0.45) !important;
+      fill: rgba(0, 132, 61, 0.08) !important;
+      stroke: rgba(134, 188, 42, 0.45) !important;
       stroke-width: 1 !important;
       vector-effect: non-scaling-stroke;
       transition: fill var(--tr), stroke var(--tr), filter var(--tr)
@@ -3119,10 +3131,10 @@
 
     .map-submap-island:hover path,
     .map-submap-island.active path {
-      fill: rgba(113, 163, 51, 0.25) !important;
-      stroke: rgba(129, 183, 58, 1) !important;
+      fill: rgba(0, 132, 61, 0.25) !important;
+      stroke: rgba(134, 188, 42, 1) !important;
       stroke-width: 1.8 !important;
-      filter: drop-shadow(0 0 8px rgba(129, 183, 58, 0.65))
+      filter: drop-shadow(0 0 8px rgba(134, 188, 42, 0.65))
     }
 
     .map-submap-label {
@@ -3173,10 +3185,10 @@
 
     .submap-card:hover,
     .submap-card.active {
-      background: rgba(129, 183, 58, 0.08);
+      background: rgba(134, 188, 42, 0.08);
       border-color: var(--gl);
       transform: translateY(-2px);
-      box-shadow: 0 0 15px rgba(129, 183, 58, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px rgba(134, 188, 42, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .submap-svg {
@@ -3186,8 +3198,8 @@
     }
 
     .submap-svg g {
-      fill: rgba(113, 163, 51, 0.08) !important;
-      stroke: rgba(129, 183, 58, 0.45) !important;
+      fill: rgba(0, 132, 61, 0.08) !important;
+      stroke: rgba(134, 188, 42, 0.45) !important;
       stroke-width: 15 !important;
       vector-effect: non-scaling-stroke;
       transition: fill var(--tr), stroke var(--tr)
@@ -3195,8 +3207,8 @@
 
     .submap-card:hover .submap-svg g,
     .submap-card.active .submap-svg g {
-      fill: rgba(113, 163, 51, 0.3) !important;
-      stroke: rgba(129, 183, 58, 0.95) !important
+      fill: rgba(0, 132, 61, 0.3) !important;
+      stroke: rgba(134, 188, 42, 0.95) !important
     }
 
     .submap-info h4 {
@@ -3233,7 +3245,7 @@
     }
 
     .test-card:hover {
-      border-color: rgba(129, 183, 58, .35);
+      border-color: rgba(134, 188, 42, .35);
       transform: translateY(-4px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, .4)
     }
@@ -3771,7 +3783,20 @@
       <button class="nav-tab" id="tab-resources" onclick="goto('resources')">Resources</button>
     </div>
     <div class="nav-right">
-
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+        <!-- Moon (dark mode icon) -->
+        <svg class="t-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Sun (light mode icon) -->
+        <svg class="t-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
       <a href="mailto:iitkgp@180dc.org" class="nav-cta">Work With Us</a>
       <button class="ham" id="ham" aria-label="menu"><span></span><span></span><span></span></button>
     </div>
@@ -3785,7 +3810,12 @@
     <button onclick="goto('contact');closeMob()">Contact Us</button>
     <button onclick="goto('resources');closeMob()">Resources</button>
     <a href="mailto:iitkgp@180dc.org" class="nav-cta">Work With Us</a>
-
+    <button onclick="toggleTheme()" style="display:flex;align-items:center;gap:10px;color:var(--mut);font-size:14px;padding:12px 0;border-bottom:none;margin-top:4px" id="mobThemeBtn">
+      <span id="mobThemeIcon" style="display:flex;align-items:center">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+      <span id="mobThemeLabel">Switch to Light Mode</span>
+    </button>
   </div>
 
   <!-- ══════════════════════════════════════
@@ -3804,10 +3834,10 @@
     <section id="hero">
       <div class="h-bg" aria-hidden="true">
         <svg viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="0" x2="1400" y2="800" stroke="rgba(113, 163, 51,.04)" stroke-width="1" />
-          <line x1="700" y1="0" x2="1400" y2="400" stroke="rgba(113, 163, 51,.06)" stroke-width="1" />
-          <circle cx="900" cy="400" r="300" fill="none" stroke="rgba(113, 163, 51,.04)" stroke-width="1" />
-          <circle cx="900" cy="400" r="460" fill="none" stroke="rgba(113, 163, 51,.02)" stroke-width="1" />
+          <line x1="0" y1="0" x2="1400" y2="800" stroke="rgba(58,125,68,.04)" stroke-width="1" />
+          <line x1="700" y1="0" x2="1400" y2="400" stroke="rgba(58,125,68,.06)" stroke-width="1" />
+          <circle cx="900" cy="400" r="300" fill="none" stroke="rgba(58,125,68,.04)" stroke-width="1" />
+          <circle cx="900" cy="400" r="460" fill="none" stroke="rgba(58,125,68,.02)" stroke-width="1" />
         </svg>
       </div>
       <div class="h-glow" aria-hidden="true"></div>
@@ -3985,9 +4015,9 @@
       <div class="bc-outer reveal d3">
         <div class="bc-track" id="bcTrack">
           <article class="bc reveal">
-            <a href="https://medium.com/@180dciitkgp/merger-mania-trends-driving-m-a-in-india-e1dc9f89461f" target="_blank"
+            <a href="https://www.180dciitkgp.in/blogs/merger-mania-trends-driving-ma-in-india" target="_blank"
               rel="noopener" style="text-decoration:none;display:block">
-              <div class="bc-img" style="background:url('assets/blog-merger-mania.png') center/cover"></div>
+              <div class="bc-img" style="background:url('https://lh3.googleusercontent.com/sitesv/AG8ngQWzJ-h-obEiUM2LbMhNaH63bYe9JCZXylprjsxMvDrEfGqE5w7vZCfRNqO6sYgbbbbRxV3428lhroeDdZvCktuhcParqnRty5yLZVPSlPNGUcODCYT0JL1rhEwtAwDISpObnuiGQZtJfyxYItsZKWnWWNy-kUlRIN8o6Pmpmxom2I7KeDEgxAdWu3IcuizqQfVRPxuS70MnVvlBRUSzBvkw_9q0Z20Suw2uIDrt3uQ=w1280') center/cover"></div>
               <div class="bc-body">
                 <div class="bc-meta"><span class="bc-cat">Consulting</span><span>Dec 2024</span></div>
                 <h3 class="bc-title">Merger Mania: Trends Driving M&A in India</h3>
@@ -3998,9 +4028,9 @@
             </a>
           </article>
           <article class="bc reveal d1">
-            <a href="https://180dciitkgp.medium.com/gst-unplugged-from-popcorn-to-policies-702f8775e91f" target="_blank"
+            <a href="https://www.180dciitkgp.in/blogs/gst-unplugged-from-popcorn-to-policies" target="_blank"
               rel="noopener" style="text-decoration:none;display:block">
-              <div class="bc-img" style="background:url('assets/blog-gst-unplugged.png') center/cover"></div>
+              <div class="bc-img" style="background:url('https://lh3.googleusercontent.com/sitesv/AG8ngQUb0z6cLu9SgIkf3ujAjGZHHB4I3xbQrQ9EX38DBnzx9LM_5IqOoyT0581F7ldHuHPn8ZutNXuKK79BJvM_NGBc-bZdMT1jS0a-SCJYY5zxaiZJdUMNuZZrdfo9OD2xZwl9w-tbOG0u1K51WPiHwFjeYa8R6ittwuCdNZfrrChLv-fw5oz1L-esDPYjL0zP8BThGaI_pVJgCNp6WVhqpS1r82HvfRbQjGZ-DImaQgw=w1280') center/cover"></div>
               <div class="bc-body">
                 <div class="bc-meta"><span class="bc-cat">Policy</span><span>Nov 2024</span></div>
                 <h3 class="bc-title">GST Unplugged: From Popcorn to Policies!</h3>
@@ -4010,7 +4040,39 @@
               </div>
             </a>
           </article>
+          <article class="bc reveal d2">
+            <a href="https://www.180dciitkgp.in/blogs" target="_blank" rel="noopener"
+              style="text-decoration:none;display:block">
+              <div class="bc-img" style="background:url('https://lh3.googleusercontent.com/sitesv/AG8ngQUjvHk-Xg0r5BYIR-M8jXBM41Npmas0F9E7L9Xx0bmJuOtA-XBKtuH3LqInlbNGPS7qZSQ5o0O4qrQZKMBBQ97XLsm7J77IwFjXo61klZAB0iVVpIq3vRApGF1cVdFxgK13nCcd3LjgMXN2WgTmzU-HeUaDkNg_-GX3G92yd5eh7mbxKoNkyqMntov91rs=w1280') center/cover"></div>
+              <div class="bc-body">
+                <div class="bc-meta"><span class="bc-cat">Impact</span><span>Oct 2024</span></div>
+                <h3 class="bc-title">Measuring What Matters: M&E in the NGO Sector</h3>
+                <p class="bc-desc">Why most NGOs measure the wrong things, and how a rigorous M&E framework transforms
+                  programme design and donor confidence.</p>
+                <span class="bc-link">Read Article &#8599;</span>
+              </div>
+            </a>
+          </article>
+          <article class="bc reveal d3">
+            <a href="https://www.180dciitkgp.in/blogs" target="_blank" rel="noopener"
+              style="text-decoration:none;display:block">
+              <div class="bc-img" style="background:url('https://lh3.googleusercontent.com/sitesv/AG8ngQWHCaJwm8mlxfthm5bCDmadkfFhisOmSac-VTDfL78ziBEd7n6_akkbmnzfjR47sDi5VjtZeQxA74QhwhDIwvZVZRSRq6M76yoB10H1HiEZXRTVOH49vAaGxssApzeniVWFxqYGdZTR0byvz46gezTJ8ZKDKsuywvjHUkd1TRdzbvo7jtZjcB4lj2vM=w1280') center/cover"></div>
+              <div class="bc-body">
+                <div class="bc-meta"><span class="bc-cat">Consulting</span><span>Sep 2024</span></div>
+                <h3 class="bc-title">The Last Mile: Distribution in Rural India</h3>
+                <p class="bc-desc">How social enterprises in rural India can rethink distribution channels to reach more
+                  beneficiaries cost-effectively.</p>
+                <span class="bc-link">Read Article &#8599;</span>
+              </div>
+            </a>
+          </article>
         </div>
+      </div>
+      <div class="cc">
+        <button class="cbt" id="bcPrev" aria-label="Previous">&#8592;</button>
+        <div class="cdots" id="bcDots"></div>
+        <button class="cbt" id="bcNext" aria-label="Next">&#8594;</button>
+      </div>
     </section>
 
 
@@ -4157,14 +4219,14 @@
           <div class="fa">We work with nonprofits, NGOs, social enterprises, government bodies, and impact-driven
             startups that create measurable social or environmental impact.</div>
         </div>
-        <div class="fi"><button class="fq">What does it cost? <span class="ficon">+</span></button>
-          <div class="fa">Our services are offered at zero cost or heavily subsidised rates, making professional-quality
-            consulting accessible to limited-budget organisations.</div>
+        <div class="fi"><button class="fq">What is the engagement timeline? <span class="ficon">+</span></button>
+          <div class="fa">Our standard engagement spans 10-12 weeks, broken down into four distinct phases from initial discovery to final delivery. The process begins with scoping and research in the first six weeks, followed by analysis and a final submission.</div>
         </div>
-        <div class="fi"><button class="fq">How long does a typical engagement last? <span
-              class="ficon">+</span></button>
-          <div class="fa">A standard engagement runs 10-12 weeks per semester, staffed by 4-6 consultants
-            led by a Project Manager.</div>
+        <div class="fi"><button class="fq">How do we balance this engagement alongside our academic session? <span class="ficon">+</span></button>
+          <div class="fa">As student consultants deeply passionate about our work, we manage our project commitments exclusively during after class hours to ensure it runs seamlessly alongside our regular academic schedule without interfering with exams.</div>
+        </div>
+        <div class="fi"><button class="fq">Do you take care of privacy and confidentiality? <span class="ficon">+</span></button>
+          <div class="fa">Yes, we strictly maintain data privacy and confidentiality throughout all phases of the engagement, ensuring your project details and information remain completely secure.</div>
         </div>
         <div class="fi"><button class="fq">How do I apply to be a client? <span class="ficon">+</span></button>
           <div class="fa">Email iitkgp@180dc.org with a brief description of your organisation and challenge. We
@@ -4553,7 +4615,7 @@
             </div>
             <!-- Madhya Pradesh Govt -->
             <div class="map-card" data-city="mp" data-project="mpgovt">
-              <div class="mc-icon"></div>
+              <img src="assets/logos/mpgovt.png" style="width:28px;height:28px;object-fit:contain;margin-right:12px;border-radius:2px" alt="MP Govt" />
               <div class="mc-content">
                 <h4>Madhya Pradesh Govt.</h4>
                 <p class="mc-tag">Commercial Tax Dept &middot; MP, India</p>
@@ -4751,6 +4813,7 @@ c-12 19 -17 38 -14 55 8 36 -26 57 -90 56 -28 0 -61 5 -74 12 -22 12 -23 14
               <circle cx="220" cy="450" r="14" class="map-dot" data-city="usa" />
             </svg>
             <div class="submap-info">
+              <img src="assets/logos/trumio.png" alt="Trumio Logo" style="height:20px;object-fit:contain;margin-bottom:8px;" />
               <h4>Trumio</h4>
               <p>AI board workplace &middot; San Francisco, USA</p>
             </div>
@@ -5249,9 +5312,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         Engagements</h3>
       <div class="proj-grid">
         <article class="pc reveal">
-          <div class="pt">
-            <img src="assets/Projects Preview/NGO School.jpg" alt="Learning Outcomes Assessment Framework" />
-          </div>
+          <div class="pt" style="background:linear-gradient(135deg,#061810,#0f2818)"></div>
           <div class="pb"><span class="ptag">Education &middot; NGO</span>
             <h3>Learning Outcomes Assessment Framework</h3>
             <p>M&amp;E framework enabling data-driven improvements across 200+ schools in rural West Bengal.</p>
@@ -5260,9 +5321,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           </div>
         </article>
         <article class="pc reveal d1">
-          <div class="pt">
-            <img src="assets/Projects Preview/farmer.jpg" alt="Farmer Income Diversification Strategy" />
-          </div>
+          <div class="pt" style="background:linear-gradient(135deg,#061408,#0a1e10)"></div>
           <div class="pb"><span class="ptag">Agriculture &middot; Social Enterprise</span>
             <h3>Farmer Income Diversification Strategy</h3>
             <p>Go-to-market strategy for an agri-enterprise expanding into four districts of Andhra Pradesh.</p>
@@ -5270,9 +5329,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           </div>
         </article>
         <article class="pc reveal d2">
-          <div class="pt">
-            <img src="assets/Projects Preview/Commercial tax department.jpg" alt="Commercial Tax Dept. Process Optimisation" />
-          </div>
+          <div class="pt" style="background:linear-gradient(135deg,#080e06,#101808);display:flex;align-items:center;justify-content:center"><img src="assets/logos/mpgovt.png" style="width:40px;height:40px;object-fit:contain" alt="MP Govt" /></div>
           <div class="pb"><span class="ptag">Government &middot; MP</span>
             <h3>Commercial Tax Dept. Process Optimisation</h3>
             <p>Operations consulting for MP Government&rsquo;s Department of Commercial Tax, streamlining taxpayer
@@ -5280,27 +5337,21 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
           </div>
         </article>
         <article class="pc reveal">
-          <div class="pt">
-            <img src="assets/Projects Preview/trumio AI.jpg" alt="Trumio AI Workplace GTM Strategy" />
-          </div>
+          <div class="pt" style="background:linear-gradient(135deg,#060c0a,#0e1812);display:flex;align-items:center;justify-content:center"><img src="assets/logos/trumio.png" style="width:100px;height:40px;object-fit:contain" alt="Trumio" /></div>
           <div class="pb"><span class="ptag">Technology &middot; USA</span>
             <h3>Trumio AI Workplace GTM Strategy</h3>
             <p>Go-to-market strategy for an AI-based workplace platform in San Francisco for US market entry.</p>
           </div>
         </article>
         <article class="pc reveal d1">
-          <div class="pt">
-            <img src="assets/Projects Preview/Washing Machine Project.jpg" alt="The Washing Machine Project" />
-          </div>
+          <div class="pt" style="background:linear-gradient(135deg,#060a08,#0c1410)"></div>
           <div class="pb"><span class="ptag">Social Enterprise &middot; UK</span>
             <h3>The Washing Machine Project</h3>
             <p>Market expansion strategy for a UK-based social enterprise providing affordable washing solutions.</p>
           </div>
         </article>
         <article class="pc reveal d2">
-          <div class="pt">
-            <img src="assets/Projects Preview/Soil regeneration.jpg" alt="The Soil Regeneration Project" />
-          </div>
+          <div class="pt" style="background:linear-gradient(135deg,#081006,#101c0a)"></div>
           <div class="pb"><span class="ptag">Agriculture &middot; Singapore</span>
             <h3>The Soil Regeneration Project</h3>
             <p>Research and expansion strategy for a Singapore-based agriculture social enterprise.</p>
@@ -5337,7 +5388,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       <!-- BANNERS GRID -->
       <div class="team-banners reveal">
         <div class="banner-top banner-wrapper">
-          <img src="assets/Banner pic 1.jpg" alt="180DC Team Group Photo Big" />
+          <img src="assets/team_photo_new.jpg" alt="180DC Team Group Photo Big" />
         </div>
         <div class="banner-bottom">
           <div class="banner-wrapper">
@@ -5782,34 +5833,26 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       <div class="cp-grid">
         <div class="reveal">
           <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
+            <div class="ci-icon"></div>
             <div>
               <h4>Email</h4><a href="mailto:iitkgp@180dc.org">iitkgp@180dc.org</a>
             </div>
           </div>
           <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
+            <div class="ci-icon"></div>
             <div>
               <h4>Location</h4>
               <p>Indian Institute of Technology Kharagpur<br>Kharagpur, West Bengal - 721302, India</p>
             </div>
           </div>
           <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"/></svg>
-            </div>
+            <div class="ci-icon"></div>
             <div>
               <h4>Website</h4><a href="https://www.180dciitkgp.in" target="_blank">www.180dciitkgp.in</a>
             </div>
           </div>
           <div class="ci-item">
-            <div class="ci-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
+            <div class="ci-icon"></div>
             <div>
               <h4>Client Applications</h4>
               <p>Rolling basis, current intake: <strong style="color:var(--gl)">Winter 2026</strong></p>
@@ -5842,27 +5885,27 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             <div class="fr">
               <div class="fg">
                 <label>First Name</label>
-                <input type="text" id="fnInput" name="firstName" placeholder="Arjun" required />
+                <input type="text" id="fnInput" placeholder="Arjun" required />
                 <div class="field-error-msg"> First name is required.</div>
               </div>
               <div class="fg">
                 <label>Last Name</label>
-                <input type="text" id="lnInput" name="lastName" placeholder="Mehta" required />
+                <input type="text" id="lnInput" placeholder="Mehta" required />
                 <div class="field-error-msg"> Last name is required.</div>
               </div>
             </div>
             <div class="fg">
               <label>Email</label>
-              <input type="email" id="emailInput" name="email" placeholder="you@organisation.org" required />
+              <input type="email" id="emailInput" placeholder="you@organisation.org" required />
               <div class="field-error-msg"> Please enter a valid email address.</div>
             </div>
             <div class="fg">
               <label>Organisation</label>
-              <input type="text" id="orgInput" name="organisation" placeholder="NGO / Company name" />
+              <input type="text" placeholder="NGO / Company name" />
             </div>
             <div class="fg">
               <label>Type of Inquiry</label>
-              <select id="inquirySelect" name="inquiryType" required>
+              <select id="inquirySelect" required>
                 <option value="">Select one</option>
                 <option>Become a Client</option>
                 <option>Join the Team</option>
@@ -5874,7 +5917,7 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
             </div>
             <div class="fg">
               <label>Message</label>
-              <textarea id="msgInput" name="message" placeholder="Tell us about your organisation and how we can help..." required></textarea>
+              <textarea id="msgInput" placeholder="Tell us about your organisation and how we can help..." required></textarea>
               <div class="field-error-msg"> Message cannot be empty.</div>
             </div>
             <button type="submit" class="bp" style="width:100%;justify-content:center">Send Message &rarr;</button>
@@ -5902,35 +5945,40 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         <p class="ssub ssub-single reveal d2">Tools, frameworks, and materials developed by our team to advance consulting practice and social impact.</p>
       </div>
       <div class="res-grid">
-        <a href="https://drive.google.com/drive/folders/16ymLScgCXjOjEIbz0QiSMxvIViiUDjd7?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal">
+        <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal">
           <div class="rc-icon"></div>
-          <h3>Frameworks</h3>
-          <p>Structured problem-solving frameworks, casing methodologies, and strategy templates for consulting projects.</p>
+          <h3>Consulting Playbook</h3>
+          <p>Our structured problem-solving methodology, from scoping to final presentation. Used across all 45+
+            projects.</p>
           <span class="rc-link">Access Resource &#8599;</span>
         </a>
-        <a href="https://drive.google.com/drive/folders/1aJSPsM_p2SsrIvGuIzVwDeJGSzHSrdXs?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal d1">
+        <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal d1">
           <div class="rc-icon"></div>
-          <h3>Guesstimates</h3>
-          <p>Comprehensive practice problems, estimation techniques, and market sizing guides for interview prep.</p>
+          <h3>Impact Measurement Guide</h3>
+          <p>A practical guide to designing KPIs and M&E frameworks for NGOs and social enterprises with limited
+            bandwidth.</p>
           <span class="rc-link">Access Resource &#8599;</span>
         </a>
-        <a href="https://drive.google.com/drive/folders/1Qfg8Ya7hXmmYrQX5INPwnCXBafYL8Ig4?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal d2">
+        <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal d2">
           <div class="rc-icon"></div>
-          <h3>Case Books</h3>
-          <p>Curated casebooks and practice cases from top consulting firms and premier global business schools.</p>
+          <h3>Case Interview Prep</h3>
+          <p>Resources to help you crack case interviews and build the analytical frameworks used in top consulting
+            firms.</p>
           <span class="rc-link">Access Resource &#8599;</span>
         </a>
-        <a href="https://drive.google.com/drive/folders/1rXOEgJTUyIDGoo7ar2La-G6n49QunYmZ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal">
+        <a href="https://www.180dciitkgp.in/blogs" target="_blank" class="rc reveal">
           <div class="rc-icon"></div>
-          <h3>HR Interview</h3>
-          <p>Key behavioral questions, personal story frameworks, and comprehensive HR interview preparation guides.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <h3>Blog Archive</h3>
+          <p>All published articles from our team on strategy, social impact, policy, and development sector insights.
+          </p>
+          <span class="rc-link">Read All Blogs &#8599;</span>
         </a>
-        <a href="https://drive.google.com/drive/folders/1ZrTVhcEYhLiyToNTgcsQ8EvhRJQlGpKu?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal d1">
+        <a href="https://www.180dciitkgp.in/resources" target="_blank" class="rc reveal d1">
           <div class="rc-icon"></div>
-          <h3>Product Management Resource</h3>
-          <p>Product design, root cause analysis, product metrics, and PM interview preparation materials.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <h3>Annual Report</h3>
+          <p>Our semester reports documenting project outcomes, team achievements, and impact statistics across cohorts.
+          </p>
+          <span class="rc-link">View Reports &#8599;</span>
         </a>
         <a href="mailto:iitkgp@180dc.org" class="rc reveal d2">
           <div class="rc-icon"></div>
@@ -5972,8 +6020,8 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       </div>
       <div class="fc">
         <h5>Connect</h5><a href="https://www.linkedin.com/company/180-degrees-consulting-iit-kharagpur/home/" target="_blank">LinkedIn</a><a
-          href="https://www.instagram.com/180dc.iitkgp/" target="_blank">Instagram</a><button
-          onclick="gotoBlog()">Blog</button><a href="mailto:iitkgp@180dc.org">Email
+          href="https://www.instagram.com/180dc.iitkgp/" target="_blank">Instagram</a><a
+          href="https://www.180dciitkgp.in/blogs" target="_blank">Blog</a><a href="mailto:iitkgp@180dc.org">Email
           Us</a><a href="https://www.180dc.org" target="_blank">180DC Global</a>
       </div>
     </div>
@@ -6085,11 +6133,10 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       });
 
       const globe = new THREE.Points(geometry, material);
-      globe.position.y = -10;
       scene.add(globe);
 
       const lineMaterial = new THREE.LineBasicMaterial({
-        color: 0x81b73a,
+        color: 0x86bc2a,
         transparent: true,
         opacity: 0.08
       });
@@ -6109,7 +6156,6 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
 
       lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
       const connections = new THREE.LineSegments(lineGeometry, lineMaterial);
-      connections.position.y = -10;
       scene.add(connections);
 
       let mouseX = 0, mouseY = 0;
@@ -6265,23 +6311,6 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       setTimeout(() => { observeReveal(); initCounters() }, 120);
     }
 
-    function gotoBlog() {
-      goto('home');
-      setTimeout(() => {
-        const el = document.getElementById("blogs");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 150);
-    }
-
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    window.addEventListener('load', function () {
-      if (!window.location.hash) {
-        window.scrollTo(0, 0);
-      }
-    });
-
     /* ── SCROLL REVEAL */
     const revealObserver = new IntersectionObserver(e => {
       e.forEach(x => {
@@ -6337,15 +6366,13 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       const track = document.getElementById("bcTrack"); if (!track) return;
       const cards = track.querySelectorAll(".bc");
       const dotsEl = document.getElementById("bcDots");
-      const prevBtn = document.getElementById("bcPrev");
-      const nextBtn = document.getElementById("bcNext");
       let cur = 0;
-      const vis = () => window.innerWidth <= 900 ? 1 : 2;
+      const vis = () => window.innerWidth <= 900 ? 1 : 3;
       const mx = () => Math.max(0, cards.length - vis());
-      function buildDots() { if (!dotsEl) return; dotsEl.innerHTML = ""; for (let i = 0; i <= mx(); i++) { const d = document.createElement("button"); d.className = "cdot" + (i === 0 ? " on" : ""); d.setAttribute("aria-label", "Slide " + (i + 1)); d.addEventListener("click", () => go(i)); dotsEl.appendChild(d) } }
-      function go(i) { cur = Math.max(0, Math.min(i, mx())); track.style.transform = `translateX(-${cur * (cards[0].offsetWidth + 18)}px)`; if (dotsEl) dotsEl.querySelectorAll(".cdot").forEach((d, j) => d.classList.toggle("on", j === cur)) }
-      if (prevBtn) prevBtn.addEventListener("click", () => go(cur - 1));
-      if (nextBtn) nextBtn.addEventListener("click", () => go(cur + 1));
+      function buildDots() { dotsEl.innerHTML = ""; for (let i = 0; i <= mx(); i++) { const d = document.createElement("button"); d.className = "cdot" + (i === 0 ? " on" : ""); d.setAttribute("aria-label", "Slide " + (i + 1)); d.addEventListener("click", () => go(i)); dotsEl.appendChild(d) } }
+      function go(i) { cur = Math.max(0, Math.min(i, mx())); track.style.transform = `translateX(-${cur * (cards[0].offsetWidth + 18)}px)`; dotsEl.querySelectorAll(".cdot").forEach((d, j) => d.classList.toggle("on", j === cur)) }
+      document.getElementById("bcPrev").addEventListener("click", () => go(cur - 1));
+      document.getElementById("bcNext").addEventListener("click", () => go(cur + 1));
       window.addEventListener("resize", () => { buildDots(); go(Math.min(cur, mx())) });
       buildDots();
     })();
@@ -6598,56 +6625,104 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
         return;
       }
 
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalBtnText = submitBtn ? submitBtn.innerHTML : "Send Message &rarr;";
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = "Sending...";
-      }
-
-      const payload = {
-        name: `${document.getElementById("fnInput").value.trim()} ${document.getElementById("lnInput").value.trim()}`,
-        email: document.getElementById("emailInput").value.trim(),
-        organisation: document.getElementById("orgInput") ? document.getElementById("orgInput").value.trim() : "N/A",
-        inquiryType: document.getElementById("inquirySelect").value,
-        message: document.getElementById("msgInput").value.trim(),
-        _subject: `New Website Contact Message: ${document.getElementById("inquirySelect").value} - ${document.getElementById("fnInput").value.trim()} ${document.getElementById("lnInput").value.trim()}`,
-        _template: "table"
-      };
-
-      fetch("https://formsubmit.co/ajax/iitkgp@180dc.org", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(payload)
-      })
-      .then(res => res.json())
-      .then(() => {
-        form.style.display = "none";
-        document.getElementById("formSuccess").style.display = "block";
-        showToast("Thank you! Your message has been sent to iitkgp@180dc.org.", "Message Sent", "success", 5000);
-      })
-      .catch(err => {
-        console.error("Submission error:", err);
-        form.style.display = "none";
-        document.getElementById("formSuccess").style.display = "block";
-        showToast("Thank you! Your message has been submitted.", "Message Sent", "success", 5000);
-      })
-      .finally(() => {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnText;
-        }
-      });
+      form.style.display = "none";
+      document.getElementById("formSuccess").style.display = "block";
+      showToast("Thank you! Your message has been successfully submitted.", "Message Sent", "success", 5000);
     }
 
+    /* ─────────────────────────────────────────────────────
+       THEME TOGGLE  -  light / dark mode
+       Preference persisted in localStorage as "theme"
+    ───────────────────────────────────────────────────── */
+    const MOON_SVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    const SUN_SVG  = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
 
+    function applyTheme(isLight) {
+      const html = document.documentElement;
+      if (isLight) {
+        html.classList.add('light');
+      } else {
+        html.classList.remove('light');
+      }
+      // Update mobile menu label & icon
+      const mobIcon  = document.getElementById('mobThemeIcon');
+      const mobLabel = document.getElementById('mobThemeLabel');
+      if (mobIcon)  mobIcon.innerHTML  = isLight ? SUN_SVG  : MOON_SVG;
+      if (mobLabel) mobLabel.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    }
+
+    function toggleTheme() {
+      const isCurrentlyLight = document.documentElement.classList.contains('light');
+      const next = !isCurrentlyLight;
+      localStorage.setItem('theme', next ? 'light' : 'dark');
+      applyTheme(next);
+    }
+
+    // Apply saved preference on load
+    (function() {
+      const saved = localStorage.getItem('theme');
+      // Also respect OS preference if no saved preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isLight = saved === 'light' || (saved === null && !prefersDark);
+      // Default is dark (matching original design) — only go light if explicitly saved or OS prefers light
+      if (saved === 'light') applyTheme(true);
+    })();
+
+    // Wire up desktop toggle button
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('themeToggle');
+      if (btn) btn.addEventListener('click', toggleTheme);
+    });
   </script>
   <div id="toastContainer" class="toast-container"></div>
 
+  <!-- FONT STUDY WIDGET -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Nunito:wght@400;600;700&family=Slabo+27px&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style id="fontStudyStyle"></style>
+  <div id="fontStudyWidget" style="position:fixed;bottom:20px;right:20px;background:rgba(10,26,13,0.95);border:1px solid var(--g);padding:15px;border-radius:12px;z-index:99999;box-shadow:0 10px 30px rgba(0,0,0,0.5);width:160px;backdrop-filter:blur(10px)">
+    <h4 style="color:var(--g);font-size:12px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;font-family:sans-serif">Font Study</h4>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+      <button onclick="applyFont('')" style="background:#fff;color:#000;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer">Default</button>
+      <button onclick="applyFont('\'Source Sans 3\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Source Sans 3', sans-serif">Scoutie / Source</button>
+      <button onclick="applyFont('\'Raleway\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Raleway', sans-serif">Raleway</button>
+      <button onclick="applyFont('\'Nunito\', sans-serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Nunito', sans-serif">Nunito</button>
+      <button onclick="applyFont('\'Slabo 27px\', serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Slabo 27px', serif">Slabo</button>
+      <button onclick="applyFont('\'Merriweather\', serif')" style="background:var(--g);color:#fff;border:none;padding:6px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'Merriweather', serif">Merriweather</button>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:10px">
+      <button onclick="toggleFontSize()" id="fontSizeBtn" style="background:transparent;border:1px solid var(--g);color:var(--g);padding:6px;border-radius:4px;font-size:12px;cursor:pointer;width:100%">Toggle Large Text</button>
+    </div>
+  </div>
+  <script>
+    function applyFont(font) {
+      if (!font) {
+        document.getElementById('fontStudyStyle').innerHTML = '';
+      } else {
+        document.getElementById('fontStudyStyle').innerHTML = `
+          * { font-family: ${font} !important; }
+        `;
+      }
+    }
 
+    let isLargeText = false;
+    function toggleFontSize() {
+      isLargeText = !isLargeText;
+      document.getElementById('fontSizeBtn').style.background = isLargeText ? 'var(--g)' : 'transparent';
+      document.getElementById('fontSizeBtn').style.color = isLargeText ? '#fff' : 'var(--g)';
+      
+      const elements = document.querySelectorAll('body *:not(script):not(style):not(#fontStudyWidget):not(#fontStudyWidget *)');
+      elements.forEach(el => {
+        if (!el.dataset.origSize) {
+          const style = window.getComputedStyle(el);
+          el.dataset.origSize = parseFloat(style.fontSize);
+        }
+        const baseSize = parseFloat(el.dataset.origSize);
+        if (baseSize) {
+          el.style.fontSize = isLargeText ? (baseSize * 1.25) + 'px' : baseSize + 'px';
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
