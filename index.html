@@ -453,6 +453,7 @@
     html.light .rc h3 { color: #0a1a0d }
     html.light .rc p { color: #3d5c47 }
     html.light .rc-link { color: var(--g) }
+    html.light .rc-preview { background: linear-gradient(135deg, #f0f7e6, #ebf5ef); border-bottom-color: rgba(0,0,0,.08) }
 
     /* ── footer ──────────────────────────────────────────────────────── */
     html.light footer {
@@ -2903,37 +2904,75 @@
     }
 
     .rc {
-      display: block;
+      display: flex;
+      flex-direction: column;
       background: rgba(255, 255, 255, .02);
       backdrop-filter: blur(12px);
       border: 1px solid var(--bdr);
-      border-radius: 8px;
-      padding: 24px;
+      border-radius: 10px;
+      overflow: hidden;
       transition: all var(--tr)
     }
 
     .rc:hover {
-      border-color: rgba(129, 183, 58, .3);
+      border-color: rgba(129, 183, 58, .35);
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 10px rgba(16, 185, 129, 0.05)
+      box-shadow: 0 16px 32px rgba(0, 0, 0, .5), 0 0 15px rgba(16, 185, 129, 0.05)
     }
 
-    .rc-icon {
-      font-size: 28px;
-      margin-bottom: 12px
+    .rc-preview {
+      height: 160px;
+      width: 100%;
+      background: linear-gradient(135deg, rgba(113, 163, 51, 0.12), rgba(14, 22, 19, 0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .rc-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--tr);
+    }
+
+    .rc:hover .rc-img {
+      transform: scale(1.05);
+    }
+
+    .rc-ph-icon {
+      font-size: 36px;
+      opacity: 0.85;
+      transition: transform var(--tr);
+    }
+
+    .rc:hover .rc-ph-icon {
+      transform: scale(1.1);
+    }
+
+    .rc-body {
+      padding: 20px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .rc h3 {
-      font-size: 16px;
+      font-size: 16.5px;
       font-weight: 600;
-      margin-bottom: 6px
+      margin-bottom: 8px
     }
 
     .rc p {
       font-size: 13px;
-      color: rgba(255, 255, 255, .4);
+      color: rgba(255, 255, 255, .78);
       line-height: 1.7;
-      margin-bottom: 14px
+      margin-bottom: 16px;
+      flex: 1;
     }
 
     .rc-link {
@@ -5916,41 +5955,71 @@ c39 -40 38 -54 -4 -70 -28 -11 -42 1 -42 37 0 22 -35 44 -70 44 -10 0 -26 -10
       </div>
       <div class="res-grid">
         <a href="https://drive.google.com/drive/folders/16ymLScgCXjOjEIbz0QiSMxvIViiUDjd7?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal">
-          <div class="rc-icon"></div>
-          <h3>Frameworks</h3>
-          <p>Structured problem-solving frameworks, casing methodologies, and strategy templates for consulting projects.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <div class="rc-preview">
+            <img src="" alt="Frameworks Preview" class="rc-img" onerror="this.style.display='none'" />
+            <span class="rc-ph-icon">📐</span>
+          </div>
+          <div class="rc-body">
+            <h3>Frameworks</h3>
+            <p>Structured problem-solving frameworks, casing methodologies, and strategy templates for consulting projects.</p>
+            <span class="rc-link">Access Resource &#8599;</span>
+          </div>
         </a>
         <a href="https://drive.google.com/drive/folders/1aJSPsM_p2SsrIvGuIzVwDeJGSzHSrdXs?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal d1">
-          <div class="rc-icon"></div>
-          <h3>Guesstimates</h3>
-          <p>Comprehensive practice problems, estimation techniques, and market sizing guides for interview prep.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <div class="rc-preview">
+            <img src="" alt="Guesstimates Preview" class="rc-img" onerror="this.style.display='none'" />
+            <span class="rc-ph-icon">📊</span>
+          </div>
+          <div class="rc-body">
+            <h3>Guesstimates</h3>
+            <p>Comprehensive practice problems, estimation techniques, and market sizing guides for interview prep.</p>
+            <span class="rc-link">Access Resource &#8599;</span>
+          </div>
         </a>
         <a href="https://drive.google.com/drive/folders/1Qfg8Ya7hXmmYrQX5INPwnCXBafYL8Ig4?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal d2">
-          <div class="rc-icon"></div>
-          <h3>Case Books</h3>
-          <p>Curated casebooks and practice cases from top consulting firms and premier global business schools.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <div class="rc-preview">
+            <img src="" alt="Case Books Preview" class="rc-img" onerror="this.style.display='none'" />
+            <span class="rc-ph-icon">📚</span>
+          </div>
+          <div class="rc-body">
+            <h3>Case Books</h3>
+            <p>Curated casebooks and practice cases from top consulting firms and premier global business schools.</p>
+            <span class="rc-link">Access Resource &#8599;</span>
+          </div>
         </a>
         <a href="https://drive.google.com/drive/folders/1rXOEgJTUyIDGoo7ar2La-G6n49QunYmZ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal">
-          <div class="rc-icon"></div>
-          <h3>HR Interview</h3>
-          <p>Key behavioral questions, personal story frameworks, and comprehensive HR interview preparation guides.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <div class="rc-preview">
+            <img src="" alt="HR Interview Preview" class="rc-img" onerror="this.style.display='none'" />
+            <span class="rc-ph-icon">🎯</span>
+          </div>
+          <div class="rc-body">
+            <h3>HR Interview</h3>
+            <p>Key behavioral questions, personal story frameworks, and comprehensive HR interview preparation guides.</p>
+            <span class="rc-link">Access Resource &#8599;</span>
+          </div>
         </a>
         <a href="https://drive.google.com/drive/folders/1ZrTVhcEYhLiyToNTgcsQ8EvhRJQlGpKu?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rc reveal d1">
-          <div class="rc-icon"></div>
-          <h3>Product Management Resource</h3>
-          <p>Product design, root cause analysis, product metrics, and PM interview preparation materials.</p>
-          <span class="rc-link">Access Resource &#8599;</span>
+          <div class="rc-preview">
+            <img src="" alt="Product Management Resource Preview" class="rc-img" onerror="this.style.display='none'" />
+            <span class="rc-ph-icon">🚀</span>
+          </div>
+          <div class="rc-body">
+            <h3>Product Management Resource</h3>
+            <p>Product design, root cause analysis, product metrics, and PM interview preparation materials.</p>
+            <span class="rc-link">Access Resource &#8599;</span>
+          </div>
         </a>
         <a href="mailto:iitkgp@180dc.org" class="rc reveal d2">
-          <div class="rc-icon"></div>
-          <h3>Partner With Us</h3>
-          <p>Interested in sponsoring or partnering with 180DC IIT KGP? Explore collaboration opportunities with our
-            team.</p>
-          <span class="rc-link">Get In Touch &#8599;</span>
+          <div class="rc-preview">
+            <img src="" alt="Partner With Us Preview" class="rc-img" onerror="this.style.display='none'" />
+            <span class="rc-ph-icon">🤝</span>
+          </div>
+          <div class="rc-body">
+            <h3>Partner With Us</h3>
+            <p>Interested in sponsoring or partnering with 180DC IIT KGP? Explore collaboration opportunities with our
+              team.</p>
+            <span class="rc-link">Get In Touch &#8599;</span>
+          </div>
         </a>
       </div>
     </div>
