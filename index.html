@@ -2031,6 +2031,7 @@
       padding: 13px 16px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 9px
     }
 
@@ -2042,7 +2043,8 @@
       font-size: 12.5px;
       font-weight: 600;
       letter-spacing: .05em;
-      text-transform: uppercase
+      text-transform: uppercase;
+      text-align: center
     }
 
     .sc-body {
@@ -2072,8 +2074,15 @@
     }
 
     .sc-fund {
-      max-width: 340px;
+      flex: 0 0 calc((100% - 32px) / 3);
+      max-width: calc((100% - 32px) / 3);
       margin: 0 auto
+    }
+    @media(max-width:1024px) {
+      .sc-fund { flex: 0 0 calc((100% - 16px) / 2); max-width: calc((100% - 16px) / 2); }
+    }
+    @media(max-width:900px) {
+      .sc-fund { flex: 0 0 100%; max-width: 100%; }
     }
 
     .tls {
@@ -4071,8 +4080,7 @@
       <span class="slbl reveal" style="display:block;text-align:center">Get Started</span>
       <h2 class="sttl reveal d1" style="max-width:520px;margin:0 auto 12px;text-align:center">Let&rsquo;s Build
         Something That Matters</h2>
-      <p class="ssub reveal d2" style="margin:0 auto;text-align:center">NGO needing strategic clarity? Student wanting
-        to consult for good? We&rsquo;d love to hear from you.</p>
+      <p class="ssub reveal d2" style="margin:0 auto;text-align:center">NGO needing strategic clarity? Startups wanting to expand ? We&rsquo;d love to hear from you.</p>
       <div class="cta-btns reveal d3">
         <a href="mailto:iitkgp@180dc.org" class="bp">Work With Us &rarr;</a>
         <button class="bg" onclick="goto('contact')">Contact Us</button>
